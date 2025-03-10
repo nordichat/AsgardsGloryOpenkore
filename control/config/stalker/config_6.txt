@@ -1,0 +1,5 @@
+######## Login options and server-specific options ########
+username kaymas6
+
+!include config_shared.txt
+!include skill.txt
