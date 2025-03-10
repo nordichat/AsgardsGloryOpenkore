@@ -3,10 +3,10 @@
 
 ######## Login options and server-specific options ########
 
-master
-server
-username
-password
+master Asgards Glory
+server 0
+username kaymas1
+password qweqwe123
 loginPinCode
 char
 
@@ -37,7 +37,7 @@ XKore_ID
 
 # It is not advised to set secureAdminPassword if you're using Xkore 2
 secureAdminPassword 1
-adminPassword
+adminPassword licligre
 callSign
 commandPrefix ;
 callSignGM 0
@@ -950,3 +950,4 @@ logToFile_Errors
 logToFile_Messages
 logToFile_Warnings
 history_max 50
+macro_orphans terminate
