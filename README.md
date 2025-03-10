@@ -47,7 +47,7 @@ flowchart TD
     H{Character name contains digit?}
     I[If Novice, change to Thief]
     J[Trigger JobMasterControl Macro]
-    K[Job Change Process (e.g., Thief → Rouge/others)]
+    K[Job Change Process (e.g., Thief to Rouge/others)]
     L[If name ends with "1": Create Party & Invite Stalker2-Stalker8]
     M[Post-Job Change: Trigger Platinum Skill Macro]
     N[Check equipment & zeny for Maintenance tasks]
@@ -78,66 +78,7 @@ The following table will be updated automatically with character stats via Openk
 
 | Character   | Level | Job Class | Current Lockmap             | Average XP/hour | Current Goal       | History/Changelog         |
 |-------------|-------|-----------|-----------------------------|-----------------|--------------------|---------------------------|
-| Stalker1-8  | 1/1   | novice    | Prontera Field (prt_fild05) | ?               | [Goal description] | [Link to Stalker1-8.md]   |
-
-
-<table>
-  <tr>
-    <th>Character</th>
-    <th>Level</th>
-    <th>Job Class</th>
-    <th>Current Lockmap</th>
-    <th>Average XP/hour</th>
-    <th>Current Goal</th>
-    <th>History/Changelog</th>
-  </tr>
-  <tr>
-    <td>Stalker1</td>
-    <td>1/1</td>
-    <td>novice</td>
-    <td rowspan="8">Prontera Field (prt_fild05)</td>
-    <td rowspan="8">?</td>
-    <td rowspan="8">[Goal description]</td>
-    <td rowspan="8">[Merged History/Changelog]</td>
-  </tr>
-  <tr>
-    <td>Stalker2</td>
-    <td>1/1</td>
-    <td>novice</td>
-  </tr>
-  <tr>
-    <td>Stalker3</td>
-    <td>1/1</td>
-    <td>novice</td>
-  </tr>
-  <tr>
-    <td>Stalker4</td>
-    <td>1/1</td>
-    <td>novice</td>
-  </tr>
-  <tr>
-    <td>Stalker5</td>
-    <td>1/1</td>
-    <td>novice</td>
-  </tr>
-  <tr>
-    <td>Stalker6</td>
-    <td>1/1</td>
-    <td>novice</td>
-  </tr>
-  <tr>
-    <td>Stalker7</td>
-    <td>1/1</td>
-    <td>novice</td>
-  </tr>
-  <tr>
-    <td>Stalker8</td>
-    <td>1/1</td>
-    <td>novice</td>
-  </tr>
-</table>
-
-
+| Stalker1-8  | 1/1   | novice    | Prontera Field (prt_fild05) | ?               | Job Class Thief    | [Link to Stalker1-8.md]() |
 
 
 *Each character’s progress and changelog are stored in separate markdown files (e.g., Stalker1.md) that can be auto-updated from Openkore logs.*
