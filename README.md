@@ -47,7 +47,7 @@ flowchart TD
     H{Character name contains digit?}
     I[If Novice, change to Thief]
     J[Trigger JobMasterControl Macro]
-    K[Job Change Process [e.g., Thief to Rouge/others]]
+    K[Job Change Process e.g., Thief to Rouge/others]
     L[If name ends with "1": Create Party & Invite Stalker2-Stalker8]
     M[Post-Job Change: Trigger Platinum Skill Macro]
     N[Check equipment & zeny for Maintenance tasks]
