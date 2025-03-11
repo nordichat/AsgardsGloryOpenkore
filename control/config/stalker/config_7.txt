@@ -1,5 +1,5 @@
 ######## Login options and server-specific options ########
 username kaymas7
 
-!include config_shared.txt
-!include skill.txt
+!include shared/config.txt
+!include shared/skills.txt

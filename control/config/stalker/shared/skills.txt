@@ -1,0 +1,9 @@
+monsterSkill NV_FIRSTAID {
+	lvl 1
+	hp < 36
+	sp > 2
+	disabled 0
+	aggressives <= 0
+	isSelfSkill 1
+	target_isJob Novice
+}
