@@ -84,6 +84,16 @@ The following table will be updated automatically with character stats via Openk
 
 *Each character’s progress and changelog are stored in separate markdown files (e.g., Stalker1.md) that can be auto-updated from Openkore logs.*
 
+| Phase  | Level Range | Location                        | Equipment/Upgrade                                         | Stat Increase / Comparison            |
+|--------|-------------|---------------------------------|-----------------------------------------------------------|---------------------------------------|
+| Novice | 1-10        | Prontera Field (prt_fild06)     | Guard [1] (Shield), Jacket [1] (Body) upgraded with Pupa Card (Armor) | +2 DEF, +700 Max HP                  |
+| Thief  | 10-25       | Prontera Culvert F1 (prt_sewb1) | Ribbon [1] (Upper Head), Falchion [4] (One-Handed Sword), Thief Bug Egg Card (Shield) | +1 DEF, +15 dmg, +400 Max HP         |
+| Thief  | 25-30       | Prontera Culvert F2 (prt_sewb2) | Familiar Card (Weapon)                                    | +5 ATK                                |
+| Thief  | 30-50       | Payon Cave 1 & 2 (pay_dun00, pay_dun01) | Blade [4] (One-Handed Sword), Hat [0] (Upper Head)        | +10 dmg, +1 DEF                       |
+| Rogue  | 50-70       | Orc Dungeon 1 & 2 (gef_dun00, gef_dun01) | Composite Bow [4] (Weapon), Muffler [1] (Garment)         | +20 dmg, +5 DEF                       |
+| Rogue  | 70-90       | Glast Heim St. Abbey & Chivalry 1 (gl_church, gl_knt01) | Cross Bow [3] (Weapon), Boots [1] (Footgear)              | +15 dmg, +3 DEF                       |
+| Rogue  | 90-99       | Glast Heim Chivalry 2 (gl_knt02) | Chain Mail [1] (Body)                                     | +8 DEF                                |
+
 ---
 
 ## NPC Interaction
