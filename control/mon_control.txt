@@ -56,7 +56,8 @@
 #
 # Monsters not found in this file, or flags not specified will default to:
 # <attack> = 1
-
+#Prontera Field (prt_fild06)
+Creamy 0 0 0 #Pupa
 
 ##### Eggs #####
 Ant's Egg 0 0 0

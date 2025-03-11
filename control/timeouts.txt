@@ -24,7 +24,7 @@ reconnect_random 20
 poseidon_wait_reply 15
 
 # Activate AI after x seconds after the map's loaded
-ai 2
+ai 1
 
 ai_move_retry 0.25
 ai_move_giveup 1
@@ -125,7 +125,7 @@ ai_homunFeed 60
 # Send the sit/stand packet at most every x second
 ai_sit 1
 # Sit after having idled for x seconds
-ai_sit_idle 10
+ai_sit_idle 5
 # Stand after x seconds, after having typed the 'stand' command
 ai_stand_wait 0
 # Sit after x seconds, after having typed the "sit" command

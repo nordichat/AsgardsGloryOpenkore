@@ -76,10 +76,9 @@ flowchart TD
 
 The following table will be updated automatically with character stats via Openkore modifications and Git commits:
 
-| Character   | Level | Job Class | Current Lockmap             | Average XP/hour | Current Goal       | History/Changelog         |
-|-------------|-------|-----------|-----------------------------|-----------------|--------------------|---------------------------|
-| Stalker1-8  | 1/1   | novice    | Prontera Field (prt_fild05) | ?               | Job Class Thief    | [Link to Stalker1-8.md]() |
-
+| Character   | Level | Job Class | Current Lockmap             | BaseExp/Hour    | JobExp/Hour        | Current Goal       | History/Changelog         | Last Updated  |
+|-------------|-------|-----------|-----------------------------|-----------------|--------------------|--------------------|---------------------------|---------------|
+| Stalker1-8  | 9/6   | novice    | Prontera Field (prt_fild05) | 1,463 (578.26%) | 557 (368.87%)      | Thief    | [Link to Stalker1-8.md](https://github.com/nordichat/AsgardsGloryOpenkore/blob/feature/start/changelog/Stalker1-8.md) | 2025-03-11    |
 
 *Each character’s progress and changelog are stored in separate markdown files (e.g., Stalker1.md) that can be auto-updated from Openkore logs.*
 

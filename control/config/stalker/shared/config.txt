@@ -173,7 +173,7 @@ cartMaxWeight 7900
 itemsTakeGreed 0
 itemsCheckWeight 1
 
-lockMap
+lockMap prt_fild06
 lockMap_x
 lockMap_y
 lockMap_randX
@@ -204,9 +204,9 @@ runFromTarget_dist 5
 runFromTarget_minStep 7
 runFromTarget_maxPathDistance 13
 
-saveMap
+saveMap prontera
 saveMap_warpToBuyOrSell 1
-saveMap_warpChatCommand
+saveMap_warpChatCommand @go prontera
 memo1
 memo2
 memo3
@@ -220,7 +220,7 @@ buyerShopAuto_open 0
 buyerShop_random 0
 
 sitAuto_hp_lower 40
-sitAuto_hp_upper 100
+sitAuto_hp_upper 90
 sitAuto_sp_lower 0
 sitAuto_sp_upper 0
 sitAuto_follow 0
@@ -230,13 +230,13 @@ sitAuto_look
 sitAuto_look_from_wall
 sitTensionRelax 0
 
-statsAddAuto 0
-statsAddAuto_list
+statsAddAuto 1
+statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 agi, 20 dex, 40 agi, 30 str, 30 dex, 50 agi, 40 str, 60 agi, 50 str, 70 agi, 40 dex, 80 agi, 60 str, 50 dex, 100 agi
 statsAddAuto_dontUseBonus 0
 statsAdd_over_99 1
 
-skillsAddAuto 0
-skillsAddAuto_list
+skillsAddAuto 1
+skillsAddAuto_list NV_BASIC 9
 
 tankMode 0
 tankModeTarget
@@ -873,8 +873,8 @@ buyAuto {
 	minBase
 }
 
-sellAuto 0
-sellAuto_npc
+sellAuto 1
+sellAuto_npc prontera 147 175
 sellAuto_standpoint
 sellAuto_distance 3
 sellAuto_maxDistance
