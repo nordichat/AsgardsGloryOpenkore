@@ -28,6 +28,8 @@ This project automates character progression and in-game tasks on the Asgards Gl
 | ![work in progress - yellow](https://img.shields.io/badge/work%20in%20progress-yellow?style=flat-square) | **Maintenance Routine:** Create a maintenance macro that checks if a non-novice character is missing equipment (but has zeny) at certain levels (e.g., level 20) and purchases the necessary items. |
 | ![to do - lightgrey](https://img.shields.io/badge/to%20do-lightgrey?style=flat-square) | **EXP Logging Update:** Modify Openkore's exp.txt output to include character names and average XP/hour data, and integrate these updates into the README table automatically. |
 | ![to do - lightgrey](https://img.shields.io/badge/to%20do-lightgrey?style=flat-square) | **NPC Interaction Documentation:** Create detailed documentation for automacros interacting with NPCs (Healer, Skill Resetter, Stat Resetter, Job Changer, and Platinum Skill NPC). |
+| ![to do - lightgrey](https://img.shields.io/badge/to%20do-lightgrey?style=flat-square) | **Job Change Automacro:** Create an automacro to change job at level 10 based on the character name. For example, Stalker1 will become Thief. |
+| ![to do - lightgrey](https://img.shields.io/badge/to%20do-lightgrey?style=flat-square) | **Prontera Culvert Entrance Quest:** After job change, trigger a macro to complete the Prontera Culvert (Sewer) Entrance Quest and set the lockmap to Prontera Culvert F1 (prt_sewb1). |
 
 ---
 
@@ -78,7 +80,7 @@ The following table will be updated automatically with character stats via Openk
 
 | Character   | Level | Job Class | Current Lockmap             | BaseExp/Hour    | JobExp/Hour        | Current Goal       | History/Changelog         | Last Updated  |
 |-------------|-------|-----------|-----------------------------|-----------------|--------------------|--------------------|---------------------------|---------------|
-| Stalker1-8  | 9/6   | novice    | Prontera Field (prt_fild05) | 1,463 (578.26%) | 557 (368.87%)      | Thief    | [Link to Stalker1-8.md](https://github.com/nordichat/AsgardsGloryOpenkore/blob/feature/start/changelog/Stalker1-8.md) | 2025-03-11    |
+| Stalker1-8  | 9/6   | novice    | Prontera Field (prt_fild05) | 1,463 (578.26%) | 557 (368.87%)      | Thief    | [Stalker1-8.md](https://github.com/nordichat/AsgardsGloryOpenkore/blob/feature/start/changelog/Stalker1-8.md) | 2025-03-11    |
 
 *Each character’s progress and changelog are stored in separate markdown files (e.g., Stalker1.md) that can be auto-updated from Openkore logs.*
 
