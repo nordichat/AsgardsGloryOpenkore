@@ -3,3 +3,4 @@ username kaymas1
 
 !include shared/config.txt
 !include shared/skills.txt
+!include shared/xkore.txt

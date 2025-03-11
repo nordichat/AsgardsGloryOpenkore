@@ -727,7 +727,7 @@ sub new {
 		'0B1A' => ['skill_cast', 'a4 a4 v5 V C V', [qw(sourceID targetID x y skillID unknown type wait dispose unknow)]], # 29
 		'0B1B' => ['load_confirm'],
 		'0B1D' => ['ping'], #2
-		'0B20' => ['hotkeys', 'C a2 a*', [qw(rotate tab hotkeys)]],#herc PR 2468
+		'0B20' => ['hotkeys', 'C v a*', [qw(rotate tab hotkeys)]],#herc PR 2468
 		'0B2F' => ['homunculus_property', 'Z24 C v11 V2 v2 V2 v2', [qw(name state level hunger intimacy atk matk hit critical def mdef flee aspd hp hp_max sp sp_max exp exp_max points_skill attack_range)]],
 		'0B31' => ['skill_add', 'v V v3 C v', [qw(skillID target lv sp range upgradable lv2)]], #17
 		'0B32' => ['skills_list'],
@@ -1367,8 +1367,8 @@ sub skill_used_no_damage {
 	countCastOn($args->{sourceID}, $args->{targetID}, $args->{skillID});
 	if ($args->{sourceID} eq $accountID) {
 		my $pos = calcPosition($char);
-		$char->{pos} = $pos;
-		$char->{pos_to} = $pos;
+		%{$char->{pos}} = %{$pos};
+		%{$char->{pos_to}} = %{$pos};
 		$char->{time_move} = 0;
 		$char->{time_move_calc} = 0;
 	}
