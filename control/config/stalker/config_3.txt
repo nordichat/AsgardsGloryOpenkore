@@ -2,4 +2,8 @@
 username kaymas3
 
 !include shared/config.txt
-!include shared/skills.txt
+!include shared/skills1-99.txt
+storageAuto 1
+storageAuto_npc prontera 164 175
+lockMap prt_fild06
+skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10

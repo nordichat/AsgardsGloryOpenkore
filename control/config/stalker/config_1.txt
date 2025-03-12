@@ -2,7 +2,20 @@
 username kaymas1
 
 !include shared/config.txt
-!include shared/skills.txt
+!include shared/skills1-99.txt
 !include shared/xkore.txt
 storageAuto 1
 storageAuto_npc prontera 164 175
+#lockMap prontera
+skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10
+#route_randomWalk 2
+#route_randomWalk_inTown 1 
+
+buyAuto Magnifier {
+	label label_buyAuto_Magnifier
+	maxAmount 5
+	minAmount 0
+	npc prontera 147 175
+	InMap prontera
+	disabled 0
+}

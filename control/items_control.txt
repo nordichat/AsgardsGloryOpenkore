@@ -40,6 +40,17 @@
 # All items not mentioned in this file will be automatically stored in storage.
 all 0 1 0
 
+#General
+#Magnifier 5 1 0
+
+#Prontera Field (prt_fild06) 2025-03-11
+    #Clover 0 1 0 # Mr. Smile
+    #Jellopy 0 1 0 # Mr. Smile
+    #Fluff 0 1 0 # Mr. Smile
+Phracon 7 1 0 # I think you receive when you start.... Use to upgrade weapon
+Jacket [1] 1 1 0 # Armor nr 1
+Guard [1] 1 1 0 # Shield nr 1
+Red Herb 50 1 0
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
@@ -102,7 +113,7 @@ High Heels 0 0 1 # 2409
 Hood 0 0 1 # 2501
 "Hood [1]" 0 0 1 # 2502
 Jacket 0 0 1 # 2303
-"Jacket [1]" 0 0 1 # 2304
+#"Jacket [1]" 0 0 1 # 2304
 Manteau 0 0 1 # 2505
 Mantle 0 0 1 # 2307
 "Mantle [1]" 0 0 1 # 2308
@@ -359,7 +370,7 @@ Animal Poop 0 0 1
 7030 0 0 1 # Claw of Desert Wolf
 7011 0 0 1 # Claw of Monkey
 7007 0 0 1 # Claw of Rat
-705 0 0 1 # Clover
+#705 0 0 1 # Clover
 1025 0 0 1 # Cobweb
 7093 0 0 1 # Cogwheel
 961 0 0 1 # Conch
@@ -394,7 +405,7 @@ Animal Poop 0 0 1
 7043 0 0 1 # Fine Sand
 1023 0 0 1 # Fish Tail
 712 0 0 1 # Flower
-914 0 0 1 # Fluff
+#914 0 0 1 # Fluff
 7094 0 0 1 # Fragment
 1012 0 0 1 # Frill
 749 0 0 1 # Frozen Rose
@@ -419,7 +430,7 @@ Animal Poop 0 0 1
 7028 0 0 1 # Invite for Duel
 1062 0 0 1 # Jack o' Pumpkin
 7147 0 0 1 # Jasmine
-909 0 0 1 # Jellopy
+#909 0 0 1 # Jellopy
 1041 0 0 1 # Lantern
 7126 0 0 1 # Large Jellopy
 7096 0 0 1 # Lava
@@ -460,7 +471,7 @@ Animal Poop 0 0 1
 7101 0 0 1 # PecoPeco Feather
 541 0 0 1 # PecoPeco Food
 738 0 0 1 # Pencil Case
-1010 0 0 1 # Phracon
+#1010 0 0 1 # Phracon
 7150 0 0 1 # Piece of Bamboo
 7032 0 0 1 # Piece of Egg Shell
 7108 0 0 1 # Piece of Shield
@@ -1755,3 +1766,9 @@ Spearman Scroll 10 0 0 0
 25150 0 0 0 0 0 # Hugging_Alice_Pilow
 26100 0 0 0 0 0 # Paradise_Foxtail_Staff_II
 26101 0 0 0 0 0 # Paradise_Foxtail_Staff_III
+
+# Custom
+Unripe Apple 0 0 1
+Rainbow Carrot 0 0 1
+Knife [4] 0 0 1
+Clown Nose 0 0 1

@@ -183,8 +183,6 @@ route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
 route_avoidWalls 1
-route_randomWalk 1
-route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
 route_maxWarpFee
 route_maxNpcTries 5
@@ -274,7 +272,7 @@ teleportAuto_item2
 
 dealAuto 1
 dealAuto_names
-partyAuto 1
+partyAuto 2
 partyAutoShare 0
 partyAutoShareItem 0
 partyAutoShareItemDiv 0
@@ -925,3 +923,6 @@ logToFile_Messages
 logToFile_Warnings
 history_max 50
 macro_orphans terminate
+
+# Extra
+wx_map_route 0

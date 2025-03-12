@@ -1,0 +1,17 @@
+useSelf_skill NV_FIRSTAID {
+	lvl 1
+	hp < 40%
+	sp > 2
+	disabled 0
+	aggressives <= 0
+}
+
+useSelf_item Apple, Red Herb {
+	label useHP
+	hp < 95%
+	disabled 0
+}
+
+useSelf_item Red Herb, Carrot, Apple {
+	hp < 80%
+}
