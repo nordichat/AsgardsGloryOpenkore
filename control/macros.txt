@@ -1,6 +1,6 @@
 automacro auto_loot_activation {
     run-once 1
-    call autoloot
+    call enable_autoloot
 }
 
 macro enable_autoloot {
