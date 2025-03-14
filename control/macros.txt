@@ -1,52 +1,42 @@
-# This automacro initializes the loader and calls the main controller macro.
-automacro InitializeLoader {
+automacro auto_loot_activation {
     run-once 1
+    call autoloot
+}
+
+macro enable_autoloot {
+    do c @autoloot 100
+}
+
+automacro check_party_leader {
     exclusive 1
-    call MainController
+    delay 600
+    timeout 600
+    call verify_party_leader
 }
 
-# This macro serves as the main controller and calls the macro to configure basic settings.
-macro MainController {
-    call ConfigureBasicSettings
+macro verify_party_leader {
+    # Count number of party members
+    $numberOfPlayers = @eval(scalar @partyUsersID)
+
+    # Loop through party members and log their details
+    $i = 0
+    while ($i < $numberOfPlayers) as loop
+        $charname = @eval($::char->{'name'})
+        $charnameParty = @eval($::char->{'party'}{'users'}{@partyUsersID[$i]}{'name'})
+        $isAdmin = @eval($::char->{'party'}{'users'}{@partyUsersID[$i]}{'admin'})
+
+        if ($isAdmin == 1) {
+            if ($charname == $charnameParty) {
+                log You are the party leader. Triggering 'exp output' command.
+                call save_expoutput
+            } else {
+                log You are not the party leader, $charnameParty is.
+            }
+        }
+        $i++
+    end loop
 }
 
-# This macro configures basic settings such as auto-loot, auto-sell, and save map.
-macro ConfigureBasicSettings {
-    # Kafra: prontera 164 175
-        # Talk to Kafra and Save + conf savemap prontera
-        # Set AutoStorage and config for storage.
-    # Buy/Sell NPC: prontera 147 175
-    # Job Master: prontera 153 193
-    # Healer: prontera 159 193
-    # Platinum Skill NPC: prontera 162 193
-
-    # Step 1: Enable auto-loot with 100% rate.
-        #do c @autoloot 100
-
-    # Step 2: Enable auto-sell.
-        #do conf sellAuto 1
-    # Step 3: Set the sell NPC location.
-        #do conf sellAuto_npc prontera 147 175
-    # Step 4: Set the sell distance.
-        #do conf sellAuto_distance 3
-    # Step 5: Set the sell NPC steps.
-        #do conf sellAuto_npc_steps s
-
-    # Step 6: Set the save map location.
-        #do conf saveMap prontera
-    # Step 7: Enable warp to buy or sell.
-        #do conf saveMap_warpToBuyOrSell 1
-    # Step 8: Set the warp chat command.
-        #do conf saveMap_warpChatCommand @go prontera
-}
-
-#thief = 6
-# This automacro configures the character for leveling when it has the 'First Aid' skill and is below job level 10.
-macro WhatJobAndId {
-    $jobId = @eval ($::char->{'jobID'})
-    $jobName = @eval ($::jobs_lut{$jobId})
-
-    log $jobName $jobId 
-
-    do c $jobName $jobId
+macro save_expoutput {
+    do exp output
 }
