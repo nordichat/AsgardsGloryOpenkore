@@ -1,0 +1,42 @@
+automacro auto_loot_activation {
+    run-once 1
+    call enable_autoloot
+}
+
+macro enable_autoloot {
+    do c @autoloot 100
+}
+
+automacro check_party_leader {
+    exclusive 1
+    delay 600
+    timeout 600
+    call verify_party_leader
+}
+
+macro verify_party_leader {
+    # Count number of party members
+    $numberOfPlayers = @eval(scalar @partyUsersID)
+
+    # Loop through party members and log their details
+    $i = 0
+    while ($i < $numberOfPlayers) as loop
+        $charname = @eval($::char->{'name'})
+        $charnameParty = @eval($::char->{'party'}{'users'}{@partyUsersID[$i]}{'name'})
+        $isAdmin = @eval($::char->{'party'}{'users'}{@partyUsersID[$i]}{'admin'})
+
+        if ($isAdmin == 1) {
+            if ($charname == $charnameParty) {
+                log You are the party leader. Triggering 'exp output' command.
+                call save_expoutput
+            } else {
+                log You are not the party leader, $charnameParty is.
+            }
+        }
+        $i++
+    end loop
+}
+
+macro save_expoutput {
+    do exp output
+}

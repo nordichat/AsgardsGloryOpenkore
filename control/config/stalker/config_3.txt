@@ -1,0 +1,5 @@
+!include shared/username_3.txt
+!include shared/password.txt
+
+!include shared/config.txt
+!include shared/skills1-99.txt

@@ -7,24 +7,20 @@
 master 12
 gamelogin 12
 charlogin 12
-maplogin 12
-play 40
+maplogin 30
+play 30
 # When disconnected, wait x seconds before reconnecting again
-reconnect 30
-
-# After repeated disconnects, wait longer before reconnecting, to reduce load on the server.
-# The first value in this list overrides the "reconnect" timeout above.
-reconnect_backoff 30,60,120,180,300,600,600,900,900,1800
+reconnect 10
 
 # Add a random amount of seconds to reconnect time, up to a maximum of reconnect_random seconds.
-reconnect_random 20
+reconnect_random 10
 
 # Wait x seconds for a poseidon reply before disconnecting
 # Ignore this if you don't use Poseidon Server
 poseidon_wait_reply 15
 
 # Activate AI after x seconds after the map's loaded
-ai 2
+ai 1
 
 ai_move_retry 0.25
 ai_move_giveup 1
@@ -125,7 +121,7 @@ ai_homunFeed 60
 # Send the sit/stand packet at most every x second
 ai_sit 1
 # Sit after having idled for x seconds
-ai_sit_idle 10
+ai_sit_idle 5
 # Stand after x seconds, after having typed the 'stand' command
 ai_stand_wait 0
 # Sit after x seconds, after having typed the "sit" command

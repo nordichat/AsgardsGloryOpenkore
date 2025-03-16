@@ -1,0 +1,151 @@
+# This automacro enables auto storage when the character has NV_BASIC skill level 6.
+automacro NoviceEnableStorageAuto {
+    SkillLevel NV_BASIC = 6
+    run-once 1
+    exclusive 1
+    call {
+        # Step 1: Enable auto storage.
+        do conf storageAuto 1
+        # Step 2: Set the storage NPC location.
+        do conf storageAuto_npc prontera 164 175
+    }
+}
+
+# This automacro checks if the character has the 'First Aid' skill. If not, it acquires the skill.
+automacro NoviceCheckPlatinumSkill {
+    SkillLevel NV_FIRSTAID = 0
+    run-once 1
+    exclusive 1
+    call {
+        # Step 1: Switch to manual AI mode.
+        do ai manual
+        # Step 2: Log the missing skill and the action to acquire it.
+        log Missing Platinum Skills. Acquiring skill.
+        # Step 3: Talk to the NPC to acquire the skill.
+        do talknpc 162 193 c r0 n
+        # Step 4: Switch back to auto AI mode.
+        do ai auto
+    }
+}
+
+# This automacro configures the character for leveling when it has the 'First Aid' skill and is below job level 10.
+automacro NoviceStartLeveling {
+    JobLevel < 10
+    JobID 0
+    SkillLevel NV_FIRSTAID = 1
+    timeout 1200
+    call {
+        # Step 1: Log the acquisition of 'First Aid' and the start of leveling configuration.
+        log Acquired 'First Aid'. Configuring for leveling.
+
+        # Step 2: Configure auto-sit HP thresholds.
+        do conf sitAuto_hp_lower 40
+        do conf sitAuto_hp_upper 90
+
+        # Step 3: Lock the map for leveling.
+        do conf lockMap prt_fild06
+        # Step 4: Switch to manual AI mode.
+        do ai manual
+        # Step 5: Enable auto stat allocation.
+        do conf statsAddAuto 1
+        # Step 6: Set the stat allocation list.
+        do conf statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 agi, 20 dex, 40 agi, 30 str, 30 dex, 50 agi, 40 str, 60 agi, 50 str, 70 agi, 40 dex, 80 agi, 60 str, 50 dex, 100 agi
+        # Step 7: Enable auto skill allocation.
+        do conf skillsAddAuto 1
+        # Step 8: Set the skill allocation list.
+        do conf skillsAddAuto_list NV_BASIC 9
+        # Step 10: Switch back to auto AI mode.
+        do ai auto
+    }
+}
+
+#swordman 0
+#magician 1
+#⁠archer 2
+#⁠acolyte 3
+#⁠merchant 4
+#⁠thief 5
+#supernovice 6
+#taekwon 7
+#⁠gunslinger 8
+#⁠ninja 9
+#baby novice 10
+
+automacro Novice-JobChangeTrigger {
+    JobLevel = 10
+    JobID 0
+    timeout 1200
+    call {
+        do conf lockMap none
+        do ai manual
+        do c \@go prontera
+        do move prontera 161 192
+        call Novice-JobChange
+        do ai auto
+        do conf lockMap prt_fild06
+     }
+}
+
+macro Novice-JobChange {
+    #$charName = @eval ($::char->{'name'})
+    ##my @strings = ("Stalker7", "LordKnight4", "Champion2");
+    #$string = Stalker5
+    #$string =~ s/\d+$//
+
+    $choice = r5
+    #log $string
+    do talknpc 153 193 $choice c r0 c
+}
+
+automacro ThiefStartLeveling-lvl20 {
+    BaseLevel < 20
+    JobID 6
+    SkillLevel TF_BACKSLIDING = 1
+    timeout 1200
+    call {
+        do conf lockMap prt_fild06
+        do ai manual
+        do conf skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10
+        do ai auto
+    }
+}
+
+#Should be a automacro
+macro IdentifyWhenHome {
+       $id = @inventory(Magnifier)
+       do is $id
+       pause 1
+       do identify 0
+}
+
+automacro ThiefStartLeveling-lvl20_30 {
+    #Equiped
+    IsNotEquippedID armor 2304
+    inInventory Empty Bottle > 0
+    BaseLevel >= 20
+    BaseLevel < 30
+    JobID 6
+    timeout 1200
+    call 
+        do c \@go prontera
+        #do conf !include shared/skills20-99.txt
+
+        $jacket1 = @inventory(Jacket [1])
+        
+        $itemIdentifed = @eval ($::jacket1->{identified})
+        log Was jacket found? $jacket1 and itemIdentifed 
+
+        do conf label_buyAuto_Magnifier.disabled 0
+        #!$item->{identified}
+        # Things to do....
+        # Buy a better dagger.
+        # Upgrade Dagger.                                (Added so it keeps 7 Phracon in inventory.)
+        # Identify and Equip Jacket [1]         (Added so it keeps 1 in inventory.) Add Autobuy Magnifier and always keep 5....
+        # Add Stockup Automacro for Conc potion.
+        #do conf lockMap none
+        do ai manual
+        log Level 20 - 30 but has yet not equipped Jacket [1].
+        #do conf lockMap none
+        do ai auto
+    
+}

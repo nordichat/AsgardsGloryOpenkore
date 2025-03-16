@@ -3,12 +3,10 @@
 
 ######## Login options and server-specific options ########
 
-master
-server
-username
-password
+master Asgards Glory
+server 0
 loginPinCode
-char
+char 0
 
 # Poseidon Settings: https://openkore.com/wiki/Poseidon
 # They must be the same as Query Server config in Poseidon.txt
@@ -17,31 +15,6 @@ poseidonPort 24390
 
 bindIp
 forceMapIP
-
-# 1 = hook into RO client, 2 = Act as stand-alone proxy, proxy = act as true proxy
-# https://openkore.com/wiki/XKore
-XKore 0
-XKore_port 2350
-XKore_dll NetRedirect.dll
-XKore_injectDLL 1
-XKore_autoAttachIfOneExe 1
-XKore_silent 1
-XKore_bypassBotDetection 0
-XKore_exeName ragexe.exe
-
-# XKore 2 / Proxy configuration
-XKore_listenIp 127.0.0.1
-XKore_listenPort 6901
-XKore_publicIp 127.0.0.1
-XKore_ID
-
-# It is not advised to set secureAdminPassword if you're using Xkore 2
-secureAdminPassword 1
-adminPassword
-callSign
-commandPrefix ;
-callSignGM 0
-inGameAuth 0
 
 macAddress
 
@@ -91,10 +64,6 @@ aggressiveAntiKS 0
 
 attackUpdateMonsterPos 1
 
-autoMoveOnDeath 0
-autoMoveOnDeath_x
-autoMoveOnDeath_y
-autoMoveOnDeath_map
 
 attackEquip_topHead
 attackEquip_midHead
@@ -128,7 +97,7 @@ autoRestart 0
 autoRestartMin 10800
 autoRestartSeed 3600
 
-autoRestartSleep 1
+autoRestartSleep 0
 autoSleepMin 900
 autoSleepSeed 900
 
@@ -194,23 +163,15 @@ itemsGatherAutoMinPlayerDistance 6
 itemsGatherAutoMinPortalDistance 5
 itemsMaxWeight 89
 itemsMaxWeight_sellOrStore 48
-itemsMaxNum_sellOrStore 99
+itemsMaxNum_sellOrStore
 cartMaxWeight 7900
 itemsTakeGreed 0
 itemsCheckWeight 1
-
-lockMap
-lockMap_x
-lockMap_y
-lockMap_randX
-lockMap_randY
 
 route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
 route_avoidWalls 1
-route_randomWalk 1
-route_randomWalk_inTown 0
 route_randomWalk_maxRouteTime 75
 route_maxWarpFee
 route_maxNpcTries 5
@@ -230,13 +191,6 @@ runFromTarget_dist 5
 runFromTarget_minStep 7
 runFromTarget_maxPathDistance 13
 
-saveMap
-saveMap_warpToBuyOrSell 1
-saveMap_warpChatCommand
-memo1
-memo2
-memo3
-memo4
 
 shopAuto_open 0
 shop_random 0
@@ -245,8 +199,8 @@ shop_useSkill 1
 buyerShopAuto_open 0
 buyerShop_random 0
 
-sitAuto_hp_lower 40
-sitAuto_hp_upper 100
+sitAuto_hp_lower 60
+sitAuto_hp_upper 90
 sitAuto_sp_lower 0
 sitAuto_sp_upper 0
 sitAuto_follow 0
@@ -256,13 +210,13 @@ sitAuto_look
 sitAuto_look_from_wall
 sitTensionRelax 0
 
-statsAddAuto 0
-statsAddAuto_list
+statsAddAuto 1
+statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 agi, 20 dex, 40 agi, 30 str, 30 dex, 50 agi, 40 str, 60 agi, 50 str, 70 agi, 40 dex, 80 agi, 60 str, 50 dex, 100 agi
 statsAddAuto_dontUseBonus 0
 statsAdd_over_99 1
 
-skillsAddAuto 0
-skillsAddAuto_list
+skillsAddAuto 1
+skillsAddAuto_list NV_BASIC 9
 
 tankMode 0
 tankModeTarget
@@ -300,18 +254,18 @@ teleportAuto_item2
 
 dealAuto 1
 dealAuto_names
-partyAuto 1
+partyAuto 2
 partyAutoShare 0
 partyAutoShareItem 0
 partyAutoShareItemDiv 0
 guildAutoDeny 1
 attendanceAuto 1
 
-verbose 1
+verbose 0
 showDomain 0
 showDomain_NPC parseMsg_presence
 showDomain_Shop list
-squelchDomains
+squelchDomains ai_attack, ai_npcTalk, attacked, attackedMiss, attackMon, attackMonMiss, connection, console, deal, devotion, drop, emotion, exp, equip, follow, guildchat, guildnotice, input, inventory, load, looter, map_event, npc, parseMsg_statuslook, parseMsg/hairColor, parseMsg/job, parseMsg/upgrade, party, partychat, pet, plugins, pm, pm/sent, portals, portalRecord, publicchat, refine, route, route_teleport, schat, selfSkill, skill, sold, startup, success, syntax, teleport, useItem, useTeleport, waypoint, xkore, ai, ai_autoCart, ai_makeItem, ai_move, autoBreakTime, d_sendPacket, debug, equipAuto, guild, ipc, Item, monsterSkill, packetParser, parseInput, parseMsg, parseMsg_comboDelay, parseMsg_damage, parseMsg_move, parseMsg_presence, parseMsg_presence/name, parseMsg_presence/player, parseMsg_presence/remote, parseSendMsg, sendPacket, sitAuto, vending, busParty, storage
 verboseDomains
 beepDomains
 beepDomains_notInTown
@@ -331,20 +285,20 @@ showAllDamage 0
 manualURL https://openkore.com/wiki/Manual
 forumURL https://forums.openkore.com
 
-logChat 1
-logPrivateChat 1
-logPartyChat 1
-logGuildChat 1
-logSystemChat 1
-logLocalBroadcast 1
-logShop 1
+logChat 0
+logPrivateChat 0
+logPartyChat 0
+logGuildChat 0
+logSystemChat 0
+logLocalBroadcast 0
+logShop 0
 logEmoticons
-logConsole 1
-logAppendUsername 1
+logConsole 0
+logAppendUsername 0
 logAppendServer 0
 monsterLog 0
 playerLog 0
-logDead 1
+logDead 0
 
 questDisplayStyle 2
 
@@ -899,15 +853,11 @@ buyAuto {
 	minBase
 }
 
-sellAuto 0
-sellAuto_npc
 sellAuto_standpoint
 sellAuto_distance 3
 sellAuto_maxDistance
 sellAuto_npc_steps s
 
-storageAuto 0
-storageAuto_npc
 storageAuto_standpoint
 storageAuto_distance 3
 storageAuto_maxDistance
@@ -950,3 +900,40 @@ logToFile_Errors
 logToFile_Messages
 logToFile_Warnings
 history_max 50
+macro_orphans terminate
+
+##### CUSTOM #####
+wx_map_route 0
+skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10
+route_randomWalk 2
+
+storageAuto 1
+storageAuto_npc payon 181 104
+#storageAuto_npc prontera 164 175
+
+sellAuto 1
+sellAuto_npc payon 183 102
+#sellAuto_npc prontera 147 175
+
+autoMoveOnDeath 1
+autoMoveOnDeath_x
+autoMoveOnDeath_y
+autoMoveOnDeath_map pay_fild02
+
+saveMap payon
+saveMap_warpToBuyOrSell 1
+saveMap_warpChatCommand @go payon
+memo1
+memo2
+memo3
+memo4
+
+lockMap pay_fild02
+lockMap_x
+lockMap_y
+lockMap_randX
+lockMap_randY
+
+##### EXTRA #####
+wx_map_route 0
+#route_randomWalk_inTown 1 

@@ -1,0 +1,6 @@
+!include shared/username_1.txt
+!include shared/password.txt
+
+!include shared/config.txt
+!include shared/skills1-99.txt
+!include shared/xkore.txt
