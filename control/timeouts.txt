@@ -4,11 +4,11 @@
 # The value of each variable is reffered as "x".
 
 # Server connection timeouts
-master 10
-gamelogin 10
-charlogin 10
-maplogin 10
-play 10
+master 12
+gamelogin 12
+charlogin 12
+maplogin 30
+play 30
 # When disconnected, wait x seconds before reconnecting again
 reconnect 10
 

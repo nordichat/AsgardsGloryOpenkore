@@ -61,22 +61,188 @@ Singing Plant 0 0 1
 Romantic Flower 0 0 1
 Animal Skin 0 0 1
 Asura [3] 0 0 1
-
-##### CUSTOM: FOOD #####
-Orange 50 0 1
-Milk 150 0 1
-Meat 50 1 0
+Snake Scale 0 0 1
+Wolf Claw 0 0 1
+Garlet 0 0 1
+Emveretarcon 0 0 1
+Red Herb 0 0 1
+Spore Doll
+Green Herb 5 0 1            # Keep 5pcs in inventory for use whenStatusActive Poisoned
+Apple 0 0 1
+Main Gauche [3]
+Bitter Herb 0 0 1
+Flower 0 0 1
+Pointed Scale 0 0 1
+Romantic Leaf 0 0 1
+Dew Laden Moss 0 0 1
+Feather 0 0 1
+Alcohol 0 0 1
+Orange 10 0 1                # FOOD: Keep 10pcs in inventory.
+Milk 10 0 1                  # FOOD: Keep 10pcs in inventory.
+Yellow Herb 10 0 1           # FOOD: Keep 10pcs in inventory.
+Carrot 10 0 1                # FOOD: Keep 10pcs in inventory.
+Apple 10 0 1                 # FOOD: Keep 10pcs in inventory.
+Red Herb 10 0 1              # FOOD: Keep 10pcs in inventory.
+Meat 10 0 1                  # FOOD: Keep 10pcs in inventory.
+Monster's Feed 10 0 1        # FOOD: Keep 10pcs in inventory.
+Aloe Leaflet 10 0 1          # FOOD: Keep 10pcs in inventory.
 
 ##### CUSTOM: KEEP #####
-Clover 1 0 1   # Mr. Smile
-Jellopy 10 0 1 # Mr. Smile
-Fluff 10 0 1   # Mr. Smile
+Clover 1 0 1            # Mr. Smile
+Jellopy 10 0 1          # Mr. Smile
+Fluff 10 0 1            # Mr. Smile
+Berserk Potion 0 1 0    # Poison Bottle
+Empty Bottle 0 1 0      # Poison Bottle
+Venom Canine 0 1 0      # Poison Bottle
+Bee Sting 0 1 0         # Poison Bottle
+Cactus Needle 0 1 0     # Poison Bottle
+Karvodailnirol 0 1 0    # Poison Bottle
+Poison Spore 0 1 0      # Poison Bottle
+Scorpion Tail 0 1 0     #Elemental Converter
+Snail's Shell 0 1 0     #Elemental Converter
+Horn 0 1 0              #Elemental Converter
+Rainbow Shell 0 1 0     #Elemental Converter
+Empty Bottle 0 1 0      #General Creation
+Red Gemstone 0 1 0      
+Blue Gemstone 0 1 0
+Yellow Gemstone 0 1 0
+Flame Heart 0 1 0       #Forging
+Red Blood 0 1 0         #Forging
+Mystic Frozen 0 1 0     #Forging
+Crystal Blue 0 1 0      #Forging
+Rough Wind 0 1 0        #Forging
+Wind of Verdure 0 1 0   #Forging
+Great Nature 0 1 0      #Forging
+Green Live 0 1 0        #Forging
+Star Crumb 0 1 0        #Forging
+Star Dust 0 1 0         #Forging
+Rough Elunium 0 1 0
+Rough Oridecon 0 1 0
+Elunium 0 1 0
+Oridecon 0 1 0
+Steel 0 1 0
+Aquamarine 0 1 0
+Ruby 0 1 0
+Evil Horn 0 1 0
+Opal 0 1 0
+Heroic Emblem 0 1 0
+1carat Diamond 0 1 0
+2carat Diamond 0 1 0
+3carat Diamond 0 1 0
+Amethyst 0 1 0
+Cracked Diamond 0 1 0
+Zircon 0 1 0
+Sapphire 0 1 0
+Garnet 0 1 0
+Opal 0 1 0
+Topaz 0 1 0
+White Herb 0 1 0
+Witched Starsand 0 1 0
+Anodyne 0 1 0
+Aloevera 0 1 0
+Ment 0 1 0
+Alcohol 0 1 0
+Honey 0 1 0
+Aloe 0 1 0
+Stem 0 1 0
+Poison Spore 0 1 0
+Alcohol 0 1 0
+Fabric 0 1 0
+Immortal Heart 0 1 0
+Heart of Mermaid 0 1 0
+Zenorc's Fang 0 1 0
+Frill 0 1 0
+Large Jellopy 0 1 0
+Moth Dust 0 1 0
+Tiger's Footskin 0 1 0          #Einherjar
+Queen's Hair Ornament 0 1 0     #Einherjar
+Golden Bell 0 1 0               #Einherjar
+Huuma Blaze Shuriken 0 1 0      #Einherjar
+Bunny Band 0 1 0                #Bunny Top Hat
+Magician Hat 0 1 0              #Bunny Top Hat
+Four Leaf Clover 0 1 0          #Bunny Top Hat
+Owl Duke Card 0 1 0             #Bunny Top Hat
+Piece of Shield 0 1 0           #Lord Of Death Helm
+Wool Scarf [1] 0 1 0            #Lord Of Death Helm
+Broken Farming Utensil 0 1 0    #Lord Of Death Helm
+Bloody Murderer Card 0 1 0      #Lord Of Death Helm
+Zombie Slaughter Card 0 1 0     #Lord Of Death Helm
+Black Cat Doll 0 1 0            #Magic Eyes
+Gibbet Card 0 1 0               #Magic Eyes
+Hylozoist Card 0 1 0            #Magic Eyes
+Poisonous Powder 0 1 0          #Magic Eyes
+Disguise Card 0 1 0             #Magic Eyes
+Loli Ruri Card 0 1 0            #Magic Eyes
+Dullahan Card 0 1 0             #Magic Eyes
+Yggdrasil Leaf 0 1 0            #Alice Doll
+Manteau [1] 0 1 0               #Alice Doll
+Bookclip in Memory 0 1 0        #Alice Doll
+Soft Feather 0 1 0              #Alice Doll
+Blade Lost in Darkness 0 1 0    #Alice Doll
+Executioner's Mitten 0 1 0      #Alice Doll
+Marionette Doll [1] 0 1 0       #Alice Doll
+Gold 0 1 0                      #Pecopeco Headband
+Peco Peco Feather 0 1 0         #Pecopeco Headband
+Grand Peco Card 0 1 0           #Pecopeco Headband
+Peco Peco Card 0 1 0            #Pecopeco Headband
+Peco Peco Egg Card 0 1 0        #Pecopeco Headband
+Dead Branch 0 1 0               #Sales Banner
+Trunk 0 1 0                     #Sales Banner
+Elder Willow Card 0 1 0         #Sales Banner
+Nurse Cap 0 1 0                 #Sales Banner
+Shining Scale 0 1 0             #White Snake Hat
+Snake Card 0 1 0                #White Snake Hat
+Sidewinder Card 0 1 0           #White Snake Hat
+2carat Diamond 0 1 0            #White Snake Hat
+3carat Diamond 0 1 0            #White Snake Hat
+Necklace 0 1 0                  #White Snake Hat
+Isis Card 0 1 0                 #White Snake Hat
+Binoculars 0 1 0                #Hawk Eyes
+Bloody Page 0 1 0               #Hawk Eyes
+Ancient Mimic Card 0 1 0        #Hawk Eyes
+Death Word Card 0 1 0           #Hawk Eyes
+Icarus Wings 0 1 0              #Blessed Spirit
+Pocket Watch 0 1 0              #Blessed Spirit
+Creamy Fear Card 0 1 0          #Blessed Spirit
+Leib Olmai Card 0 1 0           #Blessed Spirit
+Gullinbursti Card 0 1 0         #Blessed Spirit
+Broken Shell 0 1 0              #Robo Eyes
+Royal Jelly 0 1 0               #Robo Eyes
+Freezer Card 0 1 0              #Robo Eyes
+Solider Card 0 1 0              #Robo Eyes
+Permeter Card 0 1 0             #Robo Eyes
+Medusa Card 0 1 0               #Buzzy BOL Gum
+Pest Card 0 1 0                 #Buzzy BOL Gum
+Fish Tail 0 1 0                 #Fish in Mouth
+Ancient Lips 0 1 0              #Fish in Mouth
+Mystic Frozen 0 1 0             #Fish in Mouth
+Phen Card 0 1 0                 #Fish in Mouth
+Swordfish Card 0 1 0            #Fish in Mouth
+Merman Card 0 1 0               #Fish in Mouth
+Zargon 0 1 0                    #Rainbow Scarf
+Old Blue Box 0 1 0              #Rainbow Scarf
+Gift Box 0 1 0                  #Rainbow Scarf
+Hood [1] 0 1 0                  #Rainbow Scarf
+Cruiser Card 0 1 0              #Rainbow Scarf
+Myst Case Card 0 1 0            #Rainbow Scarf
+2carat Diamond 0 1 0            #Rainbow Scarf
+Safety Helm 0 1 0               #Gangster Scarf
+Gas Mask 0 1 0                  #Gangster Scarf
+Earth Petite Card 0 1 0         #Gangster Scarf
+Myst Card 0 1 0                 #Gangster Scarf
+Wig 0 1 0                       #Gangster Scarf
+Well-Dried Bone 0 1 0           #Pirate Dagger
+Skel-Bone 0 1 0                 #Pirate Dagger
+Pirate Bandana 0 1 0            #Pirate Dagger
+Pirate Skeleton Card 0 1 0      #Pirate Dagger
+Penomena Card 0 1 0             #Pirate Dagger
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
 
-602 5 1 0 # Butterfly Wing
-601 100 1 0 # Fly Wing
+656 5 1 0 # Awakening Potion
+# 602 5 1 0 # Butterfly Wing
+601 10 1 0 # Fly Wing
 
 505 0 1 0 # Blue Potion
 545 50 1 0 # Condensed Red Potion
@@ -92,8 +258,6 @@ Fluff 10 0 1   # Mr. Smile
 # You may want to modify these if you're an archer/hunter
 
 Arrow 3000 1 0
-
-
 
 #########################
 ##### SELLING ITEMS #####
@@ -252,7 +416,6 @@ Javelin 0 0 1 # 1403
 "Jur [2]" 0 0 1 # 1250
 Katana 0 0 1 # 1118
 "Katana [3]" 0 0 1 # 1116
-"Katana [4]" 0 0 1 # 1117
 "Katar [1]" 0 0 1 # 1252
 Knife 0 0 1 # 1203
 "Knife [3]" 0 0 1 # 1201
@@ -267,7 +430,6 @@ Mace 0 0 1 # 1506
 "Mace [3]" 0 0 1 # 1504
 #"Mace [4]" 0 0 1
 Main Gauche 0 0 1 # 1209
-"Main Gauche [3]" 0 0 1 # 1207
 "Mandolin [2]" 0 0 1 # 1903
 "Mandolin [3]" 0 0 1 # 1904
 "Morning Star [1]" 0 0 1 # 1513

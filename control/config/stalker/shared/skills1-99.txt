@@ -1,11 +1,36 @@
 #Item			Avg Healing	Weight	Healing per Weight
+#Aloe Leaflet   365         2       182.50
 #Orange			30			2		15.00
 #Milk			32			3		10.67
 #Yellow Herb	48			5		9.60
 #Carrot			19			2		9.50
 #Apple			19			2		9.50
 #Red Herb		23			3		7.67
+#Monster's Feed 90          15      6.00
 #Meat			85			15		5.67
-useSelf_item Orange, Milk, Yellow Herb, Carrot, Apple, Red Herb, Meat {  
+useSelf_item Orange, Milk, Yellow Herb, Carrot, Apple, Red Herb, Meat, Monster's Feed, Aloe Leaflet {  
     hp < 80%  
+}
+
+useSelf_item Green Herb {
+    whenStatusActive Poisoned
+    inLockOnly 1
+    timeout 5
+}
+
+useSelf_item Awakening Potion {
+    whenStatusInactive Concentration Potion
+    inLockOnly 1
+    notWhileSitting 1
+    notInTown 1
+    inInventory Awakening Potion > 0
+}
+
+buyAuto Awakening Potion {
+	npc payon 183 102
+	distance 8
+	price 1500
+	minAmount
+	maxAmount 5
+	disabled 0
 }
