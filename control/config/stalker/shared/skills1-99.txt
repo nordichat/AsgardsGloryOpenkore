@@ -26,7 +26,7 @@ useSelf_skill Detoxify {
 }
 
 useSelf_item Awakening Potion {
-    whenStatusInactive Concentration Potion
+    whenStatusInactive EFST_ATTHASTE_POTION2
     inLockOnly 1
     notWhileSitting 1
     notInTown 1
@@ -35,7 +35,7 @@ useSelf_item Awakening Potion {
 }
 
 buyAuto Awakening Potion {
-	npc morocc 149 102
+	npc geffen 124 70
 	distance 8
 	price 1500
 	minAmount 0
@@ -44,7 +44,7 @@ buyAuto Awakening Potion {
 }
 
 buyAuto Fly Wing {
-	npc morocc 149 102
+	npc geffen 124 70
 	distance 8
 	price 60
 	minAmount
