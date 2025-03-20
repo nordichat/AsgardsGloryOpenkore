@@ -286,7 +286,6 @@ Circlet 0 0 1 # 2233
 Coat 0 0 1 # 2309
 Cotton Shirt 0 0 1 # 2302
 "Cotton Shirt [1]" 0 0 1
-#Crystal Pumps 0 0 1
 Diamond Ring 0 0 1 # 2613
 Diver Goggles 0 0 1 # 2205
 Eye Patch 0 0 1 # 2212
