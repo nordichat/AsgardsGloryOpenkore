@@ -81,7 +81,7 @@ Carrot 10 0 1                # FOOD: Keep 10pcs in inventory.
 Apple 10 0 1                 # FOOD: Keep 10pcs in inventory.
 Red Herb 10 0 1              # FOOD: Keep 10pcs in inventory.
 Meat 10 0 1                  # FOOD: Keep 10pcs in inventory.
-Monster's Feed 10 0 1        # FOOD: Keep 10pcs in inventory.
+Monster's Feed 50 0 1        # FOOD: Keep 50pcs in inventory.
 Aloe Leaflet 10 0 1          # FOOD: Keep 10pcs in inventory.
 ##### Sphinx F2 (in_sphinx2) #####
 Tooth of Bat 0 0 1
