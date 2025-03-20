@@ -213,7 +213,7 @@ sitTensionRelax 0
 statsAddAuto 1
 statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 agi, 20 dex, 40 agi, 30 str, 30 dex, 50 agi, 40 str, 60 agi, 50 str, 70 agi, 40 dex, 80 agi, 60 str, 50 dex, 70 str, 100 agi, 80 str,
 statsAddAuto_dontUseBonus 0
-statsAdd_over_99 0
+statsAdd_over_99 1
 
 skillsAddAuto 1
 
