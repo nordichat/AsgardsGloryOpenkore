@@ -23,6 +23,7 @@ useSelf_skill Detoxify {
 	whenStatusActive Poisoned
 	disabled 0
 	timeout 5
+	inInventory Green Herb <= 0
 }
 
 useSelf_item Awakening Potion {
@@ -49,5 +50,46 @@ buyAuto Fly Wing {
 	price 60
 	minAmount
 	maxAmount 20
+	disabled 0
+}
+
+attackSkillSlot TF_POISON {
+    lvl 10
+    sp >= 12
+	target_whenStatusInactive Poisoned
+    monsters STEEL_CHONCHON
+	maxUses 1
+}
+
+attackSkillSlot TF_POISON {
+    lvl 10
+    sp >= 12
+	target_whenStatusInactive Poisoned
+    monsters KOBOLD_1
+	maxUses 10
+}
+
+attackSkillSlot TF_POISON {
+    lvl 10
+    sp >= 12
+	target_whenStatusInactive Poisoned
+    monsters KOBOLD_3
+	maxUses 5
+}
+
+attackSkillSlot TF_POISON {
+    lvl 10
+    sp >= 12
+	target_whenStatusInactive Poisoned
+    monsters GOLEM
+	maxUses 16
+}
+
+getAuto Monster's Feed {
+	minAmount 0
+	maxAmount 50
+	batchSize
+	passive 1
+	dcOnEmpty 0
 	disabled 0
 }
