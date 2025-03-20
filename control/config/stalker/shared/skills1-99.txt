@@ -8,8 +8,8 @@
 #Red Herb		23			3		7.67
 #Monster's Feed 90          15      6.00
 #Meat			85			15		5.67
-useSelf_item Orange, Milk, Yellow Herb, Carrot, Apple, Red Herb, Meat, Monster's Feed, Aloe Leaflet {  
-    hp < 80%  
+useSelf_item Orange, Milk, Yellow Herb, Carrot, Apple, Red Herb, Pet Food, Meat, Monster's Feed, Aloe Leaflet {  
+    hp < 80%
 }
 
 useSelf_item Green Herb {
@@ -18,19 +18,36 @@ useSelf_item Green Herb {
     timeout 5
 }
 
+useSelf_skill Detoxify {
+	lvl 1
+	whenStatusActive Poisoned
+	disabled 0
+	timeout 5
+}
+
 useSelf_item Awakening Potion {
     whenStatusInactive Concentration Potion
     inLockOnly 1
     notWhileSitting 1
     notInTown 1
     inInventory Awakening Potion > 0
+	timeout 5
 }
 
 buyAuto Awakening Potion {
-	npc payon 183 102
+	npc morocc 149 102
 	distance 8
 	price 1500
-	minAmount
+	minAmount 0
 	maxAmount 5
+	disabled 0
+}
+
+buyAuto Fly Wing {
+	npc morocc 149 102
+	distance 8
+	price 60
+	minAmount
+	maxAmount 20
 	disabled 0
 }

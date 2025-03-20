@@ -105,7 +105,7 @@ automacro ThiefStartLeveling-lvl20 {
     call {
         do conf lockMap prt_fild06
         do ai manual
-        do conf skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10
+        do conf skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10, AC_VULTURE 10, RG_SNATCHER 9, RG_STEALCOIN 4, RG_BACKSTAP 4, RG_TUNNELDRIVE 2, RG_RAID 5, RG_INTIMIDATE 5, RG_PLAGIARISM 10
         do ai auto
     }
 }

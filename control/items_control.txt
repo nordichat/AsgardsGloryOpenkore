@@ -64,18 +64,15 @@ Asura [3] 0 0 1
 Snake Scale 0 0 1
 Wolf Claw 0 0 1
 Garlet 0 0 1
-Emveretarcon 0 0 1
 Red Herb 0 0 1
-Spore Doll
+Spore Doll 0 0 1
 Green Herb 5 0 1            # Keep 5pcs in inventory for use whenStatusActive Poisoned
 Apple 0 0 1
 Main Gauche [3]
 Bitter Herb 0 0 1
-Flower 0 0 1
 Pointed Scale 0 0 1
 Romantic Leaf 0 0 1
 Dew Laden Moss 0 0 1
-Feather 0 0 1
 Alcohol 0 0 1
 Orange 10 0 1                # FOOD: Keep 10pcs in inventory.
 Milk 10 0 1                  # FOOD: Keep 10pcs in inventory.
@@ -86,9 +83,24 @@ Red Herb 10 0 1              # FOOD: Keep 10pcs in inventory.
 Meat 10 0 1                  # FOOD: Keep 10pcs in inventory.
 Monster's Feed 10 0 1        # FOOD: Keep 10pcs in inventory.
 Aloe Leaflet 10 0 1          # FOOD: Keep 10pcs in inventory.
+# Sphinx F2 (in_sphinx2)
+Tooth of Bat 0 0 1
+Emveretarcon 0 0 1
+Wing of Red Bat 0 0 1
+Pet Food 0 0 1
+Memento 0 0 1
+Horrendous Mouth 0 0 1
+Level 6 Cookbook 0 0 1
+Sardonyx 0 0 1
+Matyr's Leash 2 1 1          # Keep 2pcs in inventory to equip
+Gangster Mask 0 0 1
+Shackles 0 0 1
 
 ##### CUSTOM: KEEP #####
-Clover 1 0 1            # Mr. Smile
+Pantie 0 1 0
+Grape 0 1 0
+Emperium 0 1 0          # Guild Creation
+Clover 10 0 1           # Mr. Smile
 Jellopy 10 0 1          # Mr. Smile
 Fluff 10 0 1            # Mr. Smile
 Berserk Potion 0 1 0    # Poison Bottle
@@ -106,6 +118,7 @@ Empty Bottle 0 1 0      #General Creation
 Red Gemstone 0 1 0      
 Blue Gemstone 0 1 0
 Yellow Gemstone 0 1 0
+Iron 0 1 0              #Forging
 Flame Heart 0 1 0       #Forging
 Red Blood 0 1 0         #Forging
 Mystic Frozen 0 1 0     #Forging
@@ -134,7 +147,6 @@ Cracked Diamond 0 1 0
 Zircon 0 1 0
 Sapphire 0 1 0
 Garnet 0 1 0
-Opal 0 1 0
 Topaz 0 1 0
 White Herb 0 1 0
 Witched Starsand 0 1 0
@@ -145,9 +157,6 @@ Alcohol 0 1 0
 Honey 0 1 0
 Aloe 0 1 0
 Stem 0 1 0
-Poison Spore 0 1 0
-Alcohol 0 1 0
-Fabric 0 1 0
 Immortal Heart 0 1 0
 Heart of Mermaid 0 1 0
 Zenorc's Fang 0 1 0
@@ -193,8 +202,6 @@ Nurse Cap 0 1 0                 #Sales Banner
 Shining Scale 0 1 0             #White Snake Hat
 Snake Card 0 1 0                #White Snake Hat
 Sidewinder Card 0 1 0           #White Snake Hat
-2carat Diamond 0 1 0            #White Snake Hat
-3carat Diamond 0 1 0            #White Snake Hat
 Necklace 0 1 0                  #White Snake Hat
 Isis Card 0 1 0                 #White Snake Hat
 Binoculars 0 1 0                #Hawk Eyes
@@ -215,7 +222,6 @@ Medusa Card 0 1 0               #Buzzy BOL Gum
 Pest Card 0 1 0                 #Buzzy BOL Gum
 Fish Tail 0 1 0                 #Fish in Mouth
 Ancient Lips 0 1 0              #Fish in Mouth
-Mystic Frozen 0 1 0             #Fish in Mouth
 Phen Card 0 1 0                 #Fish in Mouth
 Swordfish Card 0 1 0            #Fish in Mouth
 Merman Card 0 1 0               #Fish in Mouth
@@ -225,7 +231,6 @@ Gift Box 0 1 0                  #Rainbow Scarf
 Hood [1] 0 1 0                  #Rainbow Scarf
 Cruiser Card 0 1 0              #Rainbow Scarf
 Myst Case Card 0 1 0            #Rainbow Scarf
-2carat Diamond 0 1 0            #Rainbow Scarf
 Safety Helm 0 1 0               #Gangster Scarf
 Gas Mask 0 1 0                  #Gangster Scarf
 Earth Petite Card 0 1 0         #Gangster Scarf
@@ -237,12 +242,15 @@ Pirate Bandana 0 1 0            #Pirate Dagger
 Pirate Skeleton Card 0 1 0      #Pirate Dagger
 Penomena Card 0 1 0             #Pirate Dagger
 
+
+Mr. Smile 0 1 0 # 2278
+
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
 
 656 5 1 0 # Awakening Potion
 # 602 5 1 0 # Butterfly Wing
-601 10 1 0 # Fly Wing
+601 20 1 0 # Fly Wing
 
 505 0 1 0 # Blue Potion
 545 50 1 0 # Condensed Red Potion
@@ -257,7 +265,7 @@ Penomena Card 0 1 0             #Pirate Dagger
 ##### ARROWS #####
 # You may want to modify these if you're an archer/hunter
 
-Arrow 3000 1 0
+#Arrow 3000 1 0
 
 #########################
 ##### SELLING ITEMS #####
@@ -276,7 +284,6 @@ Cap 0 0 1 # 2227
 Chain Mail 0 0 1 # 2314
 Circlet 0 0 1 # 2233
 Coat 0 0 1 # 2309
-"Coat [1]" 0 0 1 # 2310
 Cotton Shirt 0 0 1 # 2302
 "Cotton Shirt [1]" 0 0 1
 #Crystal Pumps 0 0 1
@@ -302,10 +309,8 @@ Manteau 0 0 1 # 2505
 Mantle 0 0 1 # 2307
 "Mantle [1]" 0 0 1 # 2308
 Mirror Shield 0 0 1 # 2107
-Mr. Smile 0 0 1 # 2278
 Muffler 0 0 1 # 2503
 Padded Armor 0 0 1 # 2313
-Pantie 0 0 1 # 2371
 Ribbon 0 0 1 # 2208
 "Ribbon [1]" 0 0 1 # 2209
 Rosary 0 0 1 # 2840
@@ -326,6 +331,7 @@ Tights 0 0 1 # 2330
 Turban 0 0 1 # 2223
 Wooden Mail 0 0 1 # 2328
 "Wooden Mail [1]" 0 0 1 # 2329
+#"Coat [1]" 0 0 1 # 2310
 
 
 ##### WORTHLESS WEAPONS #####
@@ -452,7 +458,6 @@ Rapier 0 0 1 # 1112
 "Ring Pommel Saber [2]" 0 0 1 # 1122
 Rod 0 0 1 # 1603
 "Rod [3]" 0 0 1 # 1601
-"Rod [4]" 0 0 1
 "Rope [3]" 0 0 1 # 1950
 #"Rope [4]" 0 0 1
 "Saber [2]" 0 0 1 # 1126
@@ -494,7 +499,7 @@ Two-handed Sword 0 0 1 # 1159
 "Waghnak [4]" 0 0 1 # 1802
 Wand 0 0 1 # 1606
 "Wand [2]" 0 0 1 # 1604
-"Wand [3]" 0 0 1 # 1605
+"Wand [3]" 0 0 1
 #"War Axe [1]" 0 0 1
 "Whip [1]" 0 0 1 # 1960
 "Whip [2]" 0 0 1 # 1961

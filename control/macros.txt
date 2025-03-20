@@ -1,10 +1,19 @@
 automacro auto_loot_activation {
     run-once 1
+    exclusive 1
     call enable_autoloot
 }
 
 macro enable_autoloot {
     do c @autoloot 100
+}
+
+automacro monsterRefresh {
+  monster /NPC/, /NPC Unknown/
+  call {
+    do c @refresh
+  }
+  timeout 3
 }
 
 automacro check_party_leader {
