@@ -256,7 +256,7 @@ Mushroom Spore 0 1 0
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
 
-656 5 1 0 # Awakening Potion
+656 10 1 0 # Awakening Potion
 # 602 5 1 0 # Butterfly Wing
 601 20 1 0 # Fly Wing
 

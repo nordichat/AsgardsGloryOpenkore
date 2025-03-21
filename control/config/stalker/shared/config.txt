@@ -921,7 +921,7 @@ autoMoveOnDeath_x
 autoMoveOnDeath_y
 autoMoveOnDeath_map gef_fild08
 
-saveMap morocc
+saveMap geffen
 saveMap_warpToBuyOrSell 1
 saveMap_warpChatCommand @go 2
 memo1

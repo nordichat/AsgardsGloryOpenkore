@@ -40,8 +40,9 @@ buyAuto Awakening Potion {
 	distance 8
 	price 1500
 	minAmount 0
-	maxAmount 5
+	maxAmount 10
 	disabled 0
+	whenStatusInactive EFST_ATTHASTE_POTION2
 }
 
 buyAuto Fly Wing {
@@ -55,34 +56,9 @@ buyAuto Fly Wing {
 
 attackSkillSlot TF_POISON {
     lvl 10
-    sp >= 12
-	target_whenStatusInactive Poisoned
-    monsters STEEL_CHONCHON
-	maxUses 1
-}
-
-attackSkillSlot TF_POISON {
-    lvl 10
-    sp >= 12
-	target_whenStatusInactive Poisoned
-    monsters KOBOLD_1
-	maxUses 10
-}
-
-attackSkillSlot TF_POISON {
-    lvl 10
-    sp >= 12
-	target_whenStatusInactive Poisoned
-    monsters KOBOLD_3
-	maxUses 5
-}
-
-attackSkillSlot TF_POISON {
-    lvl 10
-    sp >= 12
-	target_whenStatusInactive Poisoned
-    monsters GOLEM
-	maxUses 16
+    sp > 11
+    target_whenStatusInactive Poisoned
+    monsters Golem, Steel Chonchon, 1135, 1133
 }
 
 getAuto Monster's Feed {
