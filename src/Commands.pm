@@ -2769,6 +2769,7 @@ sub cmdExp {
     #         error TF("Unable to write to %s\n", $Settings::storage_log_file);
     #     }
     # }
+}
 
 
 sub cmdFalcon {
