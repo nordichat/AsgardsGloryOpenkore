@@ -20,21 +20,19 @@ automacro monsterRefresh {
 }
 
 automacro goHeal {
+    set macro_delay 0.2
     hp < 15%
     call {
-        do ai manual
-        do e omg
-        $msgToSend = @random ("MEDIC! I'm dying! Retreating to base!", "Ow ow ow! Time for a tactical retreat!", "I regret all my life choices... running to heal!", "Survival instinct activated! Fleeing to town!", "Nope nope nope! I need a healer!", "BRB, patching myself up before I actually die.")
-        do p $msgToSend
         do p @go geffen
-        pause 2
+        pause 1
+        do e omg
+        pause 1
         do move 120 70
         pause 1
         do talk @npc(/Healer/)
         do e lv2
-        $msgToSend = @random ("I LIVE! Back to the battlefield!", "Patched up and ready to rumble again!", "The gods still have plans for me!", "Fully restored! Now where were we?", "Ah, sweet healing. Now back to work!", "Alright, break's over. Time to hunt again!")
+        $msgToSend = @random("Kafra blessings received! Back to the grind!", "Respawned and ready—time to farm again!", "The Valkyries sent me back! Let’s go!", "Fully healed! Kobolds won’t hunt themselves!", "Back from the brink! Time to rack up XP!", "No time for rest—Gladius and Bucklers await!")  
         do p $msgToSend
-        do ai auto
     }
     timeout 60
 }
@@ -79,8 +77,8 @@ macro verify_party_leader {
     end loop
 }
 
-macro save_expoutput {
-    $msgToSend = @random ("Logging progress... did we grind or just exist?", "Saving stats... please don't be embarrassing.", "XP, zeny, drops-let's see if we're winning.", "Recording gains... or lack thereof.", "Progress report incoming... brace for impact.", "Logging data... time to see if we slacked.", "Writing down stats... hope it's not a disaster.", "Tracking progress... RNG, don't fail me now!", "Saving results... are we cracked or just coping?", "Bot logs updated. Let's hope it's not pain.")
-    do p $msgToSend
-    do exp output
-}
+macro save_expoutput {  
+    $msgToSend = @random("Tracking Kobold farming... is the grind paying off?", "Checking stats... Base XP, Job XP, Zeny flow?", "Monitoring progress... how’s the botting efficiency?", "Evaluating gains... any Gladius or Bucklers so far?", "Assessing farm rate... are we raking in zeny?", "Logging results... XP, Zeny, loot—where do we stand?", "Reviewing session... how’s the Kobold grind stacking up?", "Checking efficiency... is this spot worth the time?", "Scanning logs... deaths, XP gains, drops—any surprises?", "Crunching numbers... how’s the farm looking?")  
+    do p $msgToSend  
+    do exp output  
+}  

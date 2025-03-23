@@ -32,7 +32,7 @@ message_length_max 80
 
 alias_heal sp 28
 
-allowedMaps
+allowedMaps geffen, gef_fild07, gef_fild08
 allowedMaps_reaction 1
 
 attackAuto 2
@@ -52,7 +52,7 @@ attackMaxDistance 1
 attackMaxRouteDistance 50
 attackMaxRouteTime 4
 attackMinPlayerDistance 2
-attackMinPortalDistance 4
+attackMinPortalDistance 6
 attackUseWeapon 1
 attackNoGiveup 0
 attackCanSnipe 0
@@ -92,14 +92,14 @@ autoConfChange {
 
 autoMakeArrows 0
 
-autoRestart 0
+autoRestart 1
 
 autoRestartMin 10800
-autoRestartSeed 3600
+autoRestartSeed 0
 
 autoRestartSleep 0
-autoSleepMin 900
-autoSleepSeed 900
+autoSleepMin 0
+autoSleepSeed 0
 
 autoResponse 0
 autoResponseOnHeal 0
@@ -156,14 +156,14 @@ followSitAuto 0
 followBot 0
 
 itemsTakeAuto 2
-itemsTakeAuto_party 0
+itemsTakeAuto_party 1
 itemsGatherAuto 2
 itemsGatherAuto_notInTown 0
 itemsGatherAutoMinPlayerDistance 6
 itemsGatherAutoMinPortalDistance 5
 itemsMaxWeight 89
 itemsMaxWeight_sellOrStore 48
-itemsMaxNum_sellOrStore
+itemsMaxNum_sellOrStore 98
 cartMaxWeight 7900
 itemsTakeGreed 0
 itemsCheckWeight 1
@@ -172,12 +172,12 @@ route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
 route_avoidWalls 0
-route_randomWalk_maxRouteTime 75
+route_randomWalk_maxRouteTime 0
 route_maxWarpFee
 route_maxNpcTries 5
 route_teleport 1
-route_teleport_minDistance 75
-route_teleport_maxTries 10
+route_teleport_minDistance 50
+route_teleport_maxTries 20
 route_teleport_notInMaps
 route_step 15
 route_removeMissingPortals_NPC 1
@@ -229,10 +229,10 @@ teleportAuto_search 0
 teleportAuto_minAggressives 0
 teleportAuto_minAggressivesInLock 0
 teleportAuto_onlyWhenSafe 0
-teleportAuto_maxDmg 500
+teleportAuto_maxDmg 1000
 teleportAuto_maxDmgInLock 0
 teleportAuto_deadly 1
-teleportAuto_useSkill 1
+teleportAuto_useSkill 0
 teleportAuto_useChatCommand
 teleportAuto_allPlayers 0
 teleportAuto_notPlayers
@@ -252,8 +252,8 @@ teleportAuto_useItemForRespawn
 teleportAuto_item1
 teleportAuto_item2
 
-dealAuto 1
-dealAuto_names
+#dealAuto 1
+#dealAuto_names
 partyAuto 2
 partyAutoShare 0
 partyAutoShareItem 0
@@ -262,7 +262,7 @@ guildAutoDeny 1
 attendanceAuto 1
 
 verbose 0
-showDomain 0
+showDomain 1
 showDomain_NPC parseMsg_presence
 showDomain_Shop list
 #squelchDomains attackMon, attackedMiss, exp, drop, info, selfSkill, skill, attackMonMiss, ai_attack, selfchat, party, attacked, portals, route_teleport, parseMsg_statuslook, inventory, useItem
@@ -919,10 +919,10 @@ sellAuto_npc geffen 124 70
 #sellAuto_npc payon 183 102
 #sellAuto_npc prontera 147 175
 
-autoMoveOnDeath 1
+autoMoveOnDeath 0
 autoMoveOnDeath_x
 autoMoveOnDeath_y
-autoMoveOnDeath_map gef_fild08
+autoMoveOnDeath_map
 
 saveMap geffen
 saveMap_warpToBuyOrSell 1

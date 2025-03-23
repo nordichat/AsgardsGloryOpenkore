@@ -42,14 +42,14 @@ attackSkillSlot TF_POISON {
     monsters Golem, Steel Chonchon, 1135, 1133
 }
 
-getAuto Monster's Feed {
-	minAmount 0
-	maxAmount 50
-	batchSize
-	passive 1
-	dcOnEmpty 0
-	disabled 0
-}
+# getAuto Monster's Feed {
+# 	minAmount 0
+# 	maxAmount 50
+# 	batchSize
+# 	passive 1
+# 	dcOnEmpty 0
+# 	disabled 0
+# }
 
 buyAuto Awakening Potion {
 	npc geffen 124 70
@@ -65,7 +65,7 @@ buyAuto Fly Wing {
 	npc geffen 124 70
 	distance 8
 	price 60
-	minAmount
-	maxAmount 20
+	minAmount 0
+	maxAmount 30
 	disabled 0
 }

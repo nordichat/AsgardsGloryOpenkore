@@ -13,9 +13,9 @@
 #Obeaune
 
 ##### Geffen Field (gef_fild08) #####
-KOBOLD_1
-KOBOLD_3
-KOBOLD_2
+1133 #KOBOLD_1
+1134 #KOBOLD_2
+1135 #KOBOLD_3
 Poison Spore
 Steel Chonchon
 Golem
