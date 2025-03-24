@@ -308,6 +308,9 @@ sub checkPerson {
 			return 0;
 		}
 		my $val = sprintf("%d %d %s", $player->{pos_to}{x}, $player->{pos_to}{y}, $field->baseName);
+		my $myPosStr = sprintf("%d %d %s", $char->{pos_to}{x}, $char->{pos_to}{y}, $field->baseName);
+		$varStack{".distanceToPlayer"} = sprintf("%.1f", distance($char->{pos_to}, $player->{pos_to}));
+		$varStack{".myCharacterPos"} = $myPosStr;
 		$varStack{".lastPlayerName"} = $player->name;
 		$varStack{".lastPlayerPos"} = $val;
 		$varStack{".lastPlayerLevel"} = $player->{lv};

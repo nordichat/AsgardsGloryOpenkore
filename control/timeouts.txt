@@ -57,30 +57,27 @@ ai_route_unstuck 1
 # Pause for the specified number of seconds after taking something,
 # it increases the interval between taking several items and between
 # taking the last item and continuing the actions.
-ai_items_take_delay 0.1
+ai_items_take_delay 1
 
 # When your monster died, start checking for loot after x seconds
-ai_items_take_start 0.1
+ai_items_take_start 0.3
 
 # Stop checking for loot x seconds after it has begun checking
-ai_items_take_end 0.1
+ai_items_take_end 0.6
 
 # When standing near an item, send the 'take' packet every x seconds until
 # the item has been taken.
-ai_take .5
+ai_take .4
 
 # Give up if unable to pickup item after x seconds
-ai_take_giveup 0.1
-ai_items_gather_giveup 0.1
+ai_take_giveup 3
+ai_items_gather_giveup 3
 
 # Every x seconds, check items for gathering
-ai_items_gather_auto 1
+ai_items_gather_auto .3
 
 # Only gather items that have been more than x seconds on screen
-ai_items_gather_start .1
-
-# Delay between items when tranferring in batches.
-ai_transfer_items 0.1
+ai_items_gather_start .3
 
 # Delay between map_loaded and send ignoreAll command
 ai_ignoreAll 1
