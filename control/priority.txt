@@ -11,3 +11,12 @@
 # Example (remove the comment character to activate them):
 #Hydra
 #Obeaune
+
+##### Geffen Field (gef_fild08) #####
+1133 #KOBOLD_1
+1134 #KOBOLD_2
+1135 #KOBOLD_3
+Poison Spore
+Steel Chonchon
+Golem
+Blue Plant

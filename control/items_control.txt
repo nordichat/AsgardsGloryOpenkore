@@ -56,7 +56,7 @@ Orange Juice 0 0 1
 Iron Ore 0 0 1
 Phracon 0 0 1
 Flower 0 0 1
-Shoot  0 0 1
+Shoot 0 0 1
 Singing Plant 0 0 1
 Romantic Flower 0 0 1
 Animal Skin 0 0 1
@@ -64,18 +64,15 @@ Asura [3] 0 0 1
 Snake Scale 0 0 1
 Wolf Claw 0 0 1
 Garlet 0 0 1
-Emveretarcon 0 0 1
 Red Herb 0 0 1
-Spore Doll
+Spore Doll 0 0 1
 Green Herb 5 0 1            # Keep 5pcs in inventory for use whenStatusActive Poisoned
 Apple 0 0 1
-Main Gauche [3]
+Main Gauche [3] 0 0 1
 Bitter Herb 0 0 1
-Flower 0 0 1
 Pointed Scale 0 0 1
 Romantic Leaf 0 0 1
 Dew Laden Moss 0 0 1
-Feather 0 0 1
 Alcohol 0 0 1
 Orange 10 0 1                # FOOD: Keep 10pcs in inventory.
 Milk 10 0 1                  # FOOD: Keep 10pcs in inventory.
@@ -84,11 +81,32 @@ Carrot 10 0 1                # FOOD: Keep 10pcs in inventory.
 Apple 10 0 1                 # FOOD: Keep 10pcs in inventory.
 Red Herb 10 0 1              # FOOD: Keep 10pcs in inventory.
 Meat 10 0 1                  # FOOD: Keep 10pcs in inventory.
-Monster's Feed 10 0 1        # FOOD: Keep 10pcs in inventory.
+Monster's Feed 50 0 1        # FOOD: Keep 50pcs in inventory.
 Aloe Leaflet 10 0 1          # FOOD: Keep 10pcs in inventory.
+##### Sphinx F2 (in_sphinx2) #####
+Tooth of Bat 0 0 1
+Emveretarcon 0 0 1
+Wing of Red Bat 0 0 1
+Pet Food 0 0 1
+Memento 0 0 1
+Horrendous Mouth 0 0 1
+Level 6 Cookbook 0 0 1
+Sardonyx 0 0 1
+Matyr's Leash 2 1 1          # Keep 2pcs in inventory to equip
+Gangster Mask 0 0 1
+Shackles 0 0 1
+##### Geffen Field (gef_fild08) #####
+Stone Heart 0 0 1
+Iron 0 0 1
+Coal 0 0 1
+Solid Shell 0 0 1
+Blue Hair 0 0 1
 
 ##### CUSTOM: KEEP #####
-Clover 1 0 1            # Mr. Smile
+Pantie 0 1 0
+Grape 0 1 0
+Emperium 0 1 0          # Guild Creation
+Clover 10 0 1           # Mr. Smile
 Jellopy 10 0 1          # Mr. Smile
 Fluff 10 0 1            # Mr. Smile
 Berserk Potion 0 1 0    # Poison Bottle
@@ -120,7 +138,7 @@ Rough Elunium 0 1 0
 Rough Oridecon 0 1 0
 Elunium 0 1 0
 Oridecon 0 1 0
-Steel 0 1 0
+Steel 0 1 0             #Forging
 Aquamarine 0 1 0
 Ruby 0 1 0
 Evil Horn 0 1 0
@@ -134,7 +152,6 @@ Cracked Diamond 0 1 0
 Zircon 0 1 0
 Sapphire 0 1 0
 Garnet 0 1 0
-Opal 0 1 0
 Topaz 0 1 0
 White Herb 0 1 0
 Witched Starsand 0 1 0
@@ -145,9 +162,6 @@ Alcohol 0 1 0
 Honey 0 1 0
 Aloe 0 1 0
 Stem 0 1 0
-Poison Spore 0 1 0
-Alcohol 0 1 0
-Fabric 0 1 0
 Immortal Heart 0 1 0
 Heart of Mermaid 0 1 0
 Zenorc's Fang 0 1 0
@@ -193,8 +207,6 @@ Nurse Cap 0 1 0                 #Sales Banner
 Shining Scale 0 1 0             #White Snake Hat
 Snake Card 0 1 0                #White Snake Hat
 Sidewinder Card 0 1 0           #White Snake Hat
-2carat Diamond 0 1 0            #White Snake Hat
-3carat Diamond 0 1 0            #White Snake Hat
 Necklace 0 1 0                  #White Snake Hat
 Isis Card 0 1 0                 #White Snake Hat
 Binoculars 0 1 0                #Hawk Eyes
@@ -215,7 +227,6 @@ Medusa Card 0 1 0               #Buzzy BOL Gum
 Pest Card 0 1 0                 #Buzzy BOL Gum
 Fish Tail 0 1 0                 #Fish in Mouth
 Ancient Lips 0 1 0              #Fish in Mouth
-Mystic Frozen 0 1 0             #Fish in Mouth
 Phen Card 0 1 0                 #Fish in Mouth
 Swordfish Card 0 1 0            #Fish in Mouth
 Merman Card 0 1 0               #Fish in Mouth
@@ -225,7 +236,6 @@ Gift Box 0 1 0                  #Rainbow Scarf
 Hood [1] 0 1 0                  #Rainbow Scarf
 Cruiser Card 0 1 0              #Rainbow Scarf
 Myst Case Card 0 1 0            #Rainbow Scarf
-2carat Diamond 0 1 0            #Rainbow Scarf
 Safety Helm 0 1 0               #Gangster Scarf
 Gas Mask 0 1 0                  #Gangster Scarf
 Earth Petite Card 0 1 0         #Gangster Scarf
@@ -236,13 +246,19 @@ Skel-Bone 0 1 0                 #Pirate Dagger
 Pirate Bandana 0 1 0            #Pirate Dagger
 Pirate Skeleton Card 0 1 0      #Pirate Dagger
 Penomena Card 0 1 0             #Pirate Dagger
+Mr. Smile 0 1 0                 # 2278
+Blue Herb 0 1 0
+Mushroom Spore 0 1 0
+#"Gladius [3]" 0 1 0
+#2104 0 1 0             # Buckler [1]
+
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
 
-656 5 1 0 # Awakening Potion
-# 602 5 1 0 # Butterfly Wing
-601 10 1 0 # Fly Wing
+656 10 1 0 # Awakening Potion
+602 2 1 0 # Butterfly Wing
+601 30 1 0 # Fly Wing
 
 505 0 1 0 # Blue Potion
 545 50 1 0 # Condensed Red Potion
@@ -257,7 +273,7 @@ Penomena Card 0 1 0             #Pirate Dagger
 ##### ARROWS #####
 # You may want to modify these if you're an archer/hunter
 
-Arrow 3000 1 0
+#Arrow 3000 1 0
 
 #########################
 ##### SELLING ITEMS #####
@@ -266,238 +282,18 @@ Arrow 3000 1 0
 
 ##### WORTHLESS GEARS #####
 # Worthless gears which are sold by default
-
-Adventurer's Suit 0 0 1 # 2305
-Bandana 0 0 1 # 2211
-Biretta 0 0 1 # 2217
-Boots 0 0 1 # 2405
-Buckler 0 0 1 # 2103
-Cap 0 0 1 # 2227
-Chain Mail 0 0 1 # 2314
-Circlet 0 0 1 # 2233
-Coat 0 0 1 # 2309
-"Coat [1]" 0 0 1 # 2310
-Cotton Shirt 0 0 1 # 2302
-"Cotton Shirt [1]" 0 0 1
-#Crystal Pumps 0 0 1
-Diamond Ring 0 0 1 # 2613
-Diver Goggles 0 0 1 # 2205
-Eye Patch 0 0 1 # 2212
-Flower Ring 0 0 1 # 2612
-Flu Mask 0 0 1 # 2219
-Full Plate 0 0 1 # 2316
-Gemmed Sallet 0 0 1 # 2231
-Glasses 0 0 1 # 2204
-Gold Ring 0 0 1 # 2610
-Guard 0 0 1 # 2101
-Hair Band 0 0 1 # 2210
-Hat 0 0 1 # 2221
-Helm 0 0 1 # 2228
-High Heels 0 0 1 # 2409
-Hood 0 0 1 # 2501
-"Hood [1]" 0 0 1 # 2502
-Jacket 0 0 1 # 2303
-"Jacket [1]" 0 0 1 # 2304
-Manteau 0 0 1 # 2505
-Mantle 0 0 1 # 2307
-"Mantle [1]" 0 0 1 # 2308
-Mirror Shield 0 0 1 # 2107
-Mr. Smile 0 0 1 # 2278
-Muffler 0 0 1 # 2503
-Padded Armor 0 0 1 # 2313
-Pantie 0 0 1 # 2371
-Ribbon 0 0 1 # 2208
-"Ribbon [1]" 0 0 1 # 2209
-Rosary 0 0 1 # 2840
-Saint's Robe 0 0 1 # 2325
-Sandals 0 0 1 # 2401
-"Sandals [1]" 0 0 1 # 2402
-Scapulare 0 0 1 # 2323
-Shackles 0 0 1 # 2408
-Shield 0 0 1 # 2105
-Shoes 0 0 1 # 2403
-Silk Robe 0 0 1 # 2321
-Silver Ring 0 0 1 # 2611
-Silver Robe 0 0 1 # 2332
-"Silver Robe [1]" 0 0 1 # 2333
-Skull Ring 0 0 1 # 2715
-Thief Clothes 0 0 1 # 2335
-Tights 0 0 1 # 2330
-Turban 0 0 1 # 2223
-Wooden Mail 0 0 1 # 2328
-"Wooden Mail [1]" 0 0 1 # 2329
-
-
-##### WORTHLESS WEAPONS #####
-# Worthless weapons which are sold by default
-
-"Arbalest Bow [1]" 0 0 1
-Arc Wand 0 0 1 # 1612
-"Arc Wand [1]" 0 0 1 # 1610
-Axe 0 0 1 # 1303
-"Axe [3]" 0 0 1 # 1301
-"Axe [4]" 0 0 1 # 1302
-Bastard Sword 0 0 1 # 1156
-"Bastard Sword [2]" 0 0 1 # 1154
-Battle Axe 0 0 1 # 1353
-"Battle Axe [3]" 0 0 1 # 1351
-"Battle Axe [4]" 0 0 1 # 1352
-"Belt [1]" 0 0 1 # 2627
-#"Bible [2]" 0 0 1
-Bill Guisarme 0 0 1 # 1467
-Blade 0 0 1 # 1109
-"Blade [3]" 0 0 1 # 1107
-"Blade [4]" 0 0 1 # 1108
-Bow 0 0 1 # 1703
-"Bow [3]" 0 0 1 # 1701
-"Bow [4]" 0 0 1 # 1702
-"Broad Sword [1]" 0 0 1 # 1160
-Buster 0 0 1 # 1359
-"Buster [1]" 0 0 1 # 1357
-"Chain [2]" 0 0 1 # 1519
-#Chemeti Whip 0 0 1
-"Claw [1]" 0 0 1 # 1809
-"Claw [2]" 0 0 1 # 1810
-Claymore 0 0 1 # 1172
-Club 0 0 1 # 1503
-"Club [3]" 0 0 1 # 1501
-"Club [4]" 0 0 1 # 1502
-Composite Bow 0 0 1 # 1706
-"Composite Bow [3]" 0 0 1 # 1704
-Cross Bow 0 0 1 # 1712
-"Cross Bow [2]" 0 0 1
-Cutter 0 0 1 # 1206
-"Cutter [3]" 0 0 1 # 1204
-"Cutter [4]" 0 0 1 # 1205
-Dagger 0 0 1 # 1215
-"Dagger [2]" 0 0 1 # 1213
-"Dagger [3]" 0 0 1 # 1214
-"Damascus [1]" 0 0 1 # 1222
-Dirk 0 0 1 # 1212
-"Dirk [2]" 0 0 1 # 1210
-"Dirk [3]" 0 0 1 # 1211
-Falchion 0 0 1 # 1106
-"Falchion [3]" 0 0 1 # 1104
-"Finger [1]" 0 0 1 # 1811
-"Finger [2]" 0 0 1 # 1812
-Fist 0 0 1 # 1808
-"Fist [1]" 0 0 1 # 1808
-"Flail [2]" 0 0 1 # 1510
-"Flail [3]" 0 0 1 # 1511
-Flamberge 0 0 1 # 1149
-"Gakkung Bow [1]" 0 0 1 # 1714
-#"Girl's Diary [1]" 0 0 1
-Gladius 0 0 1 # 1221
-"Gladius [2]" 0 0 1 # 1219
-Glaive 0 0 1 # 1456
-"Glaive [2]" 0 0 1 # 1454
-"Glaive [3]" 0 0 1 # 1455
-Great Bow 0 0 1 # 1709
-"Great Bow [2]" 0 0 1 # 1707
-"Great Bow [3]" 0 0 1 # 1708
-Guisarme 0 0 1 # 1453
-"Guisarme [2]" 0 0 1 # 1451
-Guitar 0 0 1 # 1908
-"Guitar [1]" 0 0 1 # 1908
-"Gumoongoh [1]" 0 0 1 # 1911
-"Gumoongoh [2]" 0 0 1 # 1912
-"Haedonggum [1]" 0 0 1 # 1123
-"Hallberd [1]" 0 0 1
-"Hallberd [2]" 0 0 1
-Hammer 0 0 1 # 1356
-"Hammer [2]" 0 0 1 # 1354
-"Hammer [3]" 0 0 1 # 1355
-"Harp [1]" 0 0 1 # 1909
-"Harp [2]" 0 0 1 # 1910
-Jamadhar 0 0 1 # 1255
-Javelin 0 0 1 # 1403
-"Javelin [3]" 0 0 1 # 1401
-"Javelin [4]" 0 0 1 # 1402
-"Jur [2]" 0 0 1 # 1250
-Katana 0 0 1 # 1118
-"Katana [3]" 0 0 1 # 1116
-"Katar [1]" 0 0 1 # 1252
-Knife 0 0 1 # 1203
-"Knife [3]" 0 0 1 # 1201
-"Knife [4]" 0 0 1 # 1202
-"Knuckle Dusters [2]" 0 0 1 # 1803
-"Knuckle Dusters [3]" 0 0 1 # 1804
-Lance 0 0 1 # 1412
-#Lariat Whip 0 0 1
-"Lute [2]" 0 0 1 # 1905
-"Lute [3]" 0 0 1 # 1906
-Mace 0 0 1 # 1506
-"Mace [3]" 0 0 1 # 1504
-#"Mace [4]" 0 0 1
-Main Gauche 0 0 1 # 1209
-"Mandolin [2]" 0 0 1 # 1903
-"Mandolin [3]" 0 0 1 # 1904
-"Morning Star [1]" 0 0 1 # 1513
-"Morning Star [2]" 0 0 1 # 1514
-"Novice Armlet [1]" 0 0 1 # 2628
-"Novice Breastplate [1]" 0 0 1 # 2340
-Orcish Axe 0 0 1 # 1309
-Orcish Sword 0 0 1 # 1124
-Partizan 0 0 1 # 1459
-"Partizan [1]" 0 0 1 # 1457
-"Partizan [2]" 0 0 1 # 1458
-Pike 0 0 1 # 1409
-"Pike [3]" 0 0 1 # 1407
-Rante Whip 0 0 1 # 1957
-"Rante Whip [1]" 0 0 1 # 1957
-Rapier 0 0 1 # 1112
-"Rapier [2]" 0 0 1 # 1110
-"Rapier [3]" 0 0 1 # 1111
-"Repeating Crossbow [1]" 0 0 1 # 1721
-"Ring Pommel Saber [2]" 0 0 1 # 1122
-Rod 0 0 1 # 1603
-"Rod [3]" 0 0 1 # 1601
-"Rod [4]" 0 0 1
-"Rope [3]" 0 0 1 # 1950
-#"Rope [4]" 0 0 1
-"Saber [2]" 0 0 1 # 1126
-"Scimiter [2]" 0 0 1
-"Scimiter [3]" 0 0 1
-Slayer 0 0 1 # 1153
-"Slayer [2]" 0 0 1 # 1151
-"Slayer [3]" 0 0 1 # 1152
-"Smasher [2]" 0 0 1 # 1507
-"Smasher [3]" 0 0 1 # 1508
-Spear 0 0 1 # 1406
-"Spear [3]" 0 0 1 # 1404
-"Spear [4]" 0 0 1 # 1405
-Staff 0 0 1 # 1609
-"Staff [2]" 0 0 1 # 1607
-Stiletto 0 0 1 # 1218
-"Stiletto [2]" 0 0 1 # 1216
-"Stiletto [3]" 0 0 1 # 1217
-"Studded Knuckles [2]" 0 0 1 # 1805
-"Studded Knuckles [3]" 0 0 1 # 1806
-Sword 0 0 1 # 1103
-"Sword [3]" 0 0 1 # 1101
-"Sword [4]" 0 0 1 # 1102
-Sword Mace 0 0 1 # 1518
-"Tail Whip [1]" 0 0 1 # 1958
-"Tail Whip [2]" 0 0 1 # 1959
-Trident 0 0 1 # 1462
-"Trident [2]" 0 0 1 # 1460
-Tsurugi 0 0 1 # 1121
-"Tsurugi [1]" 0 0 1 # 1119
-"Tsurugi [2]" 0 0 1 # 1120
-Two-handed Axe 0 0 1 # 1362
-"Two-handed Axe [1]" 0 0 1
-Two-handed Sword 0 0 1 # 1159
-"Two-handed Sword [1]" 0 0 1
-"Violin [3]" 0 0 1 # 1901
-#"Violin [4]" 0 0 1
-"Waghnak [3]" 0 0 1 # 1801
-"Waghnak [4]" 0 0 1 # 1802
-Wand 0 0 1 # 1606
-"Wand [2]" 0 0 1 # 1604
-"Wand [3]" 0 0 1 # 1605
-#"War Axe [1]" 0 0 1
-"Whip [1]" 0 0 1 # 1960
-"Whip [2]" 0 0 1 # 1961
-"Whip [3]" 0 0 1 # 1953
-"Wire Whip [2]" 0 0 1 # 1954
-"Wire Whip [3]" 0 0 1 # 1955
+Cotton Shirt 0 0 1
+Adventurer's Suit 0 0 1
+2220 0 0 1                  #Hat [0]   [Upper Head]
+2221 0 0 1                  #Hat [1]   [Upper Head]
+2101 0 0 1                  #Guard [0]   [Shield]
+2102 0 0 1                  #Guard [1]   [Shield]
+1355 0 0 1                  #Hammer [3]   [Two Handed]
+1510 0 0 1                  #Flail [2]   [One Hand]
+1511 0 0 1                  #Flail [3]   [One Hand]
+13006 0 0 1                 #Khukri [0]   [One Hand]
+1301 0 0 1                  #Axe [3]   [One Hand]
+1302 0 0 1                  #Axe [4]   [One Hand]
+2101 0 0 1                  #Guard [0]   [Shield]
+2102 0 0 1                  #Guard [0]   [Shield]
+5118 0 0 1                  #Puppy Headband [0]   [Upper Head]

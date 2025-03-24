@@ -1,15 +1,86 @@
 automacro auto_loot_activation {
     run-once 1
+    exclusive 1
     call enable_autoloot
 }
 
 macro enable_autoloot {
     do c @autoloot 100
 }
+automacro ifInventoryContainsItem1 {
+    exclusive 1
+    run-once 1
+    timeout 5
+    inventory "Buckler [1]" > 0
+    call transferItem
+}
+
+automacro ifInventoryContainsItem2 {
+    exclusive 1
+    run-once 1
+    timeout 5
+    inventory "Gladius [1]" > 0
+    call transferItem
+}
+
+macro transferItem {
+    $mainCharname = "Stalker1"
+    $charname = @eval($::char->{'name'})
+
+    if ($charname != $mainCharname) {
+        do ai manual
+        $item1 = @inventory(Buckler [1])
+        if ($item1 > -1) {
+            do p Found a Buckler [1], I will give it to someone else!
+            do drop $item1
+            do take first
+        }
+
+        $item2 = @Inventory(Gladius [3])
+        if ($item2 > -1) {  
+            do p Found a Gladius [3], I will give it to someone else!
+            do drop $item2
+            do take first
+        }
+
+        do ai auto
+        release ifInventoryContainsItem1
+        release ifInventoryContainsItem2
+    }
+}
+
+
+automacro monsterRefresh {
+    monster /NPC/, /NPC Unknown/
+    call {
+        do c @refresh
+        do e hmm
+        $msgToSend = @random ("Weird stuff... panic refresh!", "Something's off... hitting @refresh!", "Is this a bug or a feature? Refreshing!", "I don't trust what I just saw. @refresh!", "Reality is glitching. Time to press refresh!", "Classic fix: turn it off and on again!", "Saw something cursed. Cleansing with @refresh!", "If I ignore it and refresh, it never happened!", "Not sure if lag or hallucination. @refresh!", "Me: *sees weird stuff* Also me: *smashes refresh*")
+        do p $msgToSend
+    }
+    timeout 3
+}
+
+automacro goHeal {
+    set macro_delay 0.2
+    hp < 15%
+    call {
+        do p @go geffen
+        pause 1
+        do e omg
+        pause 1
+        do move 120 70
+        pause 1
+        do talk @npc(/Healer/)
+        do e lv2
+        $msgToSend = @random("Kafra blessings received! Back to the grind!", "Respawned and ready—time to farm again!", "The Valkyries sent me back! Let’s go!", "Fully healed! Kobolds won’t hunt themselves!", "Back from the brink! Time to rack up XP!", "No time for rest—Gladius and Bucklers await!")  
+        do p $msgToSend
+    }
+    timeout 60
+}
 
 automacro check_party_leader {
     exclusive 1
-    delay 600
     timeout 600
     call verify_party_leader
 }
@@ -17,8 +88,6 @@ automacro check_party_leader {
 macro verify_party_leader {
     # Count number of party members
     $numberOfPlayers = @eval(scalar @partyUsersID)
-
-    # Loop through party members and log their details
     $i = 0
     while ($i < $numberOfPlayers) as loop
         $charname = @eval($::char->{'name'})
@@ -27,16 +96,31 @@ macro verify_party_leader {
 
         if ($isAdmin == 1) {
             if ($charname == $charnameParty) {
-                log You are the party leader. Triggering 'exp output' command.
+                $msgToSend = @random ("He who has a why to live can bear almost any how - Friedrich Nietzsche", "No tree, it is said, can grow to heaven unless its roots reach down to hell - Carl Jung", "Talent hits a target no one else can hit, Genius hits a target no one else can see - Arthur Schopenhauer", "Man is not the lord of beings, Man is the shepherd of Being - Martin Heidegger", "Life can only be understood backwards, but it must be lived forwards - Soren Kierkegaard", "Man is condemned to be free - Jean-Paul Sartre", "Madness is the exception in individuals but the rule in groups - Friedrich Nietzsche", "Your visions will become clear only when you look into your own heart - Carl Jung", "A man can do what he wants, but not want what he wants - Arthur Schopenhauer", "The function of prayer is not to influence God, but rather to change the nature of the one who prays - Soren Kierkegaard", "We do not see things as they are, we see them as we are - Michel Foucault", "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment - Ralph Waldo Emerson", "The meeting of two personalities is like the contact of two chemical substances, if there is any reaction, both are transformed - Carl Jung")
+                do p $msgToSend
                 call save_expoutput
             } else {
-                log You are not the party leader, $charnameParty is.
+                $num = @rand(1, 4)
+                if ($num == 1) {
+                    do e sry
+                }
+                if ($num == 2) {
+                    do e heh
+                }
+                if ($num == 3) {
+                    do e gg
+                }
+                if ($num == 4) {
+                    do e meh
+                }
             }
         }
         $i++
     end loop
 }
 
-macro save_expoutput {
-    do exp output
-}
+macro save_expoutput {  
+    $msgToSend = @random("Tracking Kobold farming... is the grind paying off?", "Checking stats... Base XP, Job XP, Zeny flow?", "Monitoring progress... how’s the botting efficiency?", "Evaluating gains... any Gladius or Bucklers so far?", "Assessing farm rate... are we raking in zeny?", "Logging results... XP, Zeny, loot—where do we stand?", "Reviewing session... how’s the Kobold grind stacking up?", "Checking efficiency... is this spot worth the time?", "Scanning logs... deaths, XP gains, drops—any surprises?", "Crunching numbers... how’s the farm looking?")  
+    do p $msgToSend  
+    do exp output  
+}  

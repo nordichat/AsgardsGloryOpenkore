@@ -4,3 +4,6 @@
 !include shared/config.txt
 !include shared/skills1-99.txt
 !include shared/xkore.txt
+
+dealAuto 2
+dealAuto_names Stalker2, Stalker3, Stalker4, Stalker5, Stalker6, Stalker7, Stalker8

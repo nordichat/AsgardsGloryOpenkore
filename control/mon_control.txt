@@ -57,6 +57,10 @@
 # Monsters not found in this file, or flags not specified will default to:
 # <attack> = 1
 
+##### Geffen Field (gef_fild08) ####
+Golem 0 0 0
+Steel Chonchon 0 0 0
+
 ##### prt_fild06 2025-03-11 ####
 Creamy 0 0 0 #Pupa
 

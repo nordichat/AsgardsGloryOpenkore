@@ -32,8 +32,8 @@ message_length_max 80
 
 alias_heal sp 28
 
-allowedMaps
-allowedMaps_reaction 1
+allowedMaps geffen, gef_fild07, gef_fild08
+allowedMaps_reaction 0
 
 attackAuto 2
 attackAuto_party 1
@@ -47,12 +47,12 @@ attackAuto_notWhile_sellAuto 1
 attackAuto_considerDamagedAggressive 0
 attackBeyondMaxDistance_waitForAgressive 1
 attackDistance 1
-attackDistanceAuto 0
+attackDistanceAuto 1
 attackMaxDistance 1
 attackMaxRouteDistance 50
 attackMaxRouteTime 4
 attackMinPlayerDistance 2
-attackMinPortalDistance 4
+attackMinPortalDistance 6
 attackUseWeapon 1
 attackNoGiveup 0
 attackCanSnipe 0
@@ -95,11 +95,11 @@ autoMakeArrows 0
 autoRestart 0
 
 autoRestartMin 10800
-autoRestartSeed 3600
+autoRestartSeed 0
 
 autoRestartSleep 0
-autoSleepMin 900
-autoSleepSeed 900
+autoSleepMin 0
+autoSleepSeed 0
 
 autoResponse 0
 autoResponseOnHeal 0
@@ -156,14 +156,14 @@ followSitAuto 0
 followBot 0
 
 itemsTakeAuto 2
-itemsTakeAuto_party 0
+itemsTakeAuto_party 1
 itemsGatherAuto 2
 itemsGatherAuto_notInTown 0
 itemsGatherAutoMinPlayerDistance 6
 itemsGatherAutoMinPortalDistance 5
 itemsMaxWeight 89
 itemsMaxWeight_sellOrStore 48
-itemsMaxNum_sellOrStore
+itemsMaxNum_sellOrStore 98
 cartMaxWeight 7900
 itemsTakeGreed 0
 itemsCheckWeight 1
@@ -171,26 +171,25 @@ itemsCheckWeight 1
 route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
-route_avoidWalls 1
-route_randomWalk_maxRouteTime 75
+route_avoidWalls 0
+route_randomWalk_maxRouteTime 0
 route_maxWarpFee
 route_maxNpcTries 5
-route_teleport 0
-route_teleport_minDistance 75
-route_teleport_maxTries 8
+route_teleport 1
+route_teleport_minDistance 50
+route_teleport_maxTries 20
 route_teleport_notInMaps
-route_step 10
+route_step 15
 route_removeMissingPortals_NPC 1
-route_removeMissingPortals 0
-route_tryToGuessMissingPortalByDistance 1
-route_reAddMissingPortals 1
+route_removeMissingPortals 1
+route_tryToGuessMissingPortalByDistance 0
+route_reAddMissingPortals 0
 
 runFromTarget 0
 runFromTarget_inAdvance 0
 runFromTarget_dist 5
 runFromTarget_minStep 7
 runFromTarget_maxPathDistance 13
-
 
 shopAuto_open 0
 shop_random 0
@@ -199,8 +198,10 @@ shop_useSkill 1
 buyerShopAuto_open 0
 buyerShop_random 0
 
-sitAuto_hp_lower 60
-sitAuto_hp_upper 90
+#sitAuto_hp_lower 30
+#sitAuto_hp_upper 80
+sitAuto_hp_lower 0
+sitAuto_hp_upper 0
 sitAuto_sp_lower 0
 sitAuto_sp_upper 0
 sitAuto_follow 0
@@ -211,17 +212,16 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 agi, 20 dex, 40 agi, 30 str, 30 dex, 50 agi, 40 str, 60 agi, 50 str, 70 agi, 40 dex, 80 agi, 60 str, 50 dex, 100 agi
+statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 agi, 20 dex, 40 agi, 30 str, 30 dex, 50 agi, 40 str, 60 agi, 50 str, 70 agi, 40 dex, 80 agi, 60 str, 50 dex, 70 str, 100 agi, 80 str,
 statsAddAuto_dontUseBonus 0
 statsAdd_over_99 1
 
 skillsAddAuto 1
-skillsAddAuto_list NV_BASIC 9
 
 tankMode 0
 tankModeTarget
 
-teleportAuto_hp 10
+teleportAuto_hp 0
 teleportAuto_sp 0
 teleportAuto_idle 0
 teleportAuto_portal 0
@@ -229,10 +229,10 @@ teleportAuto_search 0
 teleportAuto_minAggressives 0
 teleportAuto_minAggressivesInLock 0
 teleportAuto_onlyWhenSafe 0
-teleportAuto_maxDmg 500
+teleportAuto_maxDmg 1000
 teleportAuto_maxDmgInLock 0
 teleportAuto_deadly 1
-teleportAuto_useSkill 1
+teleportAuto_useSkill 0
 teleportAuto_useChatCommand
 teleportAuto_allPlayers 0
 teleportAuto_notPlayers
@@ -252,8 +252,8 @@ teleportAuto_useItemForRespawn
 teleportAuto_item1
 teleportAuto_item2
 
-dealAuto 1
-dealAuto_names
+#dealAuto 1
+#dealAuto_names
 partyAuto 2
 partyAutoShare 0
 partyAutoShareItem 0
@@ -262,9 +262,10 @@ guildAutoDeny 1
 attendanceAuto 1
 
 verbose 0
-showDomain 0
+showDomain 1
 showDomain_NPC parseMsg_presence
 showDomain_Shop list
+#squelchDomains attackMon, attackedMiss, exp, drop, info, selfSkill, skill, attackMonMiss, ai_attack, selfchat, party, attacked, portals, route_teleport, parseMsg_statuslook, inventory, useItem
 squelchDomains ai_attack, ai_npcTalk, attacked, attackedMiss, attackMon, attackMonMiss, connection, console, deal, devotion, drop, emotion, exp, equip, follow, guildchat, guildnotice, input, inventory, load, looter, map_event, npc, parseMsg_statuslook, parseMsg/hairColor, parseMsg/job, parseMsg/upgrade, party, partychat, pet, plugins, pm, pm/sent, portals, portalRecord, publicchat, refine, route, route_teleport, schat, selfSkill, skill, sold, startup, success, syntax, teleport, useItem, useTeleport, waypoint, xkore, ai, ai_autoCart, ai_makeItem, ai_move, autoBreakTime, d_sendPacket, debug, equipAuto, guild, ipc, Item, monsterSkill, packetParser, parseInput, parseMsg, parseMsg_comboDelay, parseMsg_damage, parseMsg_move, parseMsg_presence, parseMsg_presence/name, parseMsg_presence/player, parseMsg_presence/remote, parseSendMsg, sendPacket, sitAuto, vending, busParty, storage
 verboseDomains
 beepDomains
@@ -312,9 +313,9 @@ ignoreAll 0
 itemHistory 0
 autoTalkCont 1
 noAutoSkill 0
-portalCompile 1
-portalRecord 2
-portalRecord_recompileAfter 1
+portalCompile 0
+portalRecord 0
+portalRecord_recompileAfter 0
 missDamage 0
 
 tankersList
@@ -870,7 +871,7 @@ storageAuto_useChatCommand
 storageAuto_useItem 0
 storageAuto_useItem_item
 storageAuto_notAfterDeath
-relogAfterStorage 0
+relogAfterStorage 1
 minStorageZeny 50
 
 npcTimeResponse
@@ -903,32 +904,35 @@ history_max 50
 macro_orphans terminate
 
 ##### CUSTOM #####
-wx_map_route 0
-skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10
+skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10, AC_VULTURE 10, RG_SNATCHER 9, RG_STEALCOIN 4, RG_BACKSTAP 4, RG_TUNNELDRIVE 2, RG_RAID 5, RG_INTIMIDATE 5, RG_PLAGIARISM 10
 route_randomWalk 2
 
 storageAuto 1
-storageAuto_npc payon 181 104
+storageAuto_npc geffen 120 62
+#storageAuto_npc morocc 156 97
+#storageAuto_npc payon 181 104
 #storageAuto_npc prontera 164 175
 
 sellAuto 1
-sellAuto_npc payon 183 102
+sellAuto_npc geffen 124 70
+#sellAuto_npc morocc 149 102
+#sellAuto_npc payon 183 102
 #sellAuto_npc prontera 147 175
 
-autoMoveOnDeath 1
+autoMoveOnDeath 0
 autoMoveOnDeath_x
 autoMoveOnDeath_y
-autoMoveOnDeath_map pay_fild02
+autoMoveOnDeath_map
 
-saveMap payon
+saveMap geffen
 saveMap_warpToBuyOrSell 1
-saveMap_warpChatCommand @go payon
+saveMap_warpChatCommand @go 2
 memo1
 memo2
 memo3
 memo4
 
-lockMap pay_fild02
+lockMap gef_fild08
 lockMap_x
 lockMap_y
 lockMap_randX
