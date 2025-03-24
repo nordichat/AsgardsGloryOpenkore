@@ -2739,36 +2739,6 @@ sub cmdExp {
 			close(F);
 		}
 	}
-	
-    # if ($arg1 eq "output") {
-    #     $knownArg = 1;
-
-    #     my ($show_error_on_fail) = @_;
-    #     my $f;
-
-    #     $msg .= center(T(" Storage "), 36, '-') . "\n";
-
-    #     message T("Test1.\n"), "info";
-
-    #     if (open(my $f, ">:utf8", $Settings::storage_log_file)) {
-    #         for my $item (@{$char->storage}) {
-    #             $msg .= swrite(
-    #                 "@<<< @<<<<<<<<<<<<<<<<<<<<<<<<<<<<< x @<<<<<<",
-    #                 [$item->{binID}, $item->{name}, $item->{amount}]
-    #             );
-    #         }
-
-    #         message T("Test2.\n"), "info";
-
-    #         $msg .= ('-' x 36) . "\n";
-    #         message $msg, "list";
-
-    #         print $f $msg;  # Use the correct filehandle variable
-    #         close($f);       # Close the correct filehandle
-    #     } elsif ($show_error_on_fail) {
-    #         error TF("Unable to write to %s\n", $Settings::storage_log_file);
-    #     }
-    # }
 }
 
 
