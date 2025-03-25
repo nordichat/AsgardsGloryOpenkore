@@ -32,7 +32,7 @@ message_length_max 80
 
 alias_heal sp 28
 
-allowedMaps geffen, gef_fild07, gef_fild08
+allowedMaps geffen, mjolnir_02
 allowedMaps_reaction 0
 
 attackAuto 2
@@ -931,7 +931,7 @@ memo2
 memo3
 memo4
 
-lockMap gef_fild08
+lockMap mjolnir_02
 lockMap_x
 lockMap_y
 lockMap_randX

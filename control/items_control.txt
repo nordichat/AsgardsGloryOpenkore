@@ -82,7 +82,6 @@ Apple 10 0 1                 # FOOD: Keep 10pcs in inventory.
 Red Herb 10 0 1              # FOOD: Keep 10pcs in inventory.
 Meat 10 0 1                  # FOOD: Keep 10pcs in inventory.
 Monster's Feed 50 0 1        # FOOD: Keep 50pcs in inventory.
-Aloe Leaflet 10 0 1          # FOOD: Keep 10pcs in inventory.
 ##### Sphinx F2 (in_sphinx2) #####
 Tooth of Bat 0 0 1
 Emveretarcon 0 0 1
@@ -101,6 +100,14 @@ Iron 0 0 1
 Coal 0 0 1
 Solid Shell 0 0 1
 Blue Hair 0 0 1
+##### Mt.Mjolnir (mjolnir_02) ####
+Dragon Canine 0 0 1
+Dragon Tail 0 0 1
+Level 3 Lightening Bolt 0 0 1
+Maneater Blossom 0 0 1
+Powder of Butterfly 0 0 1
+Singing Flower 0 0 1
+Witherless Rose 0 0 1
 
 ##### CUSTOM: KEEP #####
 Pantie 0 1 0
@@ -250,8 +257,8 @@ Mr. Smile 0 1 0                 # 2278
 Blue Herb 0 1 0
 Mushroom Spore 0 1 0
 #"Gladius [3]" 0 1 0
-#2104 0 1 0             # Buckler [1]
-
+#2104 0 1 0                     # Buckler [1]
+Aloe Leaflet 10 1 0             # FOOD: Keep 10pcs in inventory.
 
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
@@ -297,3 +304,7 @@ Adventurer's Suit 0 0 1
 2101 0 0 1                  #Guard [0]   [Shield]
 2102 0 0 1                  #Guard [0]   [Shield]
 5118 0 0 1                  #Puppy Headband [0]   [Upper Head]
+2207 0 0 1                  #Fancy Flower [0]   [Upper Head]
+2321 0 0 1                  #Silk Robe [0]   [Body]
+2322 0 0 1                  #Silk Robe [1]   [Body]
+2253 0 0 1                  #Sunflower [0]   [Upper Head]

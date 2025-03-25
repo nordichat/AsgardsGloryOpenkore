@@ -40,7 +40,8 @@ attackSkillSlot RG_INTIMIDATE {
     sp > 25
 	timeout 60
 	onAction attack
-    monsters 1133, 1134, 1135
+    #monsters 1133, 1134, 1135 # Geffen Field (gef_fild08)
+    monsters 1155
 }
 
 getAuto Monster's Feed {

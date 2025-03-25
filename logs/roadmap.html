@@ -97,6 +97,10 @@
                 }
             });
 
+            // Calculate total Oridecon including Rough Oridecon
+            const roughOrideconCount = Math.floor((storageMap['Rough Oridecon'] || 0) / 5);
+            storageMap['Oridecon'] = (storageMap['Oridecon'] || 0) + roughOrideconCount;
+
             // Iterate over each table cell with class 'indent' and update progress
             document.querySelectorAll('.ro-table td.indent').forEach(td => {
                 const progressSpan = td.querySelector('.progress');
@@ -151,12 +155,15 @@
         </div>
         <table class="ro-table">
             <tbody>
-                <tr><td><strong>Geffen Field (gef_fild08):</strong></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Buckler [1] <span class="progress">[0/32]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_1.png" alt="Checkbox"> Gladius [3] <span class="progress">[0/8]</span></td></tr>
-                <tr><td><strong>Shrine of Gonryun Queen (gon_dun01):</strong></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Zipper Bear Card <span class="progress">[0/24]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Enchanted Peach Tree Card <span class="progress">[0/8]</span></td></tr>
+                <tr><td><strong>Goal:</strong> Gather materials to socket enchant Gladius [3]</td></tr>
+                <tr><td><strong>Mt.Mjolnir (mjolnir_02):</strong></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Oridecon <span class="progress">[0/50]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Steel <span class="progress">[0/250]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Rough Oridecon <span class="progress">[0/250]</span></td></tr>
+                <tr><td><strong>BONUS:</strong></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Creamy Card <span class="progress">[0/8]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Flora Card <span class="progress">[0/99]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Earth Petite Card <span class="progress">[0/99]</span></td></tr>
             </tbody>
         </table>
     </div>

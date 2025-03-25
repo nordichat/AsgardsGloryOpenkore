@@ -57,12 +57,19 @@
 # Monsters not found in this file, or flags not specified will default to:
 # <attack> = 1
 
+##### Mt.Mjolnir (mjolnir_02) ####
+1155 1 0 0 #Earth Petite
+Flora 1 0 0
+Creamy 1 0 0
+Hornet 0 0 0
+Poporing 0 0 0
+
 ##### Geffen Field (gef_fild08) ####
 Golem 0 0 0
 Steel Chonchon 0 0 0
 
 ##### prt_fild06 2025-03-11 ####
-Creamy 0 0 0 #Pupa
+#Creamy 0 0 0 #Pupa
 
 ##### Eggs #####
 Ant's Egg 1 0 0
@@ -89,9 +96,9 @@ Thief Bug's Egg 1 0 0
 ##### Plants #####
 Black Mushroom 1 0 0
 Blue Plant 1 0 0
-Green Plant 1 0 0
+Green Plant 0 0 0
 Red Mushroom 1 0 0
-Red Plant 1 0 0
+Red Plant 0 0 0
 Shining Plant 1 0 0
 White Plant 1 0 0
 Yellow Plant 1 0 0

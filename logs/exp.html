@@ -84,10 +84,10 @@
             let baseExp = "N/A";
             let jobExp = "N/A";
             let zeny = "N/A";
-            let gladiusKoboldsKilled = "N/A";
+            let earthPetitesKilled = "N/A";
             let bottingTime = "N/A";
             let deaths = "N/A";
-            let koboldsPerHour = "N/A";
+            let earthPetitesPerHour = "N/A";
 
             // Process each line to extract relevant information
             for (const line of lines) {
@@ -100,9 +100,9 @@
                 if (line.includes("zeny/Hour") && zeny === "N/A") {
                     zeny = line.split(":")[1].trim();
                 }
-                if (line.includes("1133   Kobold") && gladiusKoboldsKilled === "N/A") {
+                if (line.includes("1155   Petite") && earthPetitesKilled === "N/A") {
                     let parts = line.trim().split(/\s+/);
-                    gladiusKoboldsKilled = parts[parts.length - 1];
+                    earthPetitesKilled = parts[parts.length - 1];
                 }
                 if (line.includes("Botting time") && bottingTime === "N/A") {
                     bottingTime = line.split(":")[1].trim();
@@ -112,13 +112,14 @@
                 }
 
                 // Stop when all necessary data is collected
-                if (baseExp !== "N/A" && jobExp !== "N/A" && zeny !== "N/A" && gladiusKoboldsKilled !== "N/A" && bottingTime !== "N/A" && deaths !== "N/A") {
+                if (baseExp !== "N/A" && jobExp !== "N/A" && zeny !== "N/A" && earthPetitesKilled !== "N/A" && bottingTime !== "N/A" && deaths !== "N/A") {
                     break;
                 }
             }
 
             // Parse and convert the Botting Time into decimal hours
             let bottingTimeInMinutes = 0;
+            let bottingTimeDecimal = "N/A"; // New variable for decimal hours
 
             if (bottingTime !== "N/A") {
                 let hoursMatch = bottingTime.match(/(\d+)\s*hours?/);
@@ -141,23 +142,23 @@
                 }
 
                 // Convert total minutes to decimal hours for the calculation
-                bottingTime = (bottingTimeInMinutes / 60).toFixed(2);
+                bottingTimeDecimal = (bottingTimeInMinutes / 60).toFixed(2);
             }
 
-            // Calculate Kobolds killed per hour (rounded to the nearest whole number)
-            if (gladiusKoboldsKilled !== "N/A" && bottingTime !== "N/A" && !isNaN(gladiusKoboldsKilled) && !isNaN(bottingTime)) {
-                let koboldsPerHourValue = Math.round(parseInt(gladiusKoboldsKilled) / parseFloat(bottingTime));
-                koboldsPerHour = koboldsPerHourValue;
+            // Calculate Earth Petites killed per hour (rounded to the nearest whole number)
+            if (earthPetitesKilled !== "N/A" && bottingTimeDecimal !== "N/A" && !isNaN(earthPetitesKilled) && !isNaN(bottingTimeDecimal)) {
+                let earthPetitesPerHourValue = Math.round(parseInt(earthPetitesKilled) / parseFloat(bottingTimeDecimal));
+                earthPetitesPerHour = earthPetitesPerHourValue;
             }
 
             // Update the DOM with the collected and calculated data
             document.getElementById('baseExp').textContent = baseExp;
             document.getElementById('jobExp').textContent = jobExp;
             document.getElementById('zeny').textContent = zeny;
-            document.getElementById('gladiusKoboldsKilled').textContent = gladiusKoboldsKilled;
-            document.getElementById('bottingTime').textContent = bottingTime; // Directly show the botting time
+            document.getElementById('earthPetitesKilled').textContent = earthPetitesKilled;
+            document.getElementById('bottingTime').textContent = bottingTime; // Show original botting time
             document.getElementById('deaths').textContent = deaths;
-            document.getElementById('koboldsPerHour').textContent = koboldsPerHour;
+            document.getElementById('earthPetitesPerHour').textContent = earthPetitesPerHour;
 
         } catch (error) {
             // Log any errors encountered during the process
@@ -187,8 +188,8 @@
                 <tr><td><strong>BaseExp/Hour:</strong> <span id="baseExp">Loading...</span></td></tr>
                 <tr><td><strong>JobExp/Hour:</strong> <span id="jobExp">Loading...</span></td></tr>
                 <tr><td><strong>Zeny/Hour:</strong> <span id="zeny">Loading...</span></td></tr>
-                <tr><td><strong>Gladius Kobolds killed:</strong> <span id="gladiusKoboldsKilled">Loading...</span></td></tr>
-                <tr><td><strong>Gladius Kobolds killed/Hour:</strong> <span id="koboldsPerHour">Loading...</span></td></tr>
+                <tr><td><strong>Earth Petite killed:</strong> <span id="earthPetitesKilled">Loading...</span></td></tr>
+                <tr><td><strong>Earth Petite killed/Hour:</strong> <span id="earthPetitesPerHour">Loading...</span></td></tr>
                 <tr><td><strong>Botting time:</strong> <span id="bottingTime">Loading...</span></td></tr>
                 <tr><td><strong>Deaths:</strong> <span id="deaths">Loading...</span></td></tr>
             </tbody>

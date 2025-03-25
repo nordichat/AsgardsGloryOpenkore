@@ -12,6 +12,13 @@
 #Hydra
 #Obeaune
 
+##### Mt.Mjolnir (mjolnir_02) ####
+1155 #Earth Petitex
+Flora
+Creamy
+Hornet
+Poporing
+
 ##### Geffen Field (gef_fild08) #####
 1133 #KOBOLD_1
 1134 #KOBOLD_2

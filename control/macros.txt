@@ -11,7 +11,7 @@ automacro ifInventoryContainsItem1 {
     exclusive 1
     run-once 1
     timeout 5
-    inventory "Buckler [1]" > 0
+    inventory "Rough Oridecon" > 0
     call transferItem
 }
 
@@ -19,7 +19,23 @@ automacro ifInventoryContainsItem2 {
     exclusive 1
     run-once 1
     timeout 5
-    inventory "Gladius [1]" > 0
+    inventory "Creamy Card" > 0
+    call transferItem
+}
+
+automacro ifInventoryContainsItem3 {
+    exclusive 1
+    run-once 1
+    timeout 5
+    inventory "Flora Card" > 0
+    call transferItem
+}
+
+automacro ifInventoryContainsItem4 {
+    exclusive 1
+    run-once 1
+    timeout 5
+    inventory "Earth Petite Card" > 0
     call transferItem
 }
 
@@ -29,26 +45,37 @@ macro transferItem {
 
     if ($charname != $mainCharname) {
         do ai manual
-        $item1 = @inventory(Buckler [1])
+        $item1 = @inventory(Rough Oridecon)
         if ($item1 > -1) {
-            do p Found a Buckler [1], I will give it to someone else!
             do drop $item1
             do take first
         }
 
-        $item2 = @Inventory(Gladius [3])
+        $item2 = @Inventory(Creamy Card)
         if ($item2 > -1) {  
-            do p Found a Gladius [3], I will give it to someone else!
             do drop $item2
+            do take first
+        }
+        
+        $item3 = @Inventory(Flora Card)
+        if ($item3 > -1) {  
+            do drop $item3
+            do take first
+        }
+        
+        $item4 = @Inventory(Earth Petite Card)
+        if ($item4 > -1) {  
+            do drop $item4
             do take first
         }
 
         do ai auto
         release ifInventoryContainsItem1
         release ifInventoryContainsItem2
-    }
+        release ifInventoryContainsItem3
+        release ifInventoryContainsItem4
+    } 
 }
-
 
 automacro monsterRefresh {
     monster /NPC/, /NPC Unknown/
