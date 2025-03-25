@@ -55,13 +55,12 @@ automacro monsterRefresh {
     call {
         do c @refresh
         do e hmm
-        $msgToSend = @random ("Weird stuff... panic refresh!", "Something's off... hitting @refresh!", "Is this a bug or a feature? Refreshing!", "I don't trust what I just saw. @refresh!", "Reality is glitching. Time to press refresh!", "Classic fix: turn it off and on again!", "Saw something cursed. Cleansing with @refresh!", "If I ignore it and refresh, it never happened!", "Not sure if lag or hallucination. @refresh!", "Me: *sees weird stuff* Also me: *smashes refresh*")
-        do p $msgToSend
+        do p "Refreshing due to unexpected issue."
     }
     timeout 3
 }
 
-automacro goHeal {
+automacro healAndReturn {
     set macro_delay 0.2
     hp < 15%
     call {
@@ -73,8 +72,11 @@ automacro goHeal {
         pause 1
         do talk @npc(/Healer/)
         do e lv2
-        $msgToSend = @random("Kafra blessings received! Back to the grind!", "Respawned and ready—time to farm again!", "The Valkyries sent me back! Let's go!", "Fully healed! Kobolds won't hunt themselves!", "Back from the brink! Time to rack up XP!", "No time for rest—Gladius and Bucklers await!")  
-        do p $msgToSend
+        $mainCharname = "Stalker1"
+        $charname = @eval($::char->{'name'})
+        if ($charname == $mainCharname) {
+            do p "Healed and ready to continue."
+        }
     }
     timeout 60
 }
@@ -96,9 +98,9 @@ macro verify_party_leader {
 
         if ($isAdmin == 1) {
             if ($charname == $charnameParty) {
-                $msgToSend = @random ("He who has a why to live can bear almost any how - Friedrich Nietzsche", "No tree, it is said, can grow to heaven unless its roots reach down to hell - Carl Jung", "Talent hits a target no one else can hit, Genius hits a target no one else can see - Arthur Schopenhauer", "Man is not the lord of beings, Man is the shepherd of Being - Martin Heidegger", "Life can only be understood backwards, but it must be lived forwards - Soren Kierkegaard", "Man is condemned to be free - Jean-Paul Sartre", "Madness is the exception in individuals but the rule in groups - Friedrich Nietzsche", "Your visions will become clear only when you look into your own heart - Carl Jung", "A man can do what he wants, but not want what he wants - Arthur Schopenhauer", "The function of prayer is not to influence God, but rather to change the nature of the one who prays - Soren Kierkegaard", "We do not see things as they are, we see them as we are - Michel Foucault", "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment - Ralph Waldo Emerson", "The meeting of two personalities is like the contact of two chemical substances, if there is any reaction, both are transformed - Carl Jung")
+                $msgToSend = @random("He who has a why to live can bear almost any how - Friedrich Nietzsche", "No tree it is said can grow to heaven unless its roots reach down to hell - Carl Jung", "Talent hits a target no one else can hit Genius hits a target no one else can see - Arthur Schopenhauer", "Man is not the lord of beings Man is the shepherd of Being - Martin Heidegger", "Life can only be understood backwards but it must be lived forwards - Soren Kierkegaard", "Man is condemned to be free - Jean-Paul Sartre", "Madness is the exception in individuals but the rule in groups - Friedrich Nietzsche", "Your visions will become clear only when you look into your own heart - Carl Jung", "A man can do what he wants but not want what he wants - Arthur Schopenhauer", "The function of prayer is not to influence God but rather to change the nature of the one who prays - Soren Kierkegaard", "We do not see things as they are we see them as we are - Michel Foucault", "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment - Ralph Waldo Emerson", "The meeting of two personalities is like the contact of two chemical substances if there is any reaction both are transformed - Carl Jung", "The only way to deal with this life meaningfully is to find ones passion and follow it - Soren Kierkegaard", "Life is the flower for which love is the honey - Victor Hugo", "The only true wisdom is in knowing you know nothing - Socrates", "The unexamined life is not worth living - Socrates", "It is not length of life but depth of life - Ralph Waldo Emerson", "I am not what happened to me I am what I choose to become - Carl Jung", "The first step toward change is awareness The second step is acceptance - Nathaniel Branden", "The only thing we have to fear is fear itself - Franklin D Roosevelt", "Do not go where the path may lead go instead where there is no path and leave a trail - Ralph Waldo Emerson", "The mind is everything What you think you become - Buddha", "Happiness depends upon ourselves - Aristotle", "The only limit to our realization of tomorrow is our doubts of today - Franklin D Roosevelt", "What we achieve inwardly will change outer reality - Plutarch", "In the middle of difficulty lies opportunity - Albert Einstein", "You must be the change you wish to see in the world - Mahatma Gandhi", "There are no accidents in life - John Lennon", "It is never too late to be what you might have been - George Eliot", "A journey of a thousand miles begins with a single step - Lao Tzu")
                 do p $msgToSend
-                call save_expoutput
+                call track_progress
             } else {
                 $num = @rand(1, 4)
                 if ($num == 1) {
@@ -119,8 +121,8 @@ macro verify_party_leader {
     end loop
 }
 
-macro save_expoutput {  
-    $msgToSend = @random("Tracking Kobold farming... is the grind paying off?", "Checking stats... Base XP, Job XP, Zeny flow?", "Monitoring progress... how's the botting efficiency?", "Evaluating gains... any Gladius or Bucklers so far?", "Assessing farm rate... are we raking in zeny?", "Logging results... XP, Zeny, loot—where do we stand?", "Reviewing session... how's the Kobold grind stacking up?", "Checking efficiency... is this spot worth the time?", "Scanning logs... deaths, XP gains, drops—any surprises?", "Crunching numbers... how's the farm looking?")  
-    do p $msgToSend  
-    do exp output  
-}  
+macro track_progress {
+    $timestamp = @eval(my @t = localtime(); my $offset = 1; sprintf("%02d:%02d", $t[2]+$offset, $t[1]))
+    do p "Tracking progress as of $timestamp."
+    do exp output
+}
