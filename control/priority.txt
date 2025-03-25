@@ -12,6 +12,12 @@
 #Hydra
 #Obeaune
 
+##### Sphinx F3 (in_sphinx3) ####
+Pasana
+MimiC
+Marduk
+Matyr
+
 ##### Mt.Mjolnir (mjolnir_02) ####
 1155 #Earth Petitex
 Flora

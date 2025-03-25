@@ -5,7 +5,8 @@ password.txt
 username_*.txt
 stream_roadmap.html
 exp.txt
-storage.txt
+storage*.txt
+console*.txt
 debug*.bat
 
 # Debug logs

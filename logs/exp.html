@@ -84,10 +84,10 @@
             let baseExp = "N/A";
             let jobExp = "N/A";
             let zeny = "N/A";
-            let desertWolvesKilled = "N/A"; // Renamed variable
+            // let desertWolvesKilled = "N/A"; // Renamed variable
             let bottingTime = "N/A";
             let deaths = "N/A";
-            let desertWolvesPerHour = "N/A"; // Renamed variable
+            // let desertWolvesPerHour = "N/A"; // Renamed variable
 
             // Process each line to extract relevant information
             for (const line of lines) {
@@ -100,10 +100,10 @@
                 if (line.includes("zeny/Hour") && zeny === "N/A") {
                     zeny = line.split(":")[1].trim();
                 }
-                if (line.includes("1106   Desert Wolf") && desertWolvesKilled === "N/A") { // Updated condition
-                    let parts = line.trim().split(/\s+/);
-                    desertWolvesKilled = parts[parts.length - 1];
-                }
+                // if (line.includes("1106   Desert Wolf") && desertWolvesKilled === "N/A") { // Updated condition
+                //     let parts = line.trim().split(/\s+/);
+                //     desertWolvesKilled = parts[parts.length - 1];
+                // }
                 if (line.includes("Botting time") && bottingTime === "N/A") {
                     bottingTime = line.split(":")[1].trim();
                 }
@@ -112,7 +112,7 @@
                 }
 
                 // Stop when all necessary data is collected
-                if (baseExp !== "N/A" && jobExp !== "N/A" && zeny !== "N/A" && desertWolvesKilled !== "N/A" && bottingTime !== "N/A" && deaths !== "N/A") {
+                if (baseExp !== "N/A" && jobExp !== "N/A" && zeny !== "N/A" && bottingTime !== "N/A" && deaths !== "N/A") {
                     break;
                 }
             }
@@ -146,19 +146,19 @@
             }
 
             // Calculate Desert Wolves killed per hour (rounded to the nearest whole number)
-            if (desertWolvesKilled !== "N/A" && bottingTimeDecimal !== "N/A" && !isNaN(desertWolvesKilled) && !isNaN(bottingTimeDecimal)) {
-                let desertWolvesPerHourValue = Math.round(parseInt(desertWolvesKilled) / parseFloat(bottingTimeDecimal));
-                desertWolvesPerHour = desertWolvesPerHourValue;
-            }
+            // if (desertWolvesKilled !== "N/A" && bottingTimeDecimal !== "N/A" && !isNaN(desertWolvesKilled) && !isNaN(bottingTimeDecimal)) {
+            //     let desertWolvesPerHourValue = Math.round(parseInt(desertWolvesKilled) / parseFloat(bottingTimeDecimal));
+            //     desertWolvesPerHour = desertWolvesPerHourValue;
+            // }
 
             // Update the DOM with the collected and calculated data
             document.getElementById('baseExp').textContent = baseExp;
             document.getElementById('jobExp').textContent = jobExp;
             document.getElementById('zeny').textContent = zeny;
-            document.getElementById('desertWolvesKilled').textContent = desertWolvesKilled; // Updated ID
+            // document.getElementById('desertWolvesKilled').textContent = desertWolvesKilled; // Updated ID
             document.getElementById('bottingTime').textContent = bottingTime; // Show original botting time
             document.getElementById('deaths').textContent = deaths;
-            document.getElementById('desertWolvesPerHour').textContent = desertWolvesPerHour; // Updated ID
+            // document.getElementById('desertWolvesPerHour').textContent = desertWolvesPerHour; // Updated ID
 
         } catch (error) {
             // Log any errors encountered during the process
@@ -166,8 +166,8 @@
         }
     }
 
-    // Update every 15 minutes (900,000 milliseconds)
-    setInterval(update, 900000);
+    // Update every 5 minutes (300,000 milliseconds)
+    setInterval(update, 300000);
 
     // Initial update when the page loads
     window.onload = update;
@@ -188,8 +188,8 @@
                 <tr><td><strong>BaseExp/Hour:</strong> <span id="baseExp">Loading...</span></td></tr>
                 <tr><td><strong>JobExp/Hour:</strong> <span id="jobExp">Loading...</span></td></tr>
                 <tr><td><strong>Zeny/Hour:</strong> <span id="zeny">Loading...</span></td></tr>
-                <tr><td><strong>Desert Wolf killed:</strong> <span id="desertWolvesKilled">Loading...</span></td></tr> <!-- Updated label and ID -->
-                <tr><td><strong>Desert Wolf killed/Hour:</strong> <span id="desertWolvesPerHour">Loading...</span></td></tr> <!-- Updated label and ID -->
+                <!-- <tr><td><strong>Desert Wolf killed:</strong> <span id="desertWolvesKilled">Loading...</span></td></tr> -->
+                <!-- <tr><td><strong>Desert Wolf killed/Hour:</strong> <span id="desertWolvesPerHour">Loading...</span></td></tr> -->
                 <tr><td><strong>Botting time:</strong> <span id="bottingTime">Loading...</span></td></tr>
                 <tr><td><strong>Deaths:</strong> <span id="deaths">Loading...</span></td></tr>
             </tbody>
