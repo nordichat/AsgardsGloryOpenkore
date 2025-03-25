@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roadmap</title>
+    <style>
+        body {
+            background-color: transparent;
+            font-family: Tahoma, sans-serif;
+            font-size: 11px;
+            user-select: none; /* Prevent text selection */
+            -webkit-user-select: none; /* For Safari */
+            -moz-user-select: none; /* For Firefox */
+            -ms-user-select: none; /* For Internet Explorer/Edge */
+        }
+        .ro-container {
+            width: 280px;
+            background: rgba(255, 255, 255, 1);
+            background-color: transparent;
+        }
+        .ro-header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to bottom, rgb(133,151,201), rgb(180,194,222), rgb(175,190,221), rgb(202,212,233), rgb(177,196,231), rgb(183,198,232), rgb(153,174,217), rgb(167,186,226), rgb(158,182,228), rgb(184,202,241), rgb(175,196,240), rgb(202,223,251), rgb(190,216,242), rgb(220,241,253), rgb(197,222,243), rgb(210,234,252));
+            color: black;
+            padding: 1px 4px 2px 4px;
+            border-radius: 4px 4px 0 0;
+            image-rendering: pixelated; /* Ensures pixel precision */
+        }
+        .ro-header img {
+            position: relative;
+            top: 1px;
+            width: auto;
+            height: auto;
+            image-rendering: crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+        }
+        .ro-header span {
+            font-family: 'Press Start 2P', Tahoma, sans-serif;
+            flex-grow: 1;
+            text-align: left;
+            text-shadow: 1px 1px 0 white;
+            padding-left: 5px;
+            position: relative;
+            top: 2px;
+            -webkit-font-smoothing: none;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ro-header .right-icons img {
+            margin-left: 2px;
+        }
+        .ro-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 1);
+            color: black;
+            font-size: 11px;
+        }
+        .ro-table td {
+            padding: 5px;
+            border-top: 1px solid black;
+            border-left: 1px solid #c6c6c6;
+            border-right: 1px solid #c6c6c6;
+            border-bottom: 1px solid #c6c6c6;
+            text-align: left;
+        }
+        .ro-table td.indent {
+            padding-left: 15px;
+        }
+        .progress {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="ro-container">
+        <div class="ro-header">
+            <img src="transparent/left_button.png" alt="Left Button">
+            <span>Roadmap</span>
+            <div class="right-icons">
+                <img src="transparent/mini_button.png" alt="Mini Button">
+                <img src="transparent/quit_button.png" alt="Quit Button">
+            </div>
+        </div>
+        <table class="ro-table">
+            <tbody>
+                <tr><td><strong>Geffen Field (gef_fild08):</strong></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Buckler [1] <span class="progress">[0/4]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_1.png" alt="Checkbox"> Gladius [3] <span class="progress">[0/4]</span></td></tr>
+                <tr><td><strong>Shrine of Gonryun Queen (gon_dun01):</strong></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Zipper Bear Card <span class="progress">[0/3]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Enchanted Peach Tree Card <span class="progress">[0/1]</span></td></tr>
+            </tbody>
+        </table>
+    </div>
+    <script>
+        async function updateProgress() {
+            try {
+                const response = await fetch('storage.txt');
+                const text = await response.text();
+                const storageLines = text.split('\n').map(line => line.trim()).filter(line => line);
+                
+                const storageMap = {};
+                
+                storageLines.forEach(line => {
+                    const match = line.match(/^\d+\s+(.+)\s+x\s+(\d+)/);
+                    if (match) {
+                        const [, name, count] = match;
+                        const itemName = name.trim();
+                        storageMap[itemName] = (storageMap[itemName] || 0) + parseInt(count, 10);
+                    }
+                });
+                
+                document.querySelectorAll('.ro-table td.indent').forEach(td => {
+                    const progressSpan = td.querySelector('.progress');
+                    if (!progressSpan) return;
+                    
+                    const match = progressSpan.textContent.match(/(\d+)\/(\d+)/);
+                    if (!match) return;
+                    
+                    const [, , goal] = match;
+                    const itemName = td.textContent.replace(progressSpan.textContent, '').trim();
+                    const storedCount = storageMap[itemName] || 0;
+                    const progressText = `[${storedCount}/${goal}]`;
+                    
+                    progressSpan.textContent = progressText;
+                    
+                    if (storedCount === 0) {
+                        progressSpan.style.color = 'red';
+                        td.querySelector('img').src = 'transparent/checkbox_0.png';
+                    } else if (storedCount > 0 && storedCount < goal) {
+                        progressSpan.style.color = 'orange';
+                        td.querySelector('img').src = 'transparent/checkbox_0.png';
+                    } else if (storedCount >= goal) {
+                        progressSpan.style.color = 'green';
+                        td.querySelector('img').src = 'transparent/checkbox_1.png';
+                    }
+                });
+            } catch (error) {
+                console.error("Error reading storage.txt:", error);
+            }
+        }
+
+        setInterval(updateProgress, 900000); // Update every 15 minutes (900,000 milliseconds)
+        window.onload = updateProgress;
+    </script>
+</body>
+</html>

@@ -1,0 +1,175 @@
+/* ================================================= */
+/* OBS Browser Source - Custom CSS                   */
+/* ================================================= */
+/* TODO: Build OBS Lua/Python script                 */
+/*       → Auto-refresh browser source every X mins */
+/* ================================================= */
+
+/* ------------------------------------------------- */
+/* Reference: Stream Browser Source - Who's Online?  */
+/* ------------------------------------------------- */
+/* URL:                                             */
+/* http://asgardsglory.ddns.net/?module=character&action=online */
+/* ------------------------------------------------- */
+/* Add specific search parameters to filter results: */
+/* → Character Name: char_name=                      */
+/* → Job Class: char_class=                          */
+/* → Guild Name: guild_name=                         */
+/* Example:                                          */
+/* http://asgardsglory.ddns.net/?module=character&action=online&guild_name=Alienate */
+/* ------------------------------------------------- */
+
+/* --------------------- */
+/* Filtering/Visibility  */
+/* --------------------- */
+body {
+    /* background-color: rgba(0, 0, 0, 0); */
+    margin: 0px auto;
+    overflow: hidden;
+	background-color: transparent !important;
+}
+
+body > table > tbody > tr:nth-child(-n+2),
+body > table > tbody > tr:nth-last-child(-n+4),
+body > table > tbody > tr:not([style*="display: none;"]) > td:nth-child(-n+3),
+body > table > tbody > tr:not([style*="display: none;"]) > td:last-child,
+body > table > tbody > tr:not([style*="display: none;"]) > td > table > tbody > tr:first-child,
+body > table > tbody > tr:not([style*="display: none;"]) > td > table > tbody > tr:last-child,
+body > table > tbody > tr:not([style*="display: none;"]) > td > table > tbody > tr > td:first-child,
+body > table > tbody > tr:not([style*="display: none;"]) > td > table > tbody > tr > td:last-child,
+td[bgcolor="#f5f5f5"] > *:not(.horizontal-table),
+.horizontal-table th:nth-last-child(2),
+.horizontal-table th:last-child,
+.horizontal-table td:nth-last-child(2),
+.horizontal-table td:last-child,
+td[width="20"] {
+    display: none;
+}
+
+td[bgcolor="#f5f5f5"] {
+    background-color: transparent !important; /* Override inline bgcolor */
+}
+
+/* Align the character names to the left */
+.horizontal-table td:first-child {
+    text-align: left !important;
+}
+
+/* Apply padding to all th and td inside .horizontal-table */
+.horizontal-table th,
+.horizontal-table td {
+    padding: 2px 10px !important;
+    font-weight: normal !important;
+}
+
+/* ------------------------- */
+/* Horizontal Table Styling  */
+/* ------------------------- */
+
+/* Base table styling */
+.horizontal-table {
+min-width:280px
+	max-width: fit-content;
+    border-collapse: separate !important;
+    background: rgba(255, 255, 255, 1);
+    font-family: Tahoma, sans-serif;
+    font-size: 11px;
+    color: black;
+	background-color: transparent !important;
+	user-select: none; /* Prevent text selection */
+    -webkit-user-select: none; /* For Safari */
+    -moz-user-select: none; /* For Firefox */
+    -ms-user-select: none; /* For Internet Explorer/Edge */
+}
+
+a {
+    pointer-events: none;
+    text-decoration: none; /* Optional: Remove underline */
+    cursor: default;
+}
+
+/* Style header row (first tr's ths) like ro-header */
+.horizontal-table tr:first-child th {
+    background: linear-gradient(
+        to bottom,
+        rgb(133, 151, 201),
+        rgb(180, 194, 222),
+        rgb(175, 190, 221),
+        rgb(202, 212, 233),
+        rgb(177, 196, 231),
+        rgb(183, 198, 232),
+        rgb(153, 174, 217),
+        rgb(167, 186, 226),
+        rgb(158, 182, 228),
+        rgb(184, 202, 241),
+        rgb(175, 196, 240),
+        rgb(202, 223, 251),
+        rgb(190, 216, 242),
+        rgb(220, 241, 253),
+        rgb(197, 222, 243),
+        rgb(210, 234, 252)
+    ) !important;
+    text-shadow: 1px 1px 0 white !important;
+    font-family: 'Press Start 2P', Tahoma, sans-serif !important;
+    text-align: left !important;
+    border-bottom: 1px solid black !important;
+	border: 0;
+}
+
+/* Apply border-radius only to the first and last <th> */
+.horizontal-table tr:first-child th:first-child {
+    border-radius: 4px 0 0 0 !important;
+}
+
+.horizontal-table tr:first-child th:nth-child(4) {
+    border-radius: 0 4px 0 0 !important;
+}
+
+/* Apply top border to th elements in the second row */
+.horizontal-table tr:nth-child(2) th {
+    border-top: 1px solid black !important;
+}
+
+
+/* Styling for body rows */
+.horizontal-table tr:not(:first-child) td:nth-child(4) {
+  	border-right-width: 1px !important;
+}
+
+/* Styling for body rows */
+.horizontal-table tr:not(:first-child) td {
+    padding: 5px;
+	border-style: solid;
+	border-color: #c6c6c6;
+	border-top-width: 0px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-right-width: 0px;
+}
+
+/* Pixelated image icons */
+.horizontal-table td img {
+    width: 16px;
+    height: 16px;
+    image-rendering: pixelated;
+}
+
+/* Bold progress numbers */
+.horizontal-table .progress {
+    font-weight: bold;
+}
+
+/* ---------------------- */
+/* Sortable Column Fixes  */
+/* ---------------------- */
+.sortable {
+    color: #000 !important;
+    text-decoration: none !important;
+}
+
+.horizontal-table th,
+.horizontal-table td {
+    font-size: 11px !important;
+    text-align: left !important;
+    padding: 2px 5px !important;
+}

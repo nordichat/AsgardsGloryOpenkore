@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coding Roadmap</title>
+    <style>
+        body {
+            background-color: transparent;
+            font-family: Tahoma, sans-serif;
+            font-size: 11px;
+            user-select: none; /* Prevent text selection */
+            -webkit-user-select: none; /* For Safari */
+            -moz-user-select: none; /* For Firefox */
+            -ms-user-select: none; /* For Internet Explorer/Edge */
+        }
+        .ro-container {
+            width: 280px;
+            background: rgba(255, 255, 255, 1);
+            background-color: transparent;
+        }
+        .ro-header {
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to bottom, rgb(133,151,201), rgb(180,194,222), rgb(175,190,221), rgb(202,212,233), rgb(177,196,231), rgb(183,198,232), rgb(153,174,217), rgb(167,186,226), rgb(158,182,228), rgb(184,202,241), rgb(175,196,240), rgb(202,223,251), rgb(190,216,242), rgb(220,241,253), rgb(197,222,243), rgb(210,234,252));
+            color: black;
+            padding: 1px 4px 2px 4px;
+            border-radius: 4px 4px 0 0;
+            image-rendering: pixelated; /* Ensures pixel precision */
+        }
+        .ro-header img {
+            position: relative;
+            top: 1px;
+            width: auto;
+            height: auto;
+            image-rendering: crisp-edges;
+            image-rendering: -webkit-optimize-contrast;
+        }
+        .ro-header span {
+            font-family: 'Press Start 2P', Tahoma, sans-serif;
+            flex-grow: 1;
+            text-align: left;
+            text-shadow: 1px 1px 0 white;
+            padding-left: 5px;
+            position: relative;
+            top: 2px;
+            -webkit-font-smoothing: none;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .ro-header .right-icons img {
+            margin-left: 2px;
+        }
+        .ro-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 1);
+            color: black;
+            font-size: 11px;
+        }
+        .ro-table td {
+            padding: 5px;
+            border-top: 1px solid black;
+            border-left: 1px solid #c6c6c6;
+            border-right: 1px solid #c6c6c6;
+            border-bottom: 1px solid #c6c6c6;
+            text-align: left;
+        }
+        .ro-table td.indent {
+            padding-left: 15px;
+        }
+        .progress {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="ro-container">
+        <div class="ro-header">
+            <img src="transparent/left_button.png" alt="Left Button">
+            <span>Stream Roadmap</span>
+            <div class="right-icons">
+                <img src="transparent/mini_button.png" alt="Mini Button">
+                <img src="transparent/quit_button.png" alt="Quit Button">
+            </div>
+        </div>
+        <table class="ro-table">
+            <tbody>
+                <tr>
+                    <td><strong>Storage Sync:</strong></td>
+                </tr>
+                <tr>
+                    <td class="indent">
+                        <img src="transparent/checkbox_0.png" class="checkbox" alt="Checkbox"> 
+                        Cloud sync for storage files between all characters
+                    </td>
+                </tr>
+                <tr>
+                    <td class="indent">
+                        <img src="transparent/checkbox_0.png" class="checkbox" alt="Checkbox"> 
+                        Modify roadmap.html to sum storage data
+                    </td>
+                </tr>
+                <tr>
+                    <td class="indent">
+                        <img src="transparent/checkbox_0.png" class="checkbox" alt="Checkbox"> 
+                        Display total item counts
+                    </td>
+                </tr>
+                <tr>
+                    <td><strong>OBS Integration:</strong></td>
+                </tr>
+                <tr>
+                    <td class="indent">
+                        <img src="transparent/checkbox_0.png" class="checkbox" alt="Checkbox"> 
+                        Auto-refresh OBS browser: <a href="http://asgardsglory.ddns.net/?module=character&action=online&char_name=&char_class=Rogue&guild_name=Alienate" target="_blank">Who's Online</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
