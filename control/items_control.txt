@@ -108,6 +108,7 @@ Maneater Blossom 0 0 1
 Powder of Butterfly 0 0 1
 Singing Flower 0 0 1
 Witherless Rose 0 0 1
+Claw of Desert Wolf 0 0 1
 
 ##### CUSTOM: KEEP #####
 Pantie 0 1 0
@@ -308,3 +309,5 @@ Adventurer's Suit 0 0 1
 2321 0 0 1                  #Silk Robe [0]   [Body]
 2322 0 0 1                  #Silk Robe [1]   [Body]
 2253 0 0 1                  #Sunflower [0]   [Upper Head]
+1217 0 0 1                  #Stiletto [3]   [One Hand]
+1253 0 0 1                  #Katar [2]   [Two Handed]

@@ -32,7 +32,7 @@ message_length_max 80
 
 alias_heal sp 28
 
-allowedMaps geffen, mjolnir_02
+allowedMaps
 allowedMaps_reaction 0
 
 attackAuto 2
@@ -162,7 +162,7 @@ itemsGatherAuto_notInTown 0
 itemsGatherAutoMinPlayerDistance 6
 itemsGatherAutoMinPortalDistance 5
 itemsMaxWeight 89
-itemsMaxWeight_sellOrStore 48
+itemsMaxWeight_sellOrStore 80
 itemsMaxNum_sellOrStore 98
 cartMaxWeight 7900
 itemsTakeGreed 0
@@ -176,7 +176,7 @@ route_randomWalk_maxRouteTime 0
 route_maxWarpFee
 route_maxNpcTries 5
 route_teleport 1
-route_teleport_minDistance 50
+route_teleport_minDistance 30
 route_teleport_maxTries 20
 route_teleport_notInMaps
 route_step 15
@@ -261,12 +261,10 @@ partyAutoShareItemDiv 0
 guildAutoDeny 1
 attendanceAuto 1
 
-verbose 0
 showDomain 1
 showDomain_NPC parseMsg_presence
 showDomain_Shop list
 #squelchDomains attackMon, attackedMiss, exp, drop, info, selfSkill, skill, attackMonMiss, ai_attack, selfchat, party, attacked, portals, route_teleport, parseMsg_statuslook, inventory, useItem
-squelchDomains ai_attack, ai_npcTalk, attacked, attackedMiss, attackMon, attackMonMiss, connection, console, deal, devotion, drop, emotion, exp, equip, follow, guildchat, guildnotice, input, inventory, load, looter, map_event, npc, parseMsg_statuslook, parseMsg/hairColor, parseMsg/job, parseMsg/upgrade, party, partychat, pet, plugins, pm, pm/sent, portals, portalRecord, publicchat, refine, route, route_teleport, schat, selfSkill, skill, sold, startup, success, syntax, teleport, useItem, useTeleport, waypoint, xkore, ai, ai_autoCart, ai_makeItem, ai_move, autoBreakTime, d_sendPacket, debug, equipAuto, guild, ipc, Item, monsterSkill, packetParser, parseInput, parseMsg, parseMsg_comboDelay, parseMsg_damage, parseMsg_move, parseMsg_presence, parseMsg_presence/name, parseMsg_presence/player, parseMsg_presence/remote, parseSendMsg, sendPacket, sitAuto, vending, busParty, storage
 verboseDomains
 beepDomains
 beepDomains_notInTown
@@ -294,7 +292,6 @@ logSystemChat 0
 logLocalBroadcast 0
 logShop 0
 logEmoticons
-logConsole 0
 logAppendUsername 0
 logAppendServer 0
 monsterLog 0
@@ -307,7 +304,7 @@ chatTitleOversize 0
 shopTitleOversize 0
 buyerShopTitleOversize 0
 
-sleepTime 10000
+sleepTime 0
 
 ignoreAll 0
 itemHistory 0
@@ -907,13 +904,15 @@ skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIF
 route_randomWalk 2
 
 storageAuto 1
-storageAuto_npc geffen 120 62
+storageAuto_npc veins 208 128
+#storageAuto_npc geffen 120 62
 #storageAuto_npc morocc 156 97
 #storageAuto_npc payon 181 104
 #storageAuto_npc prontera 164 175
 
 sellAuto 1
-sellAuto_npc geffen 124 70
+sellAuto_npc veins 211 122
+#sellAuto_npc geffen 124 70
 #sellAuto_npc morocc 149 102
 #sellAuto_npc payon 183 102
 #sellAuto_npc prontera 147 175
@@ -923,15 +922,15 @@ autoMoveOnDeath_x
 autoMoveOnDeath_y
 autoMoveOnDeath_map
 
-saveMap geffen
+saveMap veins
 saveMap_warpToBuyOrSell 1
-saveMap_warpChatCommand @go 2
+saveMap_warpChatCommand @go 24
 memo1
 memo2
 memo3
 memo4
 
-lockMap mjolnir_02
+lockMap ve_fild04
 lockMap_x
 lockMap_y
 lockMap_randX

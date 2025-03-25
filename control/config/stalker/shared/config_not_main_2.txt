@@ -1,3 +1,4 @@
-relogAfterStorage 0
+relogAfterStorage 1
+
 logConsole 1
 verbose 1

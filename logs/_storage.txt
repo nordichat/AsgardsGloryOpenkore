@@ -1,0 +1,120 @@
+---------- Storage 2025.03.25 04:24:22 -----------
+ 0 Red Herb x 2083
+ 1 Yellow Herb x 1
+ 2 White Herb x 15
+ 3 Blue Herb x 119
+ 4 Green Herb x 808
+ 5 Apple x 228
+ 6 Grape x 203
+ 7 Meat x 3159
+ 8 Aloe Leaflet x 4
+ 9 Monster's Feed x 3988
+10 Strawberry x 2983
+11 Fly Wing x 104
+12 Old Blue Box x 5
+13 Magnifier x 4
+14 Aloe x 7
+15 Empty Bottle x 761
+16 Yellow Gemstone x 107
+17 Red Gemstone x 6
+18 Rough Oridecon x 44
+19 Rough Elunium x 49
+20 Stem x 184
+21 Zargon x 1097
+22 Fluff x 9
+23 Mushroom Spore x 3605
+24 Venom Canine x 1114
+25 Alcohol x 6
+26 Karvodailnirol x 16
+27 Elunium x 1
+28 Red Blood x 59
+29 Wind of Verdure x 21
+30 Iron x 25
+31 Steel x 331
+32 Poison Arrow x 57
+33 Arrow of Shadow x 1
+34 Poring Card x 1
+35 Lunatic Card x 3
+36 Thiefbug Egg Card x 2
+37 Thief Bug Card x 1
+38 Spore Card x 7
+39 Wolf Card x 17
+40 PoPoring Card x 5
+41 Snake Card x 9
+42 Steel Chonchon Card x 2
+43 Golem Card x 1
+44 Kobold Card x 8
+45 Matyr Card x 1
+46 High Orc Card x 1
+47 Poison Spore x 2477
+48 Gladius [3] x 1
+49 Gladius [3] x 1
+50 Gladius [3] x 1
+51 Gladius [3] x 1
+52 Orcish Axe x 1
+53 Buckler [1] x 1
+54 Buckler [1] x 1
+55 Buckler [1] x 1
+56 Buckler [1] x 1
+57 Buckler [1] x 1
+58 Buckler [1] x 1
+59 Buckler [1] x 1
+60 Buckler [1] x 1
+61 Buckler [1] x 1
+62 Buckler [1] x 1
+63 Buckler [1] x 1
+64 Buckler [1] x 1
+65 Buckler [1] x 1 -- Not Identified
+66 Buckler [1] x 1
+67 Buckler [1] x 1
+68 Buckler [1] x 1
+69 Buckler [1] x 1
+70 Buckler [1] x 1
+71 Buckler [1] x 1
+72 Buckler [1] x 1
+73 Buckler [1] x 1
+74 Buckler [1] x 1
+75 Buckler [1] x 1
+76 Buckler [1] x 1
+77 Buckler [1] x 1
+78 Buckler [1] x 1
+79 Buckler [1] x 1
+80 Buckler [1] x 1
+81 Buckler [1] x 1 -- Not Identified
+82 Buckler [1] x 1
+83 Buckler [1] x 1
+84 Pantie x 1
+85 Pantie x 1
+86 Pantie x 1
+87 Pantie x 1
+88 Pantie x 1
+89 Pantie x 1
+90 Pantie x 1
+91 Pantie x 1
+92 Pantie x 1
+93 Pantie x 1
+94 Pantie x 1
+95 Pantie x 1
+96 Pantie x 1
+97 Pantie x 1
+98 Pantie x 1
+99 Pantie x 1
+100 Pantie x 1
+101 Pantie x 1
+102 Pantie x 1
+103 Pantie x 1
+104 Pantie x 1
+105 Pantie x 1
+106 Pantie x 1
+107 Pantie x 1
+108 Shoes [1] x 1
+109 Shoes [1] x 1
+110 Clip [1] x 1
+111 Rosary x 1
+112 Rosary x 1
+113 Buckler [1] x 1 -- Not Identified
+114 Creamy Card x 1
+115 Desert Wolf Card x 1
+
+Capacity: 114/600
+-------------------------------

@@ -1,1 +1,5 @@
 relogAfterStorage 1
+
+logConsole 0
+squelchDomains ai_attack, ai_npcTalk, attacked, attackedMiss, attackMon, attackMonMiss, connection, console, deal, devotion, drop, emotion, exp, equip, follow, guildchat, guildnotice, input, inventory, load, looter, map_event, npc, parseMsg_statuslook, parseMsg/hairColor, parseMsg/job, parseMsg/upgrade, party, partychat, pet, plugins, pm, pm/sent, portals, portalRecord, publicchat, refine, route, route_teleport, schat, selfSkill, skill, sold, startup, success, syntax, teleport, useItem, useTeleport, waypoint, xkore, ai, ai_autoCart, ai_makeItem, ai_move, autoBreakTime, d_sendPacket, debug, equipAuto, guild, ipc, Item, monsterSkill, packetParser, parseInput, parseMsg, parseMsg_comboDelay, parseMsg_damage, parseMsg_move, parseMsg_presence, parseMsg_presence/name, parseMsg_presence/player, parseMsg_presence/remote, parseSendMsg, sendPacket, sitAuto, vending, busParty, storage
+verbose 0

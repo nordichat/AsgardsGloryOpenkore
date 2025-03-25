@@ -41,7 +41,8 @@ attackSkillSlot RG_INTIMIDATE {
 	timeout 60
 	onAction attack
     #monsters 1133, 1134, 1135 # Geffen Field (gef_fild08)
-    monsters 1155
+    #monsters 1155
+    monsters Desert Wolf
 }
 
 getAuto Monster's Feed {
@@ -54,7 +55,7 @@ getAuto Monster's Feed {
 }
 
 buyAuto Awakening Potion {
-	npc geffen 124 70
+	npc veins 211 122
 	distance 4
 	price 1500
 	minAmount 0
@@ -64,7 +65,7 @@ buyAuto Awakening Potion {
 }
 
 buyAuto Fly Wing {
-	npc geffen 124 70
+	npc veins 211 122
 	distance 4
 	price 60
 	minAmount 0
@@ -73,7 +74,7 @@ buyAuto Fly Wing {
 }
 
 buyAuto Butterfly Wing {
-	npc geffen 124 70
+	npc veins 211 122
 	distance 4
 	price 300
 	minAmount 0
