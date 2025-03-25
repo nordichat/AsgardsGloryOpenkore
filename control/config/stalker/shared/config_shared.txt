@@ -871,7 +871,6 @@ storageAuto_useChatCommand
 storageAuto_useItem 0
 storageAuto_useItem_item
 storageAuto_notAfterDeath
-relogAfterStorage 1
 minStorageZeny 50
 
 npcTimeResponse

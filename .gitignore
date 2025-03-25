@@ -1,15 +1,12 @@
 # Custom
 macro_notes.txt
-private_eventMacros.txt
+private_*.txt
 password.txt
-username_1.txt
-username_2.txt
-username_3.txt
-username_4.txt
-username_5.txt
-username_6.txt
-username_7.txt
-username_8.txt
+username_*.txt
+stream_roadmap.html
+exp.txt
+storage.txt
+debug*.bat
 
 # Debug logs
 config.log

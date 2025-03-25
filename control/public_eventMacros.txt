@@ -70,7 +70,6 @@ automacro NoviceStartLeveling {
 #⁠gunslinger 8
 #⁠ninja 9
 #baby novice 10
-
 automacro Novice-JobChangeTrigger {
     JobLevel = 10
     JobID 0
@@ -86,17 +85,6 @@ automacro Novice-JobChangeTrigger {
      }
 }
 
-macro Novice-JobChange {
-    #$charName = @eval ($::char->{'name'})
-    ##my @strings = ("Stalker7", "LordKnight4", "Champion2");
-    #$string = Stalker5
-    #$string =~ s/\d+$//
-
-    $choice = r5
-    #log $string
-    do talknpc 153 193 $choice c r0 c
-}
-
 automacro ThiefStartLeveling-lvl20 {
     BaseLevel < 20
     JobID 6
@@ -108,44 +96,4 @@ automacro ThiefStartLeveling-lvl20 {
         do conf skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10, AC_VULTURE 10, RG_SNATCHER 9, RG_STEALCOIN 4, RG_BACKSTAP 4, RG_TUNNELDRIVE 2, RG_RAID 5, RG_INTIMIDATE 5, RG_PLAGIARISM 10
         do ai auto
     }
-}
-
-#Should be a automacro
-macro IdentifyWhenHome {
-       $id = @inventory(Magnifier)
-       do is $id
-       pause 1
-       do identify 0
-}
-
-automacro ThiefStartLeveling-lvl20_30 {
-    #Equiped
-    IsNotEquippedID armor 2304
-    inInventory Empty Bottle > 0
-    BaseLevel >= 20
-    BaseLevel < 30
-    JobID 6
-    timeout 1200
-    call 
-        do c \@go prontera
-        #do conf !include shared/skills20-99.txt
-
-        $jacket1 = @inventory(Jacket [1])
-        
-        $itemIdentifed = @eval ($::jacket1->{identified})
-        log Was jacket found? $jacket1 and itemIdentifed 
-
-        do conf label_buyAuto_Magnifier.disabled 0
-        #!$item->{identified}
-        # Things to do....
-        # Buy a better dagger.
-        # Upgrade Dagger.                                (Added so it keeps 7 Phracon in inventory.)
-        # Identify and Equip Jacket [1]         (Added so it keeps 1 in inventory.) Add Autobuy Magnifier and always keep 5....
-        # Add Stockup Automacro for Conc potion.
-        #do conf lockMap none
-        do ai manual
-        log Level 20 - 30 but has yet not equipped Jacket [1].
-        #do conf lockMap none
-        do ai auto
-    
 }

@@ -9,10 +9,10 @@
             background-color: transparent;
             font-family: Tahoma, sans-serif;
             font-size: 11px;
-            user-select: none; /* Prevent text selection */
-            -webkit-user-select: none; /* For Safari */
-            -moz-user-select: none; /* For Firefox */
-            -ms-user-select: none; /* For Internet Explorer/Edge */
+            user-select: none;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
         }
         .ro-container {
             width: 280px;
@@ -26,7 +26,7 @@
             color: black;
             padding: 1px 4px 2px 4px;
             border-radius: 4px 4px 0 0;
-            image-rendering: pixelated; /* Ensures pixel precision */
+            image-rendering: pixelated;
         }
         .ro-header img {
             position: relative;
@@ -72,6 +72,72 @@
             font-weight: bold;
         }
     </style>
+<script>
+    // Function to update progress based on storage.txt data
+    async function updateProgress() {
+        try {
+            // Fetch content from 'storage.txt'
+            const response = await fetch('storage.txt');
+            const text = await response.text();
+            
+            // Split the content into lines, trim, and filter out empty lines
+            const storageLines = text.split('\n').map(line => line.trim()).filter(line => line);
+
+            // Initialize an object to map item names to their stored counts
+            const storageMap = {};
+
+            // Process each line to extract item name and count
+            storageLines.forEach(line => {
+                const match = line.match(/^\d+\s+(.+)\s+x\s+(\d+)/);
+                if (match) {
+                    const [, name, count] = match;
+                    const itemName = name.trim();
+                    // Add the count to the existing value for the item
+                    storageMap[itemName] = (storageMap[itemName] || 0) + parseInt(count, 10);
+                }
+            });
+
+            // Iterate over each table cell with class 'indent' and update progress
+            document.querySelectorAll('.ro-table td.indent').forEach(td => {
+                const progressSpan = td.querySelector('.progress');
+                if (!progressSpan) return; // Skip if no progress span
+
+                // Extract current progress and goal values from the progress text
+                const match = progressSpan.textContent.match(/(\d+)\/(\d+)/);
+                if (!match) return; // Skip if the format doesn't match
+
+                const [, current, goal] = match;
+                const itemName = td.textContent.replace(progressSpan.textContent, '').trim();
+                const storedCount = storageMap[itemName] || 0;
+
+                // Update progress text in the span
+                const progressText = `[${storedCount}/${goal}]`;
+                progressSpan.textContent = progressText;
+
+                // Change color and image based on progress
+                if (storedCount === 0) {
+                    progressSpan.style.color = 'red';
+                    td.querySelector('img').src = 'transparent/checkbox_0.png';
+                } else if (storedCount > 0 && storedCount < goal) {
+                    progressSpan.style.color = 'orange';
+                    td.querySelector('img').src = 'transparent/checkbox_0.png';
+                } else if (storedCount >= goal) {
+                    progressSpan.style.color = 'green';
+                    td.querySelector('img').src = 'transparent/checkbox_1.png';
+                }
+            });
+        } catch (error) {
+            // Log any errors encountered during the process
+            console.error("Error reading storage.txt:", error);
+        }
+    }
+
+    // Update progress every 15 minutes (900,000 milliseconds)
+    setInterval(updateProgress, 900000);
+
+    // Initial update when the page loads
+    window.onload = updateProgress;
+</script>
 </head>
 <body>
     <div class="ro-container">
@@ -86,64 +152,13 @@
         <table class="ro-table">
             <tbody>
                 <tr><td><strong>Geffen Field (gef_fild08):</strong></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Buckler [1] <span class="progress">[0/4]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_1.png" alt="Checkbox"> Gladius [3] <span class="progress">[0/4]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Buckler [1] <span class="progress">[0/32]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_1.png" alt="Checkbox"> Gladius [3] <span class="progress">[0/8]</span></td></tr>
                 <tr><td><strong>Shrine of Gonryun Queen (gon_dun01):</strong></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Zipper Bear Card <span class="progress">[0/3]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Enchanted Peach Tree Card <span class="progress">[0/1]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Zipper Bear Card <span class="progress">[0/24]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Enchanted Peach Tree Card <span class="progress">[0/8]</span></td></tr>
             </tbody>
         </table>
     </div>
-    <script>
-        async function updateProgress() {
-            try {
-                const response = await fetch('storage.txt');
-                const text = await response.text();
-                const storageLines = text.split('\n').map(line => line.trim()).filter(line => line);
-                
-                const storageMap = {};
-                
-                storageLines.forEach(line => {
-                    const match = line.match(/^\d+\s+(.+)\s+x\s+(\d+)/);
-                    if (match) {
-                        const [, name, count] = match;
-                        const itemName = name.trim();
-                        storageMap[itemName] = (storageMap[itemName] || 0) + parseInt(count, 10);
-                    }
-                });
-                
-                document.querySelectorAll('.ro-table td.indent').forEach(td => {
-                    const progressSpan = td.querySelector('.progress');
-                    if (!progressSpan) return;
-                    
-                    const match = progressSpan.textContent.match(/(\d+)\/(\d+)/);
-                    if (!match) return;
-                    
-                    const [, , goal] = match;
-                    const itemName = td.textContent.replace(progressSpan.textContent, '').trim();
-                    const storedCount = storageMap[itemName] || 0;
-                    const progressText = `[${storedCount}/${goal}]`;
-                    
-                    progressSpan.textContent = progressText;
-                    
-                    if (storedCount === 0) {
-                        progressSpan.style.color = 'red';
-                        td.querySelector('img').src = 'transparent/checkbox_0.png';
-                    } else if (storedCount > 0 && storedCount < goal) {
-                        progressSpan.style.color = 'orange';
-                        td.querySelector('img').src = 'transparent/checkbox_0.png';
-                    } else if (storedCount >= goal) {
-                        progressSpan.style.color = 'green';
-                        td.querySelector('img').src = 'transparent/checkbox_1.png';
-                    }
-                });
-            } catch (error) {
-                console.error("Error reading storage.txt:", error);
-            }
-        }
-
-        setInterval(updateProgress, 900000); // Update every 15 minutes (900,000 milliseconds)
-        window.onload = updateProgress;
-    </script>
 </body>
 </html>

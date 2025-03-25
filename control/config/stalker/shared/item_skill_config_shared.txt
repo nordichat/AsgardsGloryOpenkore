@@ -35,13 +35,13 @@ useSelf_item Awakening Potion {
 	timeout 5
 }
 
-# attackSkillSlot TF_POISON {
-#     lvl 10
-#     sp > 11
-#     target_whenStatusInactive Poisoned
-#     #monsters Golem, Steel Chonchon, 1135, 1133
-#     monsters 1135, 1133
-# }
+attackSkillSlot RG_INTIMIDATE {
+    lvl 5
+    sp > 25
+	timeout 60
+	onAction attack
+    monsters 1133, 1134, 1135
+}
 
 getAuto Monster's Feed {
 	minAmount 0
