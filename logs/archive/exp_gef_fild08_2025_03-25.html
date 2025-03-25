@@ -70,8 +70,7 @@
         }
     </style>
 <script>
-    // Function to update statistics based on exp.txt data
-    async function update() {
+    async function updateStats() {
         try {
             // Fetch the content from 'exp.txt' file
             const response = await fetch('exp.txt');
@@ -161,15 +160,15 @@
 
         } catch (error) {
             // Log any errors encountered during the process
-            console.error("Error reading exp.txt:", error);
+            console.error("Error reading report.txt:", error);
         }
     }
 
-    // Update every 15 minutes (900,000 milliseconds)
-    setInterval(update, 900000);
+    // Update stats every 15 minutes (900,000 milliseconds)
+    setInterval(updateStats, 900000);
 
     // Initial update when the page loads
-    window.onload = update;
+    window.onload = updateStats;
 </script>
 </head>
 <body>

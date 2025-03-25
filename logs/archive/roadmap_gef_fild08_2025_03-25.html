@@ -74,7 +74,7 @@
     </style>
 <script>
     // Function to update progress based on storage.txt data
-    async function update() {
+    async function updateProgress() {
         try {
             // Fetch content from 'storage.txt'
             const response = await fetch('storage.txt');
@@ -132,11 +132,11 @@
         }
     }
 
-    // Update every 15 minutes (900,000 milliseconds)
-    setInterval(update, 900000);
+    // Update progress every 15 minutes (900,000 milliseconds)
+    setInterval(updateProgress, 900000);
 
     // Initial update when the page loads
-    window.onload = update;
+    window.onload = updateProgress;
 </script>
 </head>
 <body>
