@@ -1,0 +1,337 @@
+prontera 147 196 WOE Information
+prontera 147 196 WOE Information
+prontera 150 193 Reset Girl
+prontera 150 193 Reset Girl
+prontera 159 193 Healer#prt
+prontera 159 193 Healer#prt
+prontera 153 193 Job Master
+prontera 153 193 Job Master
+prontera 162 193 Platinum Skill NPC
+prontera 162 193 Platinum Skill NPC
+prontera 164 195 PVP Warper
+prontera 164 195 PVP Warper
+prontera 149 202 YuNa#pront
+prontera 164 165 Strong Man#DummyW
+prontera 143 175 Valbrand#ExcRefinePrt
+prontera 147 175 Special Dealer#prt1
+prontera 147 171 Guild Storage#
+prontera 164 170 DB Room
+prontera 164 175 Kafra Employee
+prontera 141 181 Universal Rental NPC
+prontera 163 204 Man from Morocc
+prontera 170 180 Stylist#custom_stylist
+prontera 182 213 Kolbjo
+prontera 218 211 Pet Groomer#prt
+prontera 248 212 Busy Boy#prt
+prontera 282 200 Kafra Employee
+prontera 197 188 Veeyop#magum
+prontera 197 188 Veeyop#magum
+prontera 220 218 Berry Toe
+prontera 218 218 Pet Enthusiast
+prt_in 172 132 Armor Dealer#prt
+prt_in 172 130 Weapon Dealer#prt
+prt_in 165 140 Weapon Dealer#prt3
+prt_in 171 140 Weapon Dealer#prt2
+prontera 165 232 Nephia#1
+prontera 156 212 Chef Assistant#prt
+prontera 146 232 Hypnotist#2
+prontera 147 153 Bearded Man#bandit
+prontera 160 133 YuPi#pront
+prontera 164 125 Kafra Voting Staff#prt
+prontera 202 122 Kid#sch
+prontera 216 120 Information Post#prt
+prontera 223 99 Guard#2pront
+prontera 229 104 Guard#3pront
+prontera 223 82 #prt_key-1
+prontera 147 125 Cool Event Staff#prt
+prontera 106 116 Merideth#pront
+prontera 78 150 Dairenne#pront
+prontera 73 140 Milk Vendor
+prontera 58 182 Flower Girl#prt
+prontera 29 207 Kafra Employee
+prontera 269 326 Clanux Heffron#hellion
+prontera 183 333 Aelle#qsk_dan02
+prontera 174 328 Young Man#bard_q1
+prontera 160 330 Guard#5pront
+prontera 152 326 Kafra Employee
+prontera 150 326 Wanted Notice#edq
+prontera 140 304 Old Soldier
+prontera 124 297 Tialfi
+prontera 113 294 Sign Post#god
+prontera 101 288 Shuger#pront
+prontera 47 339 Guard#4pront
+prontera 93 330 Kellion
+prontera 147 305 Sign#prontera
+prontera 144 301 Mage#tu
+prontera 155 285 Elowen#GuildWarper
+prontera 167 281 New Guild Master#tu
+prontera 123 102 Merchant#pron
+prontera 105 87 Gift Merchant#prt
+prontera 248 153 Doll Supplier#prt
+prontera 228 279 Wanderer#rus24
+prontera 146 89 Kafra Employee
+prontera 165 60 Apprentice Craftsman
+prontera 163 53 Promotional Staff#prt
+prontera 148 49 Bulletin Board#09
+prontera 151 29 Kafra Employee
+prt_fild08 159 371 Poring War Recruiter#wo
+prontera 123 83 Maroll Battle Recruiter
+prontera 247 129 Jayon
+prontera 164 304 Continental Messenger#0
+prontera 275 86 Young man#SaYumMoon
+prontera 218 120 Auction Hall Guide#prt
+prontera 54 240 Tono#pront
+prontera 41 337 Mercenary Manager#Spear
+prontera 148 326 Chief Officer#edq
+prontera 64 125 Butcher#prt
+prontera 66 111 Sagle
+prontera 73 134 Vendor from Milk Ranch#
+prt_in 63 60 Hollgrehenn
+prt_fild08 175 374 Bard#brising
+prt_fild08 175 374 Bard#brising
+moc_fild20 203 336 Continental Guard#07
+moc_fild20 215 336 Continental Guard#08
+payon 183 102 Special Dealer#gpay1
+payon 173 82 Young Man#2payon
+payon 160 67 Healer#pay2
+payon 162 67 Guide#pay
+payon 159 96 Tool Dealer#pay3
+payon 159 96 Tool Dealer#pay3
+payon 159 96 Tool Dealer#pay3
+payon 159 96 Tool Dealer#pay3
+payon 159 96 Tool Dealer#pay3
+payon 159 96 Tool Dealer#pay3
+payon 181 104 Kafra Employee
+payon 175 226 Kafra Employee
+payon 173 238 Jade#pay
+payon 158 246 Guardsman#payon
+payon 160 183 Sign#payon
+payon 153 182 Cool Event Staff#pay
+payon 166 173 Scarlet Palace#12
+payon 166 161 Bamboo Grove Hill#12
+payon 157 146 Suhnbi#cash
+payon 182 132 Grout'he Tuccok#hellion
+payon 178 108 Bulletin Board#06
+payon 179 106 Healer#pay
+payon 189 105 Maroll Battle Recruiter
+payon 181 104 Kafra Employee
+payon 186 104 Smile Assistance#pay
+payon 175 226 Kafra Employee
+payon 173 238 Jade#pay
+payon 158 246 Guardsman#payon
+payon 160 183 Sign#payon
+payon 153 182 Cool Event Staff#pay
+payon 166 173 Scarlet Palace#12
+payon 166 165 Sacred Altar#12
+payon 157 146 Suhnbi#cash
+payon 157 141 Phoenix#TKJobChange
+payon 178 108 Bulletin Board#06
+payon 179 106 Healer#pay
+payon 189 105 Maroll Battle Recruiter
+payon 181 104 Kafra Employee
+payon 186 104 Smile Assistance#pay
+payon 175 226 Kafra Employee
+payon 173 238 Jade#pay
+payon 158 246 Guardsman#payon
+payon 160 183 Sign#payon
+payon 153 182 Cool Event Staff#pay
+payon 166 173 Scarlet Palace#12
+payon 166 161 Bamboo Grove Hill#12
+payon 157 146 Suhnbi#cash
+payon 182 132 Grout'he Tuccok#hellion
+payon 178 108 Bulletin Board#06
+payon 179 106 Healer#pay
+payon 189 105 Maroll Battle Recruiter
+payon 186 104 Smile Assistance#pay
+payon 166 177 Bright Arbor#12
+payon 154 170 Hagin#sign
+payon 166 169 Holy Shadow#12
+payon 157 141 Phoenix#TKJobChange
+payon 177 131 Pet Groomer#pay
+payon 166 177 Bright Arbor#12
+payon 166 161 Bamboo Grove Hill#12
+payon 182 132 Grout'he Tuccok#hellion
+payon 175 226 Kafra Employee
+payon 173 238 Jade#pay
+payon 158 246 Guardsman#payon
+payon 154 170 Hagin#sign
+payon 157 141 Phoenix#TKJobChange
+payon 160 183 Sign#payon
+payon 166 177 Bright Arbor#12
+payon 154 170 Hagin#sign
+payon 157 146 Suhnbi#cash
+payon 157 141 Phoenix#TKJobChange
+payon 182 132 Grout'he Tuccok#hellion
+payon 178 108 Bulletin Board#06
+payon 179 106 Healer#pay
+payon 189 105 Maroll Battle Recruiter
+payon 181 104 Kafra Employee
+payon 186 104 Smile Assistance#pay
+payon 175 226 Kafra Employee
+payon 173 238 Jade#pay
+payon 158 246 Guardsman#payon
+payon 160 183 Sign#payon
+payon 153 182 Cool Event Staff#pay
+payon 166 173 Scarlet Palace#12
+payon 166 161 Bamboo Grove Hill#12
+payon 157 146 Suhnbi#cash
+payon 182 132 Grout'he Tuccok#hellion
+payon 178 108 Bulletin Board#06
+payon 179 106 Healer#pay
+payon 189 105 Maroll Battle Recruiter
+payon 181 104 Kafra Employee
+payon 186 104 Smile Assistance#pay
+payon 166 165 Sacred Altar#12
+payon 153 182 Cool Event Staff#pay
+payon 166 173 Scarlet Palace#12
+payon 166 169 Holy Shadow#12
+payon 175 226 Kafra Employee
+payon 173 238 Jade#pay
+payon 158 246 Guardsman#payon
+payon 160 183 Sign#payon
+payon 153 182 Cool Event Staff#pay
+payon 166 173 Scarlet Palace#12
+payon 166 161 Bamboo Grove Hill#12
+payon 157 146 Suhnbi#cash
+payon 182 132 Grout'he Tuccok#hellion
+payon 178 108 Bulletin Board#06
+payon 179 106 Healer#pay
+payon 189 105 Maroll Battle Recruiter
+payon 181 104 Kafra Employee
+payon 186 104 Smile Assistance#pay
+payon 158 182 Kafra Voting Staff#pay
+payon 166 161 Bamboo Grove Hill#12
+payon 157 141 Phoenix#TKJobChange
+payon 177 131 Pet Groomer#pay
+payon 154 170 Hagin#sign
+payon 175 226 Kafra Employee
+payon 173 238 Jade#pay
+payon 158 246 Guardsman#payon
+payon 160 183 Sign#payon
+payon 153 182 Cool Event Staff#pay
+payon 166 177 Bright Arbor#12
+payon 166 169 Holy Shadow#12
+payon 157 146 Suhnbi#cash
+payon 157 141 Phoenix#TKJobChange
+payon 177 131 Pet Groomer#pay
+payon 178 108 Bulletin Board#06
+payon 179 106 Healer#pay
+payon 189 105 Maroll Battle Recruiter
+payon 181 104 Kafra Employee
+payon 186 104 Smile Assistance#pay
+payon 166 165 Sacred Altar#12
+payon 166 177 Bright Arbor#12
+payon 166 165 Sacred Altar#12
+payon 157 141 Phoenix#TKJobChange
+payon 166 177 Bright Arbor#12
+payon 154 170 Hagin#sign
+payon 166 169 Holy Shadow#12
+payon 177 131 Pet Groomer#pay
+payon 166 165 Sacred Altar#12
+payon 158 182 Kafra Voting Staff#pay
+payon 166 173 Scarlet Palace#12
+payon 166 161 Bamboo Grove Hill#12
+payon 182 132 Grout'he Tuccok#hellion
+payon 166 177 Bright Arbor#12
+payon 145 178 Begnahd
+payon 166 169 Holy Shadow#12
+morocc 165 82 Morocc Villager#rus25
+morocc 165 82 Morocc Villager#rus25
+morocc 165 82 Morocc Villager#rus25
+morocc 149 102 Special Dealer#mor1
+morocc 149 102 Special Dealer#mor1
+morocc 149 102 Special Dealer#mor1
+morocc 165 82 Morocc Villager#rus25
+morocc 165 82 Morocc Villager#rus25
+morocc 165 82 Morocc Villager#rus25
+morocc 165 82 Morocc Villager#rus25
+morocc 153 97 Healer#mor
+morocc 153 97 Healer#mor
+morocc 153 97 Healer#mor
+morocc 149 102 Special Dealer#mor1
+morocc 149 102 Special Dealer#mor1
+morocc 149 102 Special Dealer#mor1
+morocc 149 102 Special Dealer#mor1
+morocc 156 97 Kafra Employee
+morocc 156 97 Kafra Employee
+morocc 156 97 Kafra Employee
+morocc 153 97 Healer#mor
+morocc 153 97 Healer#mor
+morocc 153 97 Healer#mor
+morocc 153 97 Healer#mor
+morocc 156 97 Kafra Employee
+morocc 156 97 Kafra Employee
+morocc 156 97 Kafra Employee
+morocc 156 97 Kafra Employee
+morocc 165 82 Morocc Villager#rus25
+morocc 149 102 Special Dealer#mor1
+morocc 153 97 Healer#mor
+morocc 156 97 Kafra Employee
+moc_fild19 107 101 Bulletin Board#20
+moc_fild19 107 101 Bulletin Board#20
+moc_fild19 107 101 Bulletin Board#20
+moc_fild19 107 101 Bulletin Board#20
+moc_fild19 107 101 Bulletin Board#20
+moc_fild19 107 101 Bulletin Board#20
+moc_fild19 107 101 Bulletin Board#20
+geffen 118 62 Guide#2gef
+geffen 120 62 Kafra Employee
+geffen 109 66 Maroll Battle Recruiter
+geffen 111 48 Stacey
+geffen 90 67 Promotional Staff#gef
+geffen 119 48 Fountain#s
+geffen 115 72 Healer#gef
+geffen 124 70 Special Dealer#gef1
+geffen 124 65 Bulletin Board#2
+geffen 122 77 Nia#yagu
+geffen 67 87 Ipore#1
+geffen 39 128 Palatine#
+geffen 117 37 Cool Event Staff#gef
+geffen 135 56 Embera#Sign
+geffen 91 36 Rogue Guild Agent#nd1
+geffen 118 40 Healer#gef2
+geffen 59 143 Meera
+geffen 128 90 Continental Messenger#0
+geffen 119 107 Smile Assistance#gef
+geffen 131 123 Mersetzdeitz#11
+geffen 127 130 Bergel#11
+geffen 120 132 Yesnelph#15
+geffen 112 129 Eeyorbriggar#12
+geffen 129 148 Argen#1
+geffen 128 153 Leblo
+geffen 109 123 Repherion#11
+geffen 110 117 Ford#11
+mjolnir_02 85 362 Blacksmith Miner
+mjolnir_02 206 187 #mj02_02
+mjolnir_02 186 193 Middle-Aged Man#magum1
+mjolnir_02 170 193 Muriniel's Cottage#juno
+veins 211 122 Special Dealer#einb12
+veins 291 284 Old Lady#ve3
+veins 291 259 Old Man#ve4
+veins 217 121 Healer#ve
+veins 197 219 Towner#ve10
+veins 171 256 Towner#ve9
+veins 210 345 Veins Guide#1
+veins 218 323 Towner#ve8
+veins 221 120 Young Town Native
+veins 227 127 Ivory
+veins 208 128 Cool Event Corp. Staff
+veins 253 133 Kid#ve2
+veins 191 134 Old Man#ve3
+veins 177 147 Old Lady#ve2
+veins 159 171 Towner#vol
+veins 137 179 Towner#ve3
+veins 263 153 Towner#ve13
+veins 270 164 Old Man#ve1
+veins 274 188 Ledrion#veins
+veins 248 301 Kid#ve6
+morocc 163 48 Healer#mor2
+morocc 143 63 Ragged Man#nd
+morocc 152 110 Bulletin Board#11
+morocc 134 111 Bard#3
+morocc 132 111 Little Girl#Jorti
+morocc 88 133 Volunteer - Morocc#02
+morocc 159 113 Chief Balrog
+morocc 159 113 Chief Balrog
+morocc 159 113 Chief Balrog
+morocc 159 113 Chief Balrog
