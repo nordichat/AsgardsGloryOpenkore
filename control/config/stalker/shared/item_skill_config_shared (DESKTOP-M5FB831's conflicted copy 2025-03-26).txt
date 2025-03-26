@@ -38,8 +38,8 @@ useSelf_item Awakening Potion {
 attackSkillSlot RG_INTIMIDATE {
     lvl 5
     sp > 24
-	inLockOnly 1
 	onAction attack
+	inLockOnly 1
 	aggressives > 2
     #monsters 1133, 1134, 1135				# Geffen Field (gef_fild08)
     #monsters 1155							# Mt.Mjolnir (mjolnir_02)

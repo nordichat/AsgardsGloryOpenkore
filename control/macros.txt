@@ -89,7 +89,7 @@ automacro monsterRefresh {
     call {
         do c @refresh
         do e hmm
-        do p "Refreshing due to unexpected issue."
+        do p Refreshing due to unexpected issue.
     }
     timeout 3
 }
@@ -98,20 +98,25 @@ automacro healAndReturn {
     set macro_delay 0.2
     hp < 15%
     call {
-        do ai manual
+        #do ai manual
         do p @go 1
-        pause 1
+        #pause 1
         do e omg
         do talk @npc(/Healer/)
         do e lv2
         $mainCharname = "Stalker1"
         $charname = @eval($::char->{'name'})
         if ($charname == $mainCharname) {
-            do p "Healed and ready to continue."
+            do p Healed and ready to continue.
         }
-        pause 1
+	do ai manual
+	pause 1
+        do autosell
+        pause 10
+        do autostorage
+        pause 10
         do ai auto
-        pause 1
+        #pause 1
     }
     timeout 60
 }
@@ -126,7 +131,7 @@ macro forceHeal {
     $mainCharname = "Stalker1"
     $charname = @eval($::char->{'name'})
     if ($charname == $mainCharname) {
-        do p "Healed and ready to continue."
+        do p Healed and ready to continue.
     }
     pause 1
     do ai auto

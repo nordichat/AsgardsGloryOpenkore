@@ -73,33 +73,51 @@
         }
     </style>
 <script>
-    // Function to update progress based on storage.txt data
+    // Function to update progress based on multiple storage files
     async function update() {
         try {
-            // Fetch content from 'storage.txt'
-            const response = await fetch('storage.txt');
-            const text = await response.text();
-            
-            // Split the content into lines, trim, and filter out empty lines
-            const storageLines = text.split('\n').map(line => line.trim()).filter(line => line);
+            // Array of storage file names
+            const storageFiles = [
+                'storage.txt',
+                'storage_2.txt',
+                'storage_3.txt',
+                'storage_4.txt',
+                'storage_5.txt',
+                'storage_6.txt',
+                'storage_7.txt',
+                'storage_8.txt'
+            ];
 
             // Initialize an object to map item names to their stored counts
             const storageMap = {};
 
-            // Process each line to extract item name and count
-            storageLines.forEach(line => {
-                const match = line.match(/^\d+\s+(.+)\s+x\s+(\d+)/);
-                if (match) {
-                    const [, name, count] = match;
-                    const itemName = name.trim();
-                    // Add the count to the existing value for the item
-                    storageMap[itemName] = (storageMap[itemName] || 0) + parseInt(count, 10);
-                }
-            });
+            // Fetch and process each storage file
+            for (const file of storageFiles) {
+                const response = await fetch(file);
+                const text = await response.text();
+
+                // Split the content into lines, trim, and filter out empty lines
+                const storageLines = text.split('\n').map(line => line.trim()).filter(line => line);
+
+                // Process each line to extract item name and count
+                storageLines.forEach(line => {
+                    const match = line.match(/^\d+\s+(.+)\s+x\s+(\d+)/);
+                    if (match) {
+                        const [, name, count] = match;
+                        const itemName = name.trim();
+                        // Add the count to the existing value for the item
+                        storageMap[itemName] = (storageMap[itemName] || 0) + parseInt(count, 10);
+                    }
+                });
+            }
 
             // Calculate total Oridecon including Rough Oridecon
             const roughOrideconCount = Math.floor((storageMap['Rough Oridecon'] || 0) / 5);
             storageMap['Oridecon'] = (storageMap['Oridecon'] || 0) + roughOrideconCount;
+            
+            // Calculate total Elunium including Rough Elunium
+            const roughEluniumCount = Math.floor((storageMap['Rough Elunium'] || 0) / 5);
+            storageMap['Elunium'] = (storageMap['Elunium'] || 0) + roughEluniumCount;
 
             // Iterate over each table cell with class 'indent' and update progress
             document.querySelectorAll('.ro-table td.indent').forEach(td => {
@@ -132,7 +150,7 @@
             });
         } catch (error) {
             // Log any errors encountered during the process
-            console.error("Error reading storage.txt:", error);
+            console.error("Error reading storage files:", error);
         }
     }
 
@@ -155,16 +173,20 @@
         </div>
         <table class="ro-table">
             <tbody>
-                <tr><td><strong>Goal:</strong> Undershirt & Pantie Equip Set</td></tr>
+                <tr><td><strong>Goal:</strong> Undershirt & Pantie Equip Set [<strong>ETA:</strong> 2 hours]</td></tr>
                 <tr><td><strong>Sphinx F3 (in_sphinx3):</strong></td></tr>
                 <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Pantie <span class="progress">[0/8]</span></td></tr>
                 <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Undershirt  <span class="progress">[0/8]</span></td></tr>
                 <tr><td><strong>BONUS:</strong></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Pasana Card <span class="progress">[0/1]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Matyr Card <span class="progress">[0/1]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Mimic Card <span class="progress">[0/1]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Rosary [1] <span class="progress">[0/2]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Rough Elunium <span class="progress">[0/1337]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Pasana Card <span class="progress">[0/8]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Matyr Card <span class="progress">[0/8]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Mimic Card <span class="progress">[0/8]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Rosary [1] <span class="progress">[0/16]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Elunium <span class="progress">[0/1000]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Oridecon <span class="progress">[0/50]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Buckler [1] <span class="progress">[0/8]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Gladius [3] <span class="progress">[0/8]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Monster's Feed <span class="progress">[0/30000]</span></td></tr>
             </tbody>
         </table>
     </div>

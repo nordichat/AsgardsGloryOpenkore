@@ -63,6 +63,11 @@ Mimic 1 0 0
 Marduk 1 0 0
 Matyr 1 0 0
 
+##### Sphinx F2 (in_sphinx2) ####
+Requiem -1 0 0
+Zerom -1 0 0
+Drainliar -1 0 0
+
 ##### Veins Field (ve_fild04) ####
 Desert Wolf 1 0 0
 Muscipular -1 2 0
