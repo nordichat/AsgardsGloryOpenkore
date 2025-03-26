@@ -8,6 +8,8 @@ exp.txt
 storage*.txt
 console*.txt
 debug*.bat
+*eventMacros.txt
+*EventMacros*.txt
 
 # Debug logs
 config.log

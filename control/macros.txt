@@ -7,82 +7,6 @@ automacro auto_loot_activation {
 macro enable_autoloot {
     do c @autoloot 100
 }
-# automacro ifInventoryContainsItem1 {
-#     exclusive 1
-#     run-once 1
-#     timeout 5
-#     map ve_fild04
-#     inventory "Rough Oridecon" > 0
-#     call transferItem
-# }
-
-# automacro ifInventoryContainsItem2 {
-#     exclusive 1
-#     run-once 1
-#     timeout 5
-#     map ve_fild04
-#     inventory "Desert Wolf Card" > 0
-#     call transferItem
-# }
-
-# automacro ifInventoryContainsItem3 {
-#     exclusive 1
-#     run-once 1
-#     timeout 5
-#     map ve_fild04
-#     inventory "Mink Coat [1]" > 0
-#     call transferItem
-# }
-
-# automacro ifInventoryContainsItem4 {
-#     exclusive 1
-#     run-once 1
-#     timeout 5
-#     map mjolnive_fild04r_02
-#     inventory "Earth Petite Card" > 0
-#     call transferItem
-# }
-
-# macro transferItem {
-#     $mainCharname = "Stalker1"
-#     $charname = @eval($::char->{'name'})
-
-#     if ($charname != $mainCharname) {
-#         do ai manual
-#         pause 1
-#         $item1 = @inventory(Rough Oridecon)
-#         if ($item1 > -1) {
-#             do drop $item1
-#             do take first
-#         }
-
-#         $item2 = @Inventory(Desert Wolf Card)
-#         if ($item2 > -1) {  
-#             do drop $item2
-#             do take first
-#         }
-        
-#         $item3 = @Inventory(Mink Coat [1])
-#         if ($item3 > -1) {  
-#             do drop $item3
-#             do take first
-#         }
-        
-#         # $item4 = @Inventory(Earth Petite Card)
-#         # if ($item4 > -1) {  
-#         #     do drop $item4
-#         #     do take first
-#         # }
-#         pause 1
-#         do ai auto
-#         pause 1
-
-#         release ifInventoryContainsItem1
-#         release ifInventoryContainsItem2
-#         release ifInventoryContainsItem3
-#         # release ifInventoryContainsItem4
-#     } 
-# }
 
 automacro monsterRefresh {
     monster /NPC/, /NPC Unknown/
@@ -98,9 +22,7 @@ automacro healAndReturn {
     set macro_delay 0.2
     hp < 15%
     call {
-        #do ai manual
         do p @go 1
-        #pause 1
         do e omg
         do talk @npc(/Healer/)
         do e lv2
@@ -109,14 +31,11 @@ automacro healAndReturn {
         if ($charname == $mainCharname) {
             do p Healed and ready to continue.
         }
-	do ai manual
 	pause 1
         do autosell
         pause 10
         do autostorage
         pause 10
-        do ai auto
-        #pause 1
     }
     timeout 60
 }
