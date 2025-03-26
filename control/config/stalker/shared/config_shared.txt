@@ -181,7 +181,7 @@ route_teleport_maxTries 20
 route_teleport_notInMaps moc_fild19
 route_step 15
 route_removeMissingPortals_NPC 1
-route_removeMissingPortals 1
+route_removeMissingPortals 0
 route_tryToGuessMissingPortalByDistance 0
 route_reAddMissingPortals 0
 
