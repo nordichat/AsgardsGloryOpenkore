@@ -15,6 +15,7 @@ use Globals;
 use AI;
 use Log qw(warning error);
 use Macro::Data;
+use POSIX qw(strftime);
 
 our ($rev) = q$Revision: 6812 $ =~ /(\d+)/;
 
@@ -218,6 +219,9 @@ sub refreshGlobal {
 	$varStack{".datetime"} = scalar localtime;
 	($varStack{".second"}, $varStack{".minute"}, $varStack{".hour"}) = localtime;
 	
+    # Create .dateToday in the desired format
+    $varStack{".dateToday"} = strftime("%A %B %d %H:%M", localtime);
+
 	return unless $net && $net->getState == Network::IN_GAME;
 	
 	$varStack{".map"} = (defined $field)?$field->baseName:"undef";

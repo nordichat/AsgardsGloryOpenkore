@@ -32,14 +32,14 @@ message_length_max 80
 
 alias_heal sp 28
 
-allowedMaps geffen, gef_fild07, gef_fild08
+allowedMaps
 allowedMaps_reaction 0
 
 attackAuto 2
-attackAuto_party 1
+attackAuto_party 2
 attackAuto_onlyWhenSafe 0
 attackAuto_followTarget 1
-attackAuto_inLockOnly 1
+attackAuto_inLockOnly 2
 attackAuto_notInTown 1
 attackAuto_notWhile_storageAuto 1
 attackAuto_notWhile_buyAuto 1
@@ -162,7 +162,7 @@ itemsGatherAuto_notInTown 0
 itemsGatherAutoMinPlayerDistance 6
 itemsGatherAutoMinPortalDistance 5
 itemsMaxWeight 89
-itemsMaxWeight_sellOrStore 48
+itemsMaxWeight_sellOrStore 89
 itemsMaxNum_sellOrStore 98
 cartMaxWeight 7900
 itemsTakeGreed 0
@@ -172,16 +172,16 @@ route_escape_reachedNoPortal 1
 route_escape_randomWalk 1
 route_escape_shout
 route_avoidWalls 0
-route_randomWalk_maxRouteTime 0
+route_randomWalk_maxRouteTime 75
 route_maxWarpFee
 route_maxNpcTries 5
-route_teleport 1
-route_teleport_minDistance 50
+route_teleport 0
+route_teleport_minDistance 75
 route_teleport_maxTries 20
-route_teleport_notInMaps
+route_teleport_notInMaps moc_fild19
 route_step 15
 route_removeMissingPortals_NPC 1
-route_removeMissingPortals 1
+route_removeMissingPortals 0
 route_tryToGuessMissingPortalByDistance 0
 route_reAddMissingPortals 0
 
@@ -238,7 +238,7 @@ teleportAuto_allPlayers 0
 teleportAuto_notPlayers
 teleportAuto_atkCount 0
 teleportAuto_atkMiss 10
-teleportAuto_unstuck 0
+teleportAuto_unstuck 1
 teleportAuto_lostTarget 0
 teleportAuto_dropTarget 0
 teleportAuto_dropTargetKS 0
@@ -261,12 +261,10 @@ partyAutoShareItemDiv 0
 guildAutoDeny 1
 attendanceAuto 1
 
-verbose 0
 showDomain 1
 showDomain_NPC parseMsg_presence
 showDomain_Shop list
 #squelchDomains attackMon, attackedMiss, exp, drop, info, selfSkill, skill, attackMonMiss, ai_attack, selfchat, party, attacked, portals, route_teleport, parseMsg_statuslook, inventory, useItem
-squelchDomains ai_attack, ai_npcTalk, attacked, attackedMiss, attackMon, attackMonMiss, connection, console, deal, devotion, drop, emotion, exp, equip, follow, guildchat, guildnotice, input, inventory, load, looter, map_event, npc, parseMsg_statuslook, parseMsg/hairColor, parseMsg/job, parseMsg/upgrade, party, partychat, pet, plugins, pm, pm/sent, portals, portalRecord, publicchat, refine, route, route_teleport, schat, selfSkill, skill, sold, startup, success, syntax, teleport, useItem, useTeleport, waypoint, xkore, ai, ai_autoCart, ai_makeItem, ai_move, autoBreakTime, d_sendPacket, debug, equipAuto, guild, ipc, Item, monsterSkill, packetParser, parseInput, parseMsg, parseMsg_comboDelay, parseMsg_damage, parseMsg_move, parseMsg_presence, parseMsg_presence/name, parseMsg_presence/player, parseMsg_presence/remote, parseSendMsg, sendPacket, sitAuto, vending, busParty, storage
 verboseDomains
 beepDomains
 beepDomains_notInTown
@@ -294,7 +292,6 @@ logSystemChat 0
 logLocalBroadcast 0
 logShop 0
 logEmoticons
-logConsole 0
 logAppendUsername 0
 logAppendServer 0
 monsterLog 0
@@ -307,7 +304,7 @@ chatTitleOversize 0
 shopTitleOversize 0
 buyerShopTitleOversize 0
 
-sleepTime 10000
+sleepTime 0
 
 ignoreAll 0
 itemHistory 0
@@ -871,7 +868,6 @@ storageAuto_useChatCommand
 storageAuto_useItem 0
 storageAuto_useItem_item
 storageAuto_notAfterDeath
-relogAfterStorage 1
 minStorageZeny 50
 
 npcTimeResponse
@@ -905,17 +901,19 @@ macro_orphans terminate
 
 ##### CUSTOM #####
 skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIFY 1, TF_POISON 10, TF_STEAL 8, TF_HIDING 10, AC_VULTURE 10, RG_SNATCHER 9, RG_STEALCOIN 4, RG_BACKSTAP 4, RG_TUNNELDRIVE 2, RG_RAID 5, RG_INTIMIDATE 5, RG_PLAGIARISM 10
-route_randomWalk 2
+route_randomWalk 1
 
 storageAuto 1
-storageAuto_npc geffen 120 62
-#storageAuto_npc morocc 156 97
+#storageAuto_npc veins 208 128
+#storageAuto_npc geffen 120 62
+storageAuto_npc morocc 156 97
 #storageAuto_npc payon 181 104
 #storageAuto_npc prontera 164 175
 
 sellAuto 1
-sellAuto_npc geffen 124 70
-#sellAuto_npc morocc 149 102
+#sellAuto_npc veins 211 122
+#sellAuto_npc geffen 124 70
+sellAuto_npc morocc 149 102
 #sellAuto_npc payon 183 102
 #sellAuto_npc prontera 147 175
 
@@ -924,15 +922,15 @@ autoMoveOnDeath_x
 autoMoveOnDeath_y
 autoMoveOnDeath_map
 
-saveMap geffen
+saveMap morocc
 saveMap_warpToBuyOrSell 1
-saveMap_warpChatCommand @go 2
+saveMap_warpChatCommand @go 1
 memo1
 memo2
 memo3
 memo4
 
-lockMap gef_fild08
+lockMap in_sphinx3
 lockMap_x
 lockMap_y
 lockMap_randX

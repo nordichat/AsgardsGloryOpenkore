@@ -1,9 +1,8 @@
-!include shared/username_1.txt
-!include shared/password.txt
+!include accounts/username_1.txt
+!include accounts/password.txt
 
-!include shared/config.txt
-!include shared/skills1-99.txt
-!include shared/xkore.txt
+!include main/xkore.txt
+!include main/config_main.txt
 
-dealAuto 2
-dealAuto_names Stalker2, Stalker3, Stalker4, Stalker5, Stalker6, Stalker7, Stalker8
+!include shared/config_shared.txt
+!include shared/item_skill_config_shared.txt

@@ -1,0 +1,10 @@
+morocc 165 82 Morocc Villager#rus25
+morocc 149 102 Special Dealer#mor1
+morocc 153 97 Healer#mor
+morocc 156 97 Kafra Employee
+morocc 152 110 Bulletin Board#11
+morocc 134 111 Bard#3
+morocc 132 111 Little Girl#Jorti
+morocc 88 133 Volunteer - Morocc#02
+moc_fild19 107 101 Bulletin Board#20
+morocc 159 113 Chief Balrog

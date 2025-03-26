@@ -1,5 +1,6 @@
-!include shared/username_5.txt
-!include shared/password.txt
+!include accounts/username_5.txt
+!include accounts/password.txt
 
-!include shared/config.txt
-!include shared/skills1-99.txt
+!include shared/config_shared.txt
+!include shared/config_not_main.txt
+!include shared/item_skill_config_shared.txt

@@ -1,15 +1,15 @@
 # Custom
 macro_notes.txt
-private_eventMacros.txt
+private_*.txt
 password.txt
-username_1.txt
-username_2.txt
-username_3.txt
-username_4.txt
-username_5.txt
-username_6.txt
-username_7.txt
-username_8.txt
+username_*.txt
+stream_roadmap.html
+exp.txt
+storage*.txt
+console*.txt
+debug*.bat
+*eventMacros.txt
+*EventMacros*.txt
 
 # Debug logs
 config.log
@@ -55,9 +55,9 @@ src/test/http-reader-test
 tables/iRO/*-custom.txt
 
 # Auto-generated files.
-tables/**/portalsLOS.txt
+!tables/**/portalsLOS.txt
 tables/pserver/**/portalsLOS.txt
-tables/**/npcs.txt
+!tables/**/npcs.txt
 tables/**/monsters.txt
 *.xpm
 *.weight

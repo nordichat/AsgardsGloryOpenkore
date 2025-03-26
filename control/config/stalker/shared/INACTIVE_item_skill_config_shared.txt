@@ -1,0 +1,16 @@
+useSelf_skill NV_FIRSTAID {
+	lvl 1
+	hp < 90%
+	sp > 2
+	disabled 0
+	whenIdle 1
+	notWhileSitting 1
+}
+
+attackSkillSlot TF_POISON {
+    lvl 10
+    sp > 11
+    target_whenStatusInactive Poisoned
+    #monsters Golem, Steel Chonchon, 1135, 1133
+    monsters 1135, 1133
+}

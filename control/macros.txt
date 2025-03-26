@@ -7,76 +7,54 @@ automacro auto_loot_activation {
 macro enable_autoloot {
     do c @autoloot 100
 }
-automacro ifInventoryContainsItem1 {
-    exclusive 1
-    run-once 1
-    timeout 5
-    inventory "Buckler [1]" > 0
-    call transferItem
-}
-
-automacro ifInventoryContainsItem2 {
-    exclusive 1
-    run-once 1
-    timeout 5
-    inventory "Gladius [1]" > 0
-    call transferItem
-}
-
-macro transferItem {
-    $mainCharname = "Stalker1"
-    $charname = @eval($::char->{'name'})
-
-    if ($charname != $mainCharname) {
-        do ai manual
-        $item1 = @inventory(Buckler [1])
-        if ($item1 > -1) {
-            do p Found a Buckler [1], I will give it to someone else!
-            do drop $item1
-            do take first
-        }
-
-        $item2 = @Inventory(Gladius [3])
-        if ($item2 > -1) {  
-            do p Found a Gladius [3], I will give it to someone else!
-            do drop $item2
-            do take first
-        }
-
-        do ai auto
-        release ifInventoryContainsItem1
-        release ifInventoryContainsItem2
-    }
-}
-
 
 automacro monsterRefresh {
     monster /NPC/, /NPC Unknown/
     call {
         do c @refresh
         do e hmm
-        $msgToSend = @random ("Weird stuff... panic refresh!", "Something's off... hitting @refresh!", "Is this a bug or a feature? Refreshing!", "I don't trust what I just saw. @refresh!", "Reality is glitching. Time to press refresh!", "Classic fix: turn it off and on again!", "Saw something cursed. Cleansing with @refresh!", "If I ignore it and refresh, it never happened!", "Not sure if lag or hallucination. @refresh!", "Me: *sees weird stuff* Also me: *smashes refresh*")
-        do p $msgToSend
+        do p Refreshing due to unexpected issue.
     }
     timeout 3
 }
 
-automacro goHeal {
+automacro healAndReturn {
     set macro_delay 0.2
     hp < 15%
     call {
-        do p @go geffen
-        pause 1
+        do p @go 1
         do e omg
-        pause 1
-        do move 120 70
-        pause 1
         do talk @npc(/Healer/)
         do e lv2
-        $msgToSend = @random("Kafra blessings received! Back to the grind!", "Respawned and ready—time to farm again!", "The Valkyries sent me back! Let's go!", "Fully healed! Kobolds won't hunt themselves!", "Back from the brink! Time to rack up XP!", "No time for rest—Gladius and Bucklers await!")  
-        do p $msgToSend
+        $mainCharname = "Stalker1"
+        $charname = @eval($::char->{'name'})
+        if ($charname == $mainCharname) {
+            do p Healed and ready to continue.
+        }
+	pause 1
+        do autosell
+        pause 10
+        do autostorage
+        pause 10
     }
     timeout 60
+}
+
+macro forceHeal {
+    do ai manual
+    do p @go 1
+    pause 1
+    do e omg
+    do talk @npc(/Healer/)
+    do e lv2
+    $mainCharname = "Stalker1"
+    $charname = @eval($::char->{'name'})
+    if ($charname == $mainCharname) {
+        do p Healed and ready to continue.
+    }
+    pause 1
+    do ai auto
+    pause 1
 }
 
 automacro check_party_leader {
@@ -86,7 +64,6 @@ automacro check_party_leader {
 }
 
 macro verify_party_leader {
-    # Count number of party members
     $numberOfPlayers = @eval(scalar @partyUsersID)
     $i = 0
     while ($i < $numberOfPlayers) as loop
@@ -96,9 +73,16 @@ macro verify_party_leader {
 
         if ($isAdmin == 1) {
             if ($charname == $charnameParty) {
-                $msgToSend = @random ("He who has a why to live can bear almost any how - Friedrich Nietzsche", "No tree, it is said, can grow to heaven unless its roots reach down to hell - Carl Jung", "Talent hits a target no one else can hit, Genius hits a target no one else can see - Arthur Schopenhauer", "Man is not the lord of beings, Man is the shepherd of Being - Martin Heidegger", "Life can only be understood backwards, but it must be lived forwards - Soren Kierkegaard", "Man is condemned to be free - Jean-Paul Sartre", "Madness is the exception in individuals but the rule in groups - Friedrich Nietzsche", "Your visions will become clear only when you look into your own heart - Carl Jung", "A man can do what he wants, but not want what he wants - Arthur Schopenhauer", "The function of prayer is not to influence God, but rather to change the nature of the one who prays - Soren Kierkegaard", "We do not see things as they are, we see them as we are - Michel Foucault", "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment - Ralph Waldo Emerson", "The meeting of two personalities is like the contact of two chemical substances, if there is any reaction, both are transformed - Carl Jung")
+                # 5 rules for the quotes:
+                # 1. 33% of quotes should be from women.
+                # 2. Max 80 characters per message: Each quote must be 80 characters or less.
+                # 3. All quotes in one line: @random("1","2","3").
+                # 4. Theme from Norse mythology: All quotes must come from Norse mythology.
+                # 5. Only special characters allowed: ., '-! (Any other special characters will be adjusted).
+                
+                $msgToSend = @random("Wisdom is the most precious of all possessions - Odin", "Thor's hammer will crush the enemies of Asgard - Thor", "Victory is not achieved by strength alone, but by courage - Tyr", "Freyr brings peace and prosperity to the lands - Freyr", "Heimdall watches over the nine realms with keen eyes - Heimdall", "Loki is the trickster who weaves chaos and mischief - Loki", "In the halls of Valhalla, the brave feast forever - Odin", "A true warrior faces death with honor, not fear - Thor", "Tyr sacrificed his hand for the good of the world - Tyr", "Freyr's love brings fertility to the earth - Freyr", "Heimdall stands guard at the Bifrost, watching for danger - Heimdall", "Loki's cunning has no equal, but neither does his betrayal - Loki", "Odin's wisdom is greater than all the gods - Odin", "Thor's strength is unmatched, but it is his heart that makes him mighty - Thor", "Tyr will not turn from the path of duty, no matter the cost - Tyr", "Freyr fights for peace, not war, yet he is a warrior of the gods - Freyr", "Heimdall sees all, but his heart is heavy with the knowledge of fate - Heimdall", "Loki's lies are as powerful as any weapon - Loki", "The world tree, Yggdrasil, connects all realms - Odin", "The might of Thor is felt in the thunder that shakes the heavens - Thor", "Tyr's bravery is written in the stars, forever remembered - Tyr", "Freyr's sword is both a weapon and a symbol of peace - Freyr", "Heimdall's horn will signal the end of days, the arrival of Ragnarok - Heimdall", "Loki's true nature is both a gift and a curse - Loki", "Odin gave his eye for knowledge, and his wisdom is endless - Odin", "Thor's hammer smites the forces of darkness, bringing light to the world - Thor", "Tyr is the god of law, justice, and sacrifice - Tyr", "Freyr reigns over the harvest, ensuring the bounty of the earth - Freyr", "Heimdall's ears can hear the grass grow, a gift from the gods - Heimdall", "Loki's laughter echoes through the halls of Asgard, both a blessing and a curse - Loki", "The Norns weave the threads of fate for all beings - Norns", "The wolves of Ragnarok will devour the sun and the moon - Skoll and Hati", "Jormungandr, the world serpent, circles the earth - Jormungandr", "Fenrir, the giant wolf, is destined to slay Odin at Ragnarok - Fenrir", "Hel, the goddess of the underworld, rules over the dead - Hel", "Valkyries choose the bravest to join Odin in Valhalla - Valkyries", "Ragnarok is the end, but also the beginning - Odin", "The Aesir will rise again after the destruction of Ragnarok - Odin", "Jormungandr will battle Thor, and neither will survive - Jormungandr", "The sun will return after Ragnarok, and the world will be reborn - Odin")
                 do p $msgToSend
-                call save_expoutput
+                call track_progress
             } else {
                 $num = @rand(1, 4)
                 if ($num == 1) {
@@ -115,12 +99,12 @@ macro verify_party_leader {
                 }
             }
         }
+        
         $i++
     end loop
 }
 
-macro save_expoutput {  
-    $msgToSend = @random("Tracking Kobold farming... is the grind paying off?", "Checking stats... Base XP, Job XP, Zeny flow?", "Monitoring progress... how's the botting efficiency?", "Evaluating gains... any Gladius or Bucklers so far?", "Assessing farm rate... are we raking in zeny?", "Logging results... XP, Zeny, loot—where do we stand?", "Reviewing session... how's the Kobold grind stacking up?", "Checking efficiency... is this spot worth the time?", "Scanning logs... deaths, XP gains, drops—any surprises?", "Crunching numbers... how's the farm looking?")  
-    do p $msgToSend  
-    do exp output  
-}  
+macro track_progress {
+    do p Tracking progress as of $.dateToday;
+    do exp output;
+}

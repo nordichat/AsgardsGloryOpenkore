@@ -1,0 +1,4 @@
+relogAfterStorage 0
+logConsole 1
+verbose 1
+squelchDomains attackedMiss, attackMonMiss, attackMon, useItem, emotion, route, skill, inventory, console

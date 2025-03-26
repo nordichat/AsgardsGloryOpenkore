@@ -2739,8 +2739,12 @@ sub cmdExp {
 			close(F);
 		}
 	}
-}
 
+	if (!$knownArg) {
+		error T("Syntax error in function 'exp' (Exp Report)\n" .
+			"Usage: exp [<report | monster | item | reset | output>]\n");
+	}
+}
 
 sub cmdFalcon {
 	my (undef, $arg1) = @_;

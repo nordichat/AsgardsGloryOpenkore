@@ -1,0 +1,25 @@
+------------------- Exp Report -------------------
+Botting time : 2 hours 18 minutes 24 seconds
+BaseExp      : 558,142 (17.41%)
+JobExp       : 318,155 (25.23%)
+BaseExp/Hour : 241,969 (7.55%)
+JobExp/Hour  : 137,928 (10.94%)
+zeny         : 98,343
+zeny/Hour    : 42,634
+Base Levelup Time Estimation : 4 hours 17 minutes 43 seconds
+Job Levelup Time Estimation  : 6 hours 23 minutes 25 seconds
+Died : 1
+Bytes Sent   : 435,742
+Bytes Rcvd   : 1,834,890
+--------- Monster Killed Count ---------
+#   ID     Name                    Count
+0   1135   Kobold                  91
+1   1077   Poison Spore            107
+2   1134   Kobold                  187
+3   1133   Kobold                  90
+4   1079   Blue Plant              5
+5   1155   Petite                  33
+6   1106   Desert Wolf             20
+
+Total number of killed monsters: 480
+----------------------------------------
