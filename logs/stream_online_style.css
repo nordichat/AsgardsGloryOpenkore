@@ -15,9 +15,11 @@
 /* → Character Name: char_name=                      */
 /* → Job Class: char_class=                          */
 /* → Guild Name: guild_name=                         */
+/* → Remove ▲ symbol from Character Name: char_name_order=none */
 /* Example:                                          */
 /* http://asgardsglory.ddns.net/?module=character&action=online&guild_name=Alienate */
 /* ------------------------------------------------- */
+
 
 /* --------------------- */
 /* Filtering/Visibility  */
