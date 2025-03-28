@@ -4,13 +4,13 @@
 # The value of each variable is reffered as "x".
 
 # Server connection timeouts
-master 12
-gamelogin 12
-charlogin 12
+master 30
+gamelogin 30
+charlogin 30
 maplogin 30
 play 30
 # When disconnected, wait x seconds before reconnecting again
-reconnect 10
+reconnect 30
 
 # Add a random amount of seconds to reconnect time, up to a maximum of reconnect_random seconds.
 reconnect_random 10

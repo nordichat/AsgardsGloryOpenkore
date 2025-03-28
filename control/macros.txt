@@ -22,7 +22,7 @@ automacro healAndReturn {
     set macro_delay 0.2
     hp < 15%
     call {
-        do p @go 1
+        do p @go 11
         do e omg
         do talk @npc(/Healer/)
         do e lv2
@@ -32,17 +32,17 @@ automacro healAndReturn {
             do p Healed and ready to continue.
         }
 	pause 1
-        do autosell
-        pause 10
-        do autostorage
-        pause 10
+        #do autosell
+        pause 5
+        #do autostorage
+        pause 5
     }
     timeout 60
 }
 
 macro forceHeal {
     do ai manual
-    do p @go 1
+    do p @go 11
     pause 1
     do e omg
     do talk @npc(/Healer/)
@@ -80,7 +80,7 @@ macro verify_party_leader {
                 # 4. Theme from Norse mythology: All quotes must come from Norse mythology.
                 # 5. Only special characters allowed: ., '-! (Any other special characters will be adjusted).
                 
-                $msgToSend = @random("Wisdom is the most precious of all possessions - Odin", "Thor's hammer will crush the enemies of Asgard - Thor", "Victory is not achieved by strength alone, but by courage - Tyr", "Freyr brings peace and prosperity to the lands - Freyr", "Heimdall watches over the nine realms with keen eyes - Heimdall", "Loki is the trickster who weaves chaos and mischief - Loki", "In the halls of Valhalla, the brave feast forever - Odin", "A true warrior faces death with honor, not fear - Thor", "Tyr sacrificed his hand for the good of the world - Tyr", "Freyr's love brings fertility to the earth - Freyr", "Heimdall stands guard at the Bifrost, watching for danger - Heimdall", "Loki's cunning has no equal, but neither does his betrayal - Loki", "Odin's wisdom is greater than all the gods - Odin", "Thor's strength is unmatched, but it is his heart that makes him mighty - Thor", "Tyr will not turn from the path of duty, no matter the cost - Tyr", "Freyr fights for peace, not war, yet he is a warrior of the gods - Freyr", "Heimdall sees all, but his heart is heavy with the knowledge of fate - Heimdall", "Loki's lies are as powerful as any weapon - Loki", "The world tree, Yggdrasil, connects all realms - Odin", "The might of Thor is felt in the thunder that shakes the heavens - Thor", "Tyr's bravery is written in the stars, forever remembered - Tyr", "Freyr's sword is both a weapon and a symbol of peace - Freyr", "Heimdall's horn will signal the end of days, the arrival of Ragnarok - Heimdall", "Loki's true nature is both a gift and a curse - Loki", "Odin gave his eye for knowledge, and his wisdom is endless - Odin", "Thor's hammer smites the forces of darkness, bringing light to the world - Thor", "Tyr is the god of law, justice, and sacrifice - Tyr", "Freyr reigns over the harvest, ensuring the bounty of the earth - Freyr", "Heimdall's ears can hear the grass grow, a gift from the gods - Heimdall", "Loki's laughter echoes through the halls of Asgard, both a blessing and a curse - Loki", "The Norns weave the threads of fate for all beings - Norns", "The wolves of Ragnarok will devour the sun and the moon - Skoll and Hati", "Jormungandr, the world serpent, circles the earth - Jormungandr", "Fenrir, the giant wolf, is destined to slay Odin at Ragnarok - Fenrir", "Hel, the goddess of the underworld, rules over the dead - Hel", "Valkyries choose the bravest to join Odin in Valhalla - Valkyries", "Ragnarok is the end, but also the beginning - Odin", "The Aesir will rise again after the destruction of Ragnarok - Odin", "Jormungandr will battle Thor, and neither will survive - Jormungandr", "The sun will return after Ragnarok, and the world will be reborn - Odin")
+                $msgToSend = @random("Wisdom is the most precious of all possessions", "Thor's hammer will crush the enemies of Asgard", "Victory is not achieved by strength alone, but by courage", "Freyr brings peace and prosperity to the lands", "Heimdall watches over the nine realms with keen eyes", "Loki is the trickster who weaves chaos and mischief", "In the halls of Valhalla, the brave feast forever", "A true warrior faces death with honor, not fear", "Tyr sacrificed his hand for the good of the world", "Freyr's love brings fertility to the earth", "Heimdall stands guard at the Bifrost, watching for danger", "Loki's cunning has no equal, but neither does his betrayal", "Odin's wisdom is greater than all the gods", "Thor's strength is unmatched, but it is his heart that makes him mighty", "Tyr will not turn from the path of duty, no matter the cost", "Freyr fights for peace, not war, yet he is a warrior of the gods", "Heimdall sees all, but his heart is heavy with the knowledge of fate", "Loki's lies are as powerful as any weapon", "The world tree, Yggdrasil, connects all realms", "The might of Thor is felt in the thunder that shakes the heavens", "Tyr's bravery is written in the stars, forever remembered", "Freyr's sword is both a weapon and a symbol of peace", "Heimdall's horn will signal the end of days, the arrival of Ragnarok", "Loki's true nature is both a gift and a curse", "Odin gave his eye for knowledge, and his wisdom is endless", "Thor's hammer smites the forces of darkness, bringing light to the world", "Tyr is the god of law, justice, and sacrifice", "Freyr reigns over the harvest, ensuring the bounty of the earth", "Heimdall's ears can hear the grass grow, a gift from the gods", "Loki's laughter echoes through the halls of Asgard, both a blessing and a curse", "The Norns weave the threads of fate for all beings", "The wolves of Ragnarok will devour the sun and the moon", "Jormungandr, the world serpent, circles the earth", "Fenrir, the giant wolf, is destined to slay Odin at Ragnarok", "Hel, the goddess of the underworld, rules over the dead", "Valkyries choose the bravest to join Odin in Valhalla", "Ragnarok is the end, but also the beginning", "The Aesir will rise again after the destruction of Ragnarok", "Jormungandr will battle Thor, and neither will survive", "The sun will return after Ragnarok, and the world will be reborn")
                 do p $msgToSend
                 call track_progress
             } else {
@@ -105,6 +105,6 @@ macro verify_party_leader {
 }
 
 macro track_progress {
-    do p Tracking progress as of $.dateToday;
     do exp output;
+    do p Tracking progress as of $.dateToday;
 }
