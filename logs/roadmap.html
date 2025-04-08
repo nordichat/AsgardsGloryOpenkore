@@ -88,6 +88,13 @@
                 'storage_8.txt'
             ];
 
+            // List of items to exclude from storage updates
+            const excludeFromStorage = [
+                'Enchanted Peach Tree Card',
+                'Gladius [3]',
+                'Royal Jelly'
+            ];
+
             // Initialize an object to map item names to their stored counts
             const storageMap = {};
 
@@ -138,7 +145,11 @@
 
                 const [, current, goal] = match;
                 const itemName = td.textContent.replace(progressSpan.textContent, '').trim();
-                const storedCount = storageMap[itemName] || 0;
+
+                // Skip updating from storage for items in the exclude list
+                const storedCount = excludeFromStorage.includes(itemName) 
+                    ? parseInt(current, 10) 
+                    : (storageMap[itemName] || 0);
 
                 // Update progress text in the span
                 const progressText = `[${storedCount}/${goal}]`;
@@ -183,10 +194,10 @@
             <tbody>
                 <tr><td><strong>Shrine of Gonryun Queen (gon_dun01):</strong></td></tr>
                 <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Zipper Bear Card <span class="progress">[0/24]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Enchanted Peach Tree Card <span class="progress">[0/4]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Enchanted Peach Tree Card <span class="progress">[8/8]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Royal Jelly <span class="progress">[800/800]</span></td></tr>
                 <tr><td><strong>BONUS:</strong></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Gladius [3] <span class="progress">[0/8]</span></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Royal Jelly <span class="progress">[0/800]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Gladius [3] <span class="progress">[8/8]</span></td></tr>
                 <!-- <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Meat <span class="progress">[0/30000]</span></td></tr> -->
             </tbody>
         </table>
