@@ -147,9 +147,14 @@
                 const itemName = td.textContent.replace(progressSpan.textContent, '').trim();
 
                 // Skip updating from storage for items in the exclude list
-                const storedCount = excludeFromStorage.includes(itemName) 
+                let storedCount = excludeFromStorage.includes(itemName) 
                     ? parseInt(current, 10) 
                     : (storageMap[itemName] || 0);
+
+                // Manually add 9 to the count of "Zipper Bear Card"
+                if (itemName === "Zipper Bear Card") {
+                    storedCount += 21;
+                }
 
                 // Update progress text in the span
                 const progressText = `[${storedCount}/${goal}]`;
@@ -197,7 +202,7 @@
                 <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Enchanted Peach Tree Card <span class="progress">[8/8]</span></td></tr>
                 <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Royal Jelly <span class="progress">[800/800]</span></td></tr>
                 <tr><td><strong>BONUS:</strong></td></tr>
-                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Gladius [3] <span class="progress">[8/8]</span></td></tr>
+                <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Dead Branch <span class="progress">[0/30000]</span></td></tr>
                 <!-- <tr><td class="indent"><img src="transparent/checkbox_0.png" alt="Checkbox"> Meat <span class="progress">[0/30000]</span></td></tr> -->
             </tbody>
         </table>

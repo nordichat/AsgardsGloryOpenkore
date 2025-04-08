@@ -23,19 +23,14 @@ automacro healAndReturn {
     hp < 15%
     call {
         do p @go 11
-        do e omg
         do talk @npc(/Healer/)
         do e lv2
+        do c @autoloot 100
         $mainCharname = "Stalker1"
         $charname = @eval($::char->{'name'})
         if ($charname == $mainCharname) {
-            do p Healed and ready to continue.
+            do p Healed and ready to continue!
         }
-	pause 1
-        #do autosell
-        pause 5
-        #do autostorage
-        pause 5
     }
     timeout 60
 }
@@ -73,35 +68,56 @@ macro verify_party_leader {
 
         if ($isAdmin == 1) {
             if ($charname == $charnameParty) {
-                # 5 rules for the quotes:
-                # 1. 33% of quotes should be from women.
-                # 2. Max 80 characters per message: Each quote must be 80 characters or less.
-                # 3. All quotes in one line: @random("1","2","3").
-                # 4. Theme from Norse mythology: All quotes must come from Norse mythology.
-                # 5. Only special characters allowed: ., '-! (Any other special characters will be adjusted).
-                
-                $msgToSend = @random("Wisdom is the most precious of all possessions", "Thor's hammer will crush the enemies of Asgard", "Victory is not achieved by strength alone, but by courage", "Freyr brings peace and prosperity to the lands", "Heimdall watches over the nine realms with keen eyes", "Loki is the trickster who weaves chaos and mischief", "In the halls of Valhalla, the brave feast forever", "A true warrior faces death with honor, not fear", "Tyr sacrificed his hand for the good of the world", "Freyr's love brings fertility to the earth", "Heimdall stands guard at the Bifrost, watching for danger", "Loki's cunning has no equal, but neither does his betrayal", "Odin's wisdom is greater than all the gods", "Thor's strength is unmatched, but it is his heart that makes him mighty", "Tyr will not turn from the path of duty, no matter the cost", "Freyr fights for peace, not war, yet he is a warrior of the gods", "Heimdall sees all, but his heart is heavy with the knowledge of fate", "Loki's lies are as powerful as any weapon", "The world tree, Yggdrasil, connects all realms", "The might of Thor is felt in the thunder that shakes the heavens", "Tyr's bravery is written in the stars, forever remembered", "Freyr's sword is both a weapon and a symbol of peace", "Heimdall's horn will signal the end of days, the arrival of Ragnarok", "Loki's true nature is both a gift and a curse", "Odin gave his eye for knowledge, and his wisdom is endless", "Thor's hammer smites the forces of darkness, bringing light to the world", "Tyr is the god of law, justice, and sacrifice", "Freyr reigns over the harvest, ensuring the bounty of the earth", "Heimdall's ears can hear the grass grow, a gift from the gods", "Loki's laughter echoes through the halls of Asgard, both a blessing and a curse", "The Norns weave the threads of fate for all beings", "The wolves of Ragnarok will devour the sun and the moon", "Jormungandr, the world serpent, circles the earth", "Fenrir, the giant wolf, is destined to slay Odin at Ragnarok", "Hel, the goddess of the underworld, rules over the dead", "Valkyries choose the bravest to join Odin in Valhalla", "Ragnarok is the end, but also the beginning", "The Aesir will rise again after the destruction of Ragnarok", "Jormungandr will battle Thor, and neither will survive", "The sun will return after Ragnarok, and the world will be reborn")
-                do p $msgToSend
                 call track_progress
             } else {
-                $num = @rand(1, 4)
-                if ($num == 1) {
-                    do e sry
-                }
-                if ($num == 2) {
-                    do e heh
-                }
-                if ($num == 3) {
-                    do e gg
-                }
-                if ($num == 4) {
-                    do e meh
-                }
+                call sendRandomEmote
             }
         }
         
         $i++
     end loop
+}
+
+macro sendRandomQuote {
+    # 5 rules for the quotes:
+    # 1. 33% of quotes should be from women.
+    # 2. Max 80 characters per message: Each quote must be 80 characters or less.
+    # 3. All quotes in one line: @random("1","2","3").
+    # 4. Theme from Norse mythology: All quotes must come from Norse mythology.
+    # 5. Only special characters allowed: ., '-! (Any other special characters will be adjusted).
+    $msgToSend = @random("Wisdom is the most precious of all possessions", "Thor's hammer will crush the enemies of Asgard", "Victory is not achieved by strength alone, but by courage", "Freyr brings peace and prosperity to the lands", "Heimdall watches over the nine realms with keen eyes", "Loki is the trickster who weaves chaos and mischief", "In the halls of Valhalla, the brave feast forever", "A true warrior faces death with honor, not fear", "Tyr sacrificed his hand for the good of the world", "Freyr's love brings fertility to the earth", "Heimdall stands guard at the Bifrost, watching for danger", "Loki's cunning has no equal, but neither does his betrayal", "Odin's wisdom is greater than all the gods", "Thor's strength is unmatched, but it is his heart that makes him mighty", "Tyr will not turn from the path of duty, no matter the cost", "Freyr fights for peace, not war, yet he is a warrior of the gods", "Heimdall sees all, but his heart is heavy with the knowledge of fate", "Loki's lies are as powerful as any weapon", "The world tree, Yggdrasil, connects all realms", "The might of Thor is felt in the thunder that shakes the heavens", "Tyr's bravery is written in the stars, forever remembered", "Freyr's sword is both a weapon and a symbol of peace", "Heimdall's horn will signal the end of days, the arrival of Ragnarok", "Loki's true nature is both a gift and a curse", "Odin gave his eye for knowledge, and his wisdom is endless", "Thor's hammer smites the forces of darkness, bringing light to the world", "Tyr is the god of law, justice, and sacrifice", "Freyr reigns over the harvest, ensuring the bounty of the earth", "Heimdall's ears can hear the grass grow, a gift from the gods", "Loki's laughter echoes through the halls of Asgard, both a blessing and a curse", "The Norns weave the threads of fate for all beings", "The wolves of Ragnarok will devour the sun and the moon", "Jormungandr, the world serpent, circles the earth", "Fenrir, the giant wolf, is destined to slay Odin at Ragnarok", "Hel, the goddess of the underworld, rules over the dead", "Valkyries choose the bravest to join Odin in Valhalla", "Ragnarok is the end, but also the beginning", "The Aesir will rise again after the destruction of Ragnarok", "Jormungandr will battle Thor, and neither will survive", "The sun will return after Ragnarok, and the world will be reborn")
+    do p $msgToSend
+}
+
+macro sendRandomEmote {
+    $num = @rand(1, 4)
+    if ($num == 1) {
+        do e sry
+    }
+    if ($num == 2) {
+        do e heh
+    }
+    if ($num == 3) {
+        do e gg
+    }
+    if ($num == 4) {
+        do e meh
+    }
+    if ($num == 5) {
+        do e lv
+    }
+    if ($num == 6) {
+        do e swt
+    }
+    if ($num == 7) {
+        do e ...
+    }
+    if ($num == 8) {
+        do e yawn
+    }
+    if ($num == 9) {
+        do e omg
+    }
 }
 
 macro track_progress {

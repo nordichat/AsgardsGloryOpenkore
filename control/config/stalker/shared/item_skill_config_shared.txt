@@ -10,10 +10,9 @@
 #Orange          582  30           2       15.00
 #Pet Food        537  70           1       70.00
 #Aloe Leaflet    521  365          2       182.50
-
 #Meat, Monster's Feed, Banana Juice, Red Herb, Carrot, Apple, Yellow Herb, Milk, Orange, Pet Food, Aloe Leaflet
 useSelf_item 517, 541, 532, 509, 515, 512, 508, 525, 582, 537, 521 {  
-    hp < 80%
+	hp < 80%
 }
 
 useSelf_skill Detoxify {
@@ -24,34 +23,42 @@ useSelf_skill Detoxify {
 	inInventory Green Herb <= 0
 }
 
-useSelf_item Awakening Potion {
-    whenStatusInactive EFST_ATTHASTE_POTION2
-    inLockOnly 1
-    notWhileSitting 1
-    notInTown 1
-    inInventory Awakening Potion > 0
-	timeout 5
+useSelf_item Berserk Potion {
+	whenStatusInactive EFST_ATTHASTE_POTION3
+	inLockOnly 1
+	notWhileSitting 1
+	notInTown 1
+	inInventory Berserk Potion > 0
 }
 
 attackSkillSlot RG_INTIMIDATE {
-    lvl 5
-    sp > 24
+	lvl 5
+	sp > 24
 	inLockOnly 1
 	onAction attack
 	aggressives > 1
-    #monsters 1133, 1134, 1135										# gef_fild08
-    #monsters 1155													# mjolnir_02
-    #monsters Desert Wolf											# ve_fild04
-    #monsters Marduk, Matyr, Pasana, #Mimic							# in_sphinx3
-    monsters Bloody Butterfly, Enchanted Peach Tree, Zipper Bear	# gon_dun01
+	#monsters 1133, 1134, 1135										# gef_fild08
+	#monsters 1155												# mjolnir_02
+	#monsters Desert Wolf											# ve_fild04
+	#monsters Marduk, Matyr, Pasana, #Mimic									# in_sphinx3
+	monsters Zipper Bear, Bloody Butterfly, Enchanted Peach Tree						# gon_dun01
 }
 
-buyAuto Awakening Potion {
+buyAuto Berserk Potion {
 	npc gonryun 161 122
+	npc_steps b
 	distance 4
-	price 1500
+	price 3000
 	minAmount 0
 	maxAmount 10
 	disabled 0
-	whenStatusInactive EFST_ATTHASTE_POTION2
+	whenStatusInactive EFST_ATTHASTE_POTION3
+}
+
+getAuto Berserk Potion {
+	minAmount 0
+	maxAmount 10
+	batchSize
+	dcOnEmpty 0
+	disabled 0
 }

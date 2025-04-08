@@ -8,20 +8,20 @@ useSelf_skill NV_FIRSTAID {
 }
 
 attackSkillSlot TF_POISON {
-    lvl 10
-    sp > 11
-    target_whenStatusInactive Poisoned
-    #monsters Golem, Steel Chonchon, 1135, 1133
-    monsters 1135, 1133
+	lvl 10
+	sp > 11
+	target_whenStatusInactive Poisoned
+	#monsters Golem, Steel Chonchon, 1135, 1133
+	monsters 1135, 1133
 }
 
 buyAuto Fly Wing {
-    npc morocc 149 102
-    distance 4
-    price 60
-    minAmount
-    maxAmount 70
-    disabled 0
+	npc morocc 149 102
+	distance 4
+	price 60
+	minAmount
+	maxAmount 70
+	disabled 0
 }
 
 getAuto Meat {
@@ -34,7 +34,17 @@ getAuto Meat {
 }
 
 useSelf_item Green Herb {
-    whenStatusActive Poisoned
-    inLockOnly 1
-    timeout 5
+	whenStatusActive Poisoned
+	inLockOnly 1
+	timeout 5
+}
+
+buyAuto Awakening Potion {
+	npc gonryun 161 122
+	distance 4
+	price 1500
+	minAmount 0
+	maxAmount 10
+	disabled 0
+	whenStatusInactive EFST_ATTHASTE_POTION2
 }

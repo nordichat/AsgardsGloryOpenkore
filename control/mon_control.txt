@@ -59,8 +59,8 @@
 
 ##### Shrine of Gonryun Queen (gon_dun01) ####
 Zipper Bear 1 0 0
-Enchanted Peach Tree 1 0 0
-Bloody Butterfly 1 0 0
+Enchanted Peach Tree 0 0 0
+Bloody Butterfly 0 0 0
 
 ##### Sphinx F3 (in_sphinx3) ####
 Pasana 1 0 0

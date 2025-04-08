@@ -78,7 +78,6 @@ Meat 150 0 1                    # FOOD: Keep 10pcs in inventory.
 528 0 0 1                       # Monster's Feed FOOD: Keep 150pcs in inventory.
 Pet Food 100 0 1                # FOOD: Keep 100pcs in inventory.
 Claw of Desert Wolf 0 0 1
-##### Sphinx F2 (in_sphinx2) #####
 
 ##### Geffen Field (gef_fild08) #####
 Stone Heart 0 0 1
@@ -278,9 +277,10 @@ Aloe Leaflet 0 1 0              # FOOD: Keep 0pcs in inventory.
 ##### HEAL/SUPPORT ITEMS #####
 # Adjust these to your needs
 
-656 10 1 0 # Awakening Potion
-# 602 2 1 0 # Butterfly Wing
-# 601 70 1 0 # Fly Wing
+#656 10 1 0     # Awakening Potion
+657 10 1 0      # Berserk Potion
+# 602 2 1 0     # Butterfly Wing
+# 601 70 1 0    # Fly Wing
 
 505 0 1 0 # Blue Potion
 545 50 1 0 # Condensed Red Potion

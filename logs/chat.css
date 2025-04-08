@@ -1,0 +1,175 @@
+/* --- WIP --- */
+
+yt-live-chat-header-renderer {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(to bottom,
+      rgb(133, 151, 201),
+      rgb(180, 194, 222),
+      rgb(175, 190, 221),
+      rgb(202, 212, 233),
+      rgb(177, 196, 231),
+      rgb(183, 198, 232),
+      rgb(153, 174, 217),
+      rgb(167, 186, 226),
+      rgb(158, 182, 228),
+      rgb(184, 202, 241),
+      rgb(175, 196, 240),
+      rgb(202, 223, 251),
+      rgb(190, 216, 242),
+      rgb(220, 241, 253),
+      rgb(197, 222, 243),
+      rgb(210, 234, 252)) !important;
+  text-shadow: 1px 1px 0 white !important;
+  text-align: left !important;
+  border-bottom: 1px solid black !important;
+  border: 0;
+  height: 16px !important;
+  color: black !important;
+  color: black;
+  max-width: 280px !important;
+  border-radius: 4px 4px 0 0 !important;
+  image-rendering: pixelated !important;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+body {
+  background: rgba(255, 255, 255, 1) !important;
+  font-size: 11px !important;
+  font-family: Tahoma, sans-serif !important;
+  color: black !important;
+}
+
+#item-offset {
+  background: green !important;
+  height: auto !important;
+}
+
+/* --- CHAT MESSAGES --- */
+yt-live-chat-text-message-renderer {
+  background: blue !important
+}
+
+/* --- FONT STYLING (Pixelated Look) --- */
+yt-live-chat-renderer *,
+yt-live-chat-text-message-renderer #author-name,
+yt-live-chat-text-message-renderer #message,
+yt-live-chat-text-message-renderer #timestamp {
+  font-size: 11px !important;
+  font-family: Tahoma, sans-serif !important;
+  color: black !important;
+}
+
+/* --- AUTHOR NAME COLORS --- */
+yt-live-chat-text-message-renderer #author-name {
+  font-weight: bold;
+  color: #000000 !important;
+}
+
+/* Stream Owner */
+yt-live-chat-text-message-renderer #author-name[author-type="owner"] {
+  color: #ffcc00 !important;
+  /* Gold */
+}
+
+/* Moderators */
+yt-live-chat-text-message-renderer #author-name[author-type="moderator"] {
+  color: #007fff !important;
+  /* Bright blue */
+}
+
+/* Members */
+yt-live-chat-text-message-renderer #author-name[author-type="member"] {
+  color: #00b300 !important;
+  /* Green */
+}
+
+/* --- TIMESTAMP --- */
+yt-live-chat-text-message-renderer #timestamp {
+  color: #666666 !important;
+  font-size: 11px !important;
+  font-family: Tahoma, sans-serif !important;
+  margin-right: 6px;
+}
+
+/* --- SUPERCHATS (Donation Messages) --- */
+yt-live-chat-paid-message-renderer {
+  background: #ff4500 !important;
+  font-size: 11px !important;
+  font-family: Tahoma, sans-serif !important;
+  color: black !important;
+}
+
+/* --- AVATARS (Make them match the theme) --- */
+yt-live-chat-text-message-renderer #author-photo,
+yt-live-chat-paid-message-renderer #author-photo {
+
+  border-radius: 50% !important;
+  margin-right: 6px !important;
+}
+
+#card,
+#button,
+#subtext,
+yt-live-chat-message-input-renderer,
+#label-icon,
+#live-chat-header-context-menu,
+yt-live-chat-viewer-engagement-message-renderer,
+#ticker,
+#separator {
+  display: none !important;
+}
+
+#label-text {
+  font-size: 11px !important;
+  font-family: 'Press Start 2P', Tahoma, sans-serif !important;
+  text-shadow: 1px 1px 0 white !important;
+  color: black !important;
+  top: 2px !important;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#items {
+  background: orange !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+}
+
+#contents {
+  height: auto !important;
+  background: white !important;
+  overflow: hidden !important;
+}
+
+
+
+yt-live-chat-text-message-renderer {
+  border-bottom: 1px solid #c6c6c6 !important;
+  border-collapse: collapse !important;
+  background: white !important;
+  min-height: fit-content !important;
+  padding: 2px !important;
+  font-size: 11px !important;
+  font-family: Tahoma, sans-serif !important;
+  color: black !important;
+  overflow: none !important;
+
+}
+
+/* Hide scrollbar. */
+yt-live-chat-item-list-renderer #items {
+  overflow: hidden !important;
+}
+
+yt-live-chat-item-list-renderer #item-scroller {
+  overflow: hidden !important;
+}
+
+#chat {
+  max-width: 278px !important;
+  border-left: 1px solid #c6c6c6 !important;
+  border-right: 1px solid #c6c6c6 !important;
+  border-bottom: 1px solid #c6c6c6 !important;
+}
