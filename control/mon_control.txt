@@ -57,6 +57,11 @@
 # Monsters not found in this file, or flags not specified will default to:
 # <attack> = 1
 
+##### Shrine of Gonryun Queen (gon_dun01) ####
+Zipper Bear 1 0 0
+Enchanted Peach Tree 0 0 0
+Bloody Butterfly 0 0 0
+
 ##### Sphinx F3 (in_sphinx3) ####
 Pasana 1 0 0
 Mimic 1 0 0
@@ -111,14 +116,14 @@ Thief Bug's Egg 1 0 0
 1590 0 0 0 
 
 ##### Plants #####
-Black Mushroom 1 0 0
-Blue Plant 1 0 0
+Black Mushroom 0 0 0
+Blue Plant 0 0 0
 Green Plant 0 0 0
-Red Mushroom 1 0 0
+Red Mushroom 0 0 0
 Red Plant 0 0 0
-Shining Plant 1 0 0
-White Plant 1 0 0
-Yellow Plant 1 0 0
+Shining Plant 0 0 0
+White Plant 0 0 0
+Yellow Plant 0 0 0
 
 
 ##### Homunculus #####

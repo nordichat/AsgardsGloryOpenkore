@@ -12,6 +12,11 @@
 #Hydra
 #Obeaune
 
+##### Shrine of Gonryun Queen (gon_dun01) ####
+Zipper Bear
+Enchanted Peach Tree
+Bloody Butterfly
+
 ##### Sphinx F3 (in_sphinx3) ####
 Pasana
 MimiC

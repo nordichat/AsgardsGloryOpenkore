@@ -212,7 +212,7 @@ sitAuto_look_from_wall
 sitTensionRelax 0
 
 statsAddAuto 1
-statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 agi, 20 dex, 40 agi, 30 str, 30 dex, 50 agi, 40 str, 60 agi, 50 str, 70 agi, 40 dex, 80 agi, 60 str, 50 dex, 70 str, 100 agi, 80 str,
+statsAddAuto_list 10 str, 10 dex, 10 agi, 20 str, 20 agi, 20 dex, 40 agi, 30 str, 30 dex, 50 agi, 40 str, 60 agi, 50 str, 70 agi, 40 dex, 80 agi, 60 str, 50 dex, 70 str, 100 agi, 80 str, 110 agi, 90 str, 60 dex, 10 vit
 statsAddAuto_dontUseBonus 0
 statsAdd_over_99 1
 
@@ -904,16 +904,18 @@ skillsAddAuto_list NV_BASIC 9, TF_DOUBLE 10, TF_MISS 10, TF_POISON 3, TF_DETOXIF
 route_randomWalk 1
 
 storageAuto 1
+storageAuto_npc gonryun 159 122
 #storageAuto_npc veins 208 128
 #storageAuto_npc geffen 120 62
-storageAuto_npc morocc 156 97
+#storageAuto_npc morocc 156 97
 #storageAuto_npc payon 181 104
 #storageAuto_npc prontera 164 175
 
 sellAuto 1
+sellAuto_npc gonryun 161 122
 #sellAuto_npc veins 211 122
 #sellAuto_npc geffen 124 70
-sellAuto_npc morocc 149 102
+#sellAuto_npc morocc 149 102
 #sellAuto_npc payon 183 102
 #sellAuto_npc prontera 147 175
 
@@ -922,15 +924,15 @@ autoMoveOnDeath_x
 autoMoveOnDeath_y
 autoMoveOnDeath_map
 
-saveMap morocc
+saveMap gonryun
 saveMap_warpToBuyOrSell 1
-saveMap_warpChatCommand @go 1
+saveMap_warpChatCommand @go 11
 memo1
 memo2
 memo3
 memo4
 
-lockMap in_sphinx3
+lockMap gon_dun01
 lockMap_x
 lockMap_y
 lockMap_randX

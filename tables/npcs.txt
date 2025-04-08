@@ -8,3 +8,45 @@ morocc 132 111 Little Girl#Jorti
 morocc 88 133 Volunteer - Morocc#02
 moc_fild19 107 101 Bulletin Board#20
 morocc 159 113 Chief Balrog
+gonryun 156 122 Healer#gon
+gonryun 159 122 Kafra Employee
+gonryun 161 122 Special Dealer#einb12
+gonryun 147 101 Chef Assistant#gon
+gonryun 174 101 Weapon Dealer#gon
+gonryun 147 84 Tool Dealer#gon
+gonryun 173 84 Armor Dealer#gon
+gonryun 169 71 Guidev#gon
+gonryun 165 67 Healer#gon2
+gonryun 163 60 Kunlun Guide#gon
+gonryun 153 64 Kunlun Envoy#gon4
+gonryun 166 196 Soldier#gon
+gon_dun01 190 160 trace1-2#gnbs
+gon_dun01 139 257 trace1-5#gnbs
+gon_dun01 133 183 trace1-4#gnbs
+gon_dun01 163 53 trace1-3#gnbs
+gon_dun01 201 25 trace1-1#gnbs
+gon_dun01 110 140 Tatacho
+gon_dun01 124 192 Gisel
+gon_dun01 125 191 Gisel
+gon_dun02 23 105 trace2-5#gnbs
+gon_dun01 183 134 Stalker1
+gon_dun01 154 129 Gading
+prontera 170 180 Stylist#custom_stylist
+prontera 147 196 WOE Information
+prontera 150 193 Reset Girl
+prontera 159 193 Healer#prt
+prontera 153 193 Job Master
+prontera 162 193 Platinum Skill NPC
+prontera 164 195 PVP Warper
+prontera 149 202 YuNa#pront
+prontera 163 204 Man from Morocc
+gon_dun01 143 192 Gisel
+gon_dun01 123 116 Stalker8
+gon_dun01 210 76 Gadinggon_dun01 180 142 Gading
+gon_dun01 137 99 Stalker4
+gon_dun01 118 208 Gading
+gon_dun01 120 158 Gading
+gon_dun01 200 143 Stalker8
+gonryun 180 118 Iron man#gnp
+gon_dun01 153 189 Stalker6
+gon_dun01 94 105 Gading
